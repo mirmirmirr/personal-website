@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+
+<channel>
+	<title>Miranda Zheng- RSS Feed</title>
+	<description>This is a version of my RSS feed</description>
+	<link>https:/zhengm4rpi.eastus.cloudapp.azure.com</link>
+	<lastBuildDate>Tue, 12 Oct 2010 00:01:00 +0000 </lastBuildDate>
+	<pubDate>Tue, 12 Oct 2010 00:01:00 +0000 </pubDate>
+    
+    <!-- Repeat item blocks for each article -->
+	<item>
+		<title>Amazon to invest up to $4 billion in Anthropic</title>
+        <link>https://www.cnbc.com/2023/09/25/amazon-to-invest-up-to-4-billion-in-anthropic-a-rival-to-chatgpt-developer-openai.html</link>
+		<description>Amazon is investing $4 billion in Anthropic and is acquiring a minority stake in the 
+					 company. This is part of Amazon's push to compete with Google and Microsoft on the AI
+					 front. Anthropic was founded by former OpenAI execs and focuses on generative AI. They
+					 will collaborate with AWS. </description>
+		<guid>https://www.cnbc.com/2023/09/25/amazon-to-invest-up-to-4-billion-in-anthropic-a-rival-to-chatgpt-developer-openai.html</guid>
+	    <pubDate>Mon, 25 Sep 2023 03:35:00 +0000 </pubDate>
+	</item>
+
+	<item>
+		<title>Atlantis’ Tragic Tale: What Is the Truth Behind the Myth?</title>
+        <link>https://www.thecollector.com/atlantis-truth-behind-myth/</link>
+		<description>The article explores the story of Atlantis, a legendary advanced civilization that that 
+					 was destroyed in a single day and night due to its greed. It discuessed the city's
+					 history and cultural significance as well as modern interpretations of the myth, 
+					 highlighting its allegorical nature as a warning about the dangers of power.</description>
+		<guid>https://www.thecollector.com/atlantis-truth-behind-myth/</guid>
+	    <pubDate>Sat, 31 Dec 2022 00:00:00 +0000 </pubDate>
+	</item>
+
+	<item>
+		<title>Hyphens: Combined, Yet Divided</title>
+        <link>https://livingroomconversations.org/hyphens-combined-yet-divided/</link>
+		<description>In thier conversation, Haya and Delcan talk about the complex experiences of Asian
+					 Americans, highlighting their challenges of identity, representation, acceptance,
+					 self-appriciation, and love within a diverse and divisive society. </description>
+		<guid>https://livingroomconversations.org/hyphens-combined-yet-divided/</guid>
+	    <pubDate>Wed, 24 May 2023 00:00:00 +0000 </pubDate>
+	</item>
+
+	<item>
+		<title>Two decades of the Most Powerful Science Olympiad High Schools</title>
+        <link>https://www.competitionsciences.org/2019/06/19/the-most-powerful-science-olympiad-high-schools/</link>
+		<description>Science competitions take many forms. From the research fair to the quizbowl, these 
+		             competitions highlight many different skills across scientific disciplines. For the 
+					 past 35 years, Science Olympiad has been crowning the top schools at their regional, 
+					 state, and national tournaments. Each year, 8,000 teams compete to see who can claim 
+					 the title of the best young scientists across multiple disciplines.</description>
+		<guid>https://www.competitionsciences.org/2019/06/19/the-most-powerful-science-olympiad-high-schools/</guid>
+	    <pubDate>Wed, 19 Jun 2019 00:00:00 +0000 </pubDate>
+	</item>
+
+	<item>
+		<title>With U.S. Open Win, Coco Gauff Declares Herself the Future of U.S. Tennis</title>
+        <link>https://time.com/6312450/coco-gauff-win-us-open-2023/</link>
+		<description>Open final match on Saturday, American Coco Gauff withstood the sizzling shots of her 
+					 opponent, Aryna Sabalenka, this year’s Australian Open champion. After a shaky first 
+					 set, Gauff seemed to chase every Sabalenka effort down and send it back to her. Gauff, 
+					 somehow, stopped making mistakes. She played flawlessly. And Coco Gauff declared 
+					 herself, without much debate, the future of American tennis.</description>
+		<guid>https://time.com/6312450/coco-gauff-win-us-open-2023/</guid>
+	    <pubDate>Sat, 9 Sep 2023 07:33:00 +0000 </pubDate>
+	</item>
+
+</channel>
+
+</rss>

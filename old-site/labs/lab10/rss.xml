@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+
+<channel>
+	<title>Miranda Zheng- RSS Feed</title>
+	<description>This is a version of my RSS feed</description>
+	<link>https:/zhengm4rpi.eastus.cloudapp.azure.com</link>
+	<lastBuildDate>Tue, 12 Oct 2010 00:01:00 +0000 </lastBuildDate>
+	<pubDate>Tue, 12 Oct 2010 00:01:00 +0000 </pubDate>
+    
+    <!-- Repeat item blocks for each article -->
+	<item>
+		<title>Amazon to invest up to $4 billion in Anthropic</title>
+        <link>https://www.cnbc.com/2023/09/25/amazon-to-invest-up-to-4-billion-in-anthropic-a-rival-to-chatgpt-developer-openai.html</link>
+		<description>Amazon is investing $4 billion in Anthropic and is acquiring a minority stake in the 
+					 company. This is part of Amazon's push to compete with Google and Microsoft on the AI
+					 front. Anthropic was founded by former OpenAI execs and focuses on generative AI. They
+					 will collaborate with AWS. </description>
+		<guid>https://www.cnbc.com/2023/09/25/amazon-to-invest-up-to-4-billion-in-anthropic-a-rival-to-chatgpt-developer-openai.html</guid>
+	    <pubDate>Mon, 25 Sep 2023 03:35:00 +0000 </pubDate>
+	</item>
+
+	<item>
+		<title>Atlantis’ Tragic Tale: What Is the Truth Behind the Myth?</title>
+        <link>https://www.thecollector.com/atlantis-truth-behind-myth/</link>
+		<description>The article explores the story of Atlantis, a legendary advanced civilization that that 
+					 was destroyed in a single day and night due to its greed. It discuessed the city's
+					 history and cultural significance as well as modern interpretations of the myth, 
+					 highlighting its allegorical nature as a warning about the dangers of power.</description>
+		<guid>https://www.thecollector.com/atlantis-truth-behind-myth/</guid>
+	    <pubDate>Sat, 31 Dec 2022 00:00:00 +0000 </pubDate>
+	</item>
+
+	<item>
+		<title>Hyphens: Combined, Yet Divided</title>
+        <link>https://livingroomconversations.org/hyphens-combined-yet-divided/</link>
+		<description>In their conversation, Haya and Delcan talk about the complex experiences of Asian
+					 Americans, highlighting their challenges of identity, representation, acceptance,
+					 self-appriciation, and love within a diverse and divisive society. </description>
+		<guid>https://livingroomconversations.org/hyphens-combined-yet-divided/</guid>
+	    <pubDate>Wed, 24 May 2023 00:00:00 +0000 </pubDate>
+	</item>
+
+	<item>
+		<title>Two decades of the Most Powerful Science Olympiad High Schools</title>
+        <link>https://www.competitionsciences.org/2019/06/19/the-most-powerful-science-olympiad-high-schools/</link>
+		<description>Science competitions, from research fairs to quiz bowls, showcase diverse skills in various 
+					 scientific disciplines. For 35 years, Science Olympiad crowns top schools at tournaments, 
+					 where 8,000 teams vie for the title of the best young scientists.</description>
+		<guid>https://www.competitionsciences.org/2019/06/19/the-most-powerful-science-olympiad-high-schools/</guid>
+	    <pubDate>Wed, 19 Jun 2019 00:00:00 +0000 </pubDate>
+	</item>
+
+	<item>
+		<title>With U.S. Open Win, Coco Gauff Declares Herself the Future of U.S. Tennis</title>
+        <link>https://time.com/6312450/coco-gauff-win-us-open-2023/</link>
+		<description> In the US Open final, Coco Gauff faced Aryna Sabalenka, the current Australian Open 
+					  champion. Despite a shaky start, Gauff adeptly returned every shot, played flawlessly, 
+					  and declared herself the future of American tennis, solidifying her status.</description>
+		<guid>https://time.com/6312450/coco-gauff-win-us-open-2023/</guid>
+	    <pubDate>Sat, 9 Sep 2023 07:33:00 +0000 </pubDate>
+	</item>
+
+</channel>
+
+</rss>

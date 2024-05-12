@@ -1,0 +1,68 @@
+{
+   "title": "ITWS1100 Projects Page",
+   "projects": [
+      {
+         "labNumber": "Lab 2",
+         "labTitle": "Resume",
+         "link": "../lab02/files/zhengm4-MirandaZheng-resume.html",
+         "description": "In this lab, we started working on the first pages of our websites: the resume. The resume is built with the use of a special display tag in css. In order to format things, we used floats instead. Click <a href=\"../lab02/files/zhengm4-MirandaZheng-resume.html\">here</a> for the lab.",
+         "image": "../lab02/resume.png"
+      },
+      {
+         "labNumber": "Lab 3",
+         "labTitle": "Website Projects Page <br>Version 1.0",
+         "link": "../lab03/projects.html",
+         "description": "In this lab, I created the first version of the websites page and used CSS to develop and decorate it. Click <a href=\"../lab03/projects.html\">here</a> for the lab.",
+         "image": "../lab03/projectspage.png"
+      },
+      {
+         "labNumber": "Lab 4",
+         "labTitle": "RSS & Atom",
+         "link": "../lab04/lab04.html",
+         "description": "In order to apply the things we learned in clasa about XML pages, I created an RSS file using RSS 2.0 and an Atom file using Atom 1.0. Within each file, there are links to webpages and articles about various things that interest me or are important to me. To check them out, please click <a href=\"../lab04/ITWS1100-Lab4-RSS&Atom/rss.xml\">here</a> for the RSS file and <a href=\"../lab04/ITWS1100-Lab4-RSS&Atom/atom.xml\">here</a> for the Atom file!",
+         "image": "../lab04/atompage.png"
+      },
+      {
+         "labNumber": "Lab 5",
+         "labTitle": "JavaScript",
+         "link": "../lab05/lab5.html",
+         "description": "This lab was centered around learning to apply JavaScript by creating a form. Click <a href=\"../lab05/lab5.html\">here</a> for the lab.",
+         "image": "../lab05/lab5Page.png"
+      },
+      {
+         "labNumber": "Lab 6",
+         "labTitle": "jQuery",
+         "link": "../lab06/ITWS1100-lab6-jQuery/lab6.html",
+         "description": "In this lab, I worked with jQuery to enhance a webpage. I began by modifying the header's text and style, learned to control the visibility of paragraphs with animations, and toggled the class of list items to change their appearance on click. Additionally, learned to dynamically add elements to a list and bind that to an event. Click <a href=\"../lab06/ITWS1100-lab6-jQuery/lab6.html\">here</a> for the lab.",
+         "image": "../lab06/lab6_image.png"
+      },
+      {
+         "labNumber": "Lab 7",
+         "labTitle": "Group Project Mockups",
+         "link": "../lab07/mockup.png",
+         "description": "This lab was completed with the rest of the members of my ITWS group. We met to create a mockup of our website and create a personas for out project.",
+         "image": "../lab07/mockup.png"
+      },
+      {
+         "labNumber": "Lab 8",
+         "labTitle": "Dynamic Website Projects Page <br> Version 2.0",
+         "link": "../lab08/inclassexample/index.php",
+         "description": "In this lab, I created a new version of the projects page with javaScript, loading information about each lab using ajax. Click <a href=\"../lab08/lab8.html\">here</a> for the lab.",
+         "image": "newProjects.png"
+      },
+      {
+         "labNumber": "Lab 9",
+         "labTitle": "Databases & SQL",
+         "link": "../lab09/index.php",
+         "description": "This lab focused on creating, importing, and modifying databases using SQL and then interacting with them using PHP. Provided with starter files, I created SQl and PHP files that interacted with a database to keep track of actors, movies, and the relationships between actors and thier movies. Click <a href=\"http://zhengm4rpi.eastus.cloudapp.azure.com/iit/labs/lab09/index.php\">here</a> for the lab.",
+         "image": "../lab09/resources/php_mySQL.png"
+      },
+      {
+         "labNumber": "Lab 10",
+         "labTitle": "RSS & Atom",
+         "link": "../lab10/lab10.html",
+         "description": "Serving the data from Lab 4 in a presentable format. Click <a href=\"../lab10/lab10.html\">here</a> for the lab.",
+         "image": "../lab10/rss_atom_feed.png"
+      }
+   ]
+}

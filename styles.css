@@ -1,0 +1,195 @@
+
+html, body {
+    margin: 0;
+	padding: 0;
+	border: 0;
+
+    background-color: #f8f8f8;
+}
+
+body {
+    font-family: "Poppins";
+    overflow-x: hidden;
+}
+
+.vline {
+    width: 1px;
+    background-color: #000;
+    height: calc(100vh - 30px);
+    transition: transform 0.5s ease;
+}
+    .vline.slide-in {
+        /* height: 0; */
+        transform: translateX(-150px); /* Move second line to the position of the first line */
+        /* opacity: 0; */
+    }
+
+    .vline.hidden {
+        transform: rotate(-90deg);
+        transform-origin: top left;
+        transition: opacity 0.5s ease, transform 1s ease;
+        height: calc(100vw - 60px);
+        /* opacity: 0; */
+    }
+    .vline.horizontal {
+        height: 1px; /* Change height to make it horizontal */
+        width: calc(100wh - 30px); /* Expand width to full viewport width */
+        transform: translateY(0); /* Ensure it stays in place horizontally */
+    }
+
+.hline {
+    height: 1px;
+    width: calc(100vw - 60px);
+    background-color: #000;
+    margin-left: calc((100vw - (100vw - 60px))/2);
+    transition: transform 0.5s ease;
+}
+    .hline.slide-down {
+        transform: translateY(40px);
+    }
+
+.container {
+    display: grid;
+    grid-template-columns: 1px 150px 1px 1fr;
+    height: 100vh; /* Adjust the height as needed */
+}
+
+.vnav {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    margin-top: 55px;
+    gap: 5px; /* Space between navigation items */
+    grid-column: 2 / 3; /* Place in the middle column */
+
+    text-align: right;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+    .vnav.hidden {
+        opacity: 0;
+        /* transform: translateX(-100%); */
+    }
+    .vnav a {
+        text-decoration: none;
+        color: #000;
+        font-size: 15px;
+        transition: color 0.3s ease;
+    }
+
+.hnav {
+    display: flex;
+    height: 40px;
+    align-items: center;
+    position: relative;
+    gap: 0.3rem;
+    margin-left: calc((100vw - (100vw - 60px))/2 + 10px);
+
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}  
+    .hnav.show {
+        opacity: 1;
+    }
+    .hnav a {
+        text-decoration: none;
+        color: #000;
+        font-size: 15px;
+        transition: color 1s ease;
+        transition: opacity 0.5s ease;
+    }
+        .hnav a.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+        .hnav:hover a.hidden {
+            opacity: 0.5;
+            pointer-events: auto;
+        }
+        .hnav a.active {
+            position: absolute;
+            transition: left 1s ease;
+
+            left: calc(113px + 0.3rem);
+        }
+        .hnav:hover a.active {
+            left: initial;
+            position: relative;
+            opacity: 1;
+            pointer-events: auto;
+            transition: right 0.5s ease;
+        }
+        
+
+.content {
+    grid-column: 4 / 5; /* Place in the last column */
+    padding-left: 4vw;
+    padding-top: 1.2vh;
+    margin: 30px;
+
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+    .content.hidden {
+        opacity: 0;
+    }
+
+.box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    border: 2px solid #3395FF;
+    /* padding: 20px; */
+    /* margin: 20px; */
+    width: 73vw;
+    height: 52vh;
+    background-color: #f9f9f9; /* Background color of the box */
+    position: relative;
+}
+    .box #blueline {
+        border-top: 2px solid #3395FF;
+        width: 622px;
+        margin-top: 3px;
+    }
+    .box h2 {
+        margin: 0px;
+        font-size: 150px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: .65;
+    }
+    .box #helloTitle {
+        margin-left: 10px;
+    }
+    .box #description {
+        width: 350px;
+        height: 70px;
+        text-align: right;
+
+        margin-left: 268px;
+    }
+
+.corner-box {
+    position: absolute;
+    width: 15px; /* Width of the corner box */
+    height: 15px; /* Height of the corner box */
+    border: 2px solid #3395FF;
+    background: #FFF;
+}
+    .corner-box.top-left {
+        top: -8px;
+        left: -8px;
+    }
+    .corner-box.bottom-left {
+        top: calc(52vh - 8px);
+        left: -8px;
+    }
+    .corner-box.top-right {
+        top: -8px;
+        left: calc(73vw - 8px);
+    }
+    .corner-box.bottom-right {
+        top: calc(52vh - 8px);
+        left: calc(73vw - 8px);
+    }

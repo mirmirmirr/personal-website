@@ -6,7 +6,7 @@ export default function ResizableBox({ defaultWidth, defaultHeight, children }) 
     <Rnd
       default={{
         x: 100,
-        y: 100,
+        y: 50,
         width: defaultWidth,
         height: defaultHeight,
       }}

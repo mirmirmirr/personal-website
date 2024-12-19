@@ -5,7 +5,7 @@ import linkedinIcon from '../assets/linkedin.png';
 
 export default function Header() {
   return (
-    <div className="m-[30px]">
+    <div className="m-[30px] h-[5vh]">
       <div className="w-[663px] h-[5vh] absolute rounded-[10px] border border-black flex items-center px-4">
         <div className="text-black text-[15px] font-normal font-['Poppins'] space-x-2">
           <Link to="/" className="hover:underline">Miranda Zheng</Link> /

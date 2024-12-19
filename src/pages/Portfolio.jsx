@@ -4,9 +4,7 @@ import Header from "../resources/Header";
 
 export default function Portfolio() {
   return (
-    <div className="flex flex-col">
-        {/* <Header /> */}
-        <h1 className="text-3xl font-bold mb-6">React Stack Grid Example</h1>
+    <div className="flex flex-col m-8 mt-0">
         <MasonryExample />
     </div>
   );

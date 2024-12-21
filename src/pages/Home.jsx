@@ -4,11 +4,13 @@ import ResizableBox from "../resources/ResizeableBox";
 export default function Landing() {
   return (
     <div className="w-screen h-screen overflow-hidden">
-      <ResizableBox defaultWidth={1000} defaultHeight={400}>
+      <ResizableBox defaultWidth={1000} defaultHeight={400} x={100} y={50}>
+        <div className="p-4 flex flex-col items-start justify-center">
           <div className="text-black text-xl font-normal mt-4 -mb-[30px] ml-2">
-              hello! my name is
-          </div>
-          <div className="text-black text-[8vw] font-normal underline decoration-[#3395ff] decoration-2">Miranda</div>
+                hello! my name is
+            </div>
+            <div className="text-black text-[8vw] font-normal underline decoration-[#3395ff] decoration-2">Miranda</div>
+        </div>
       </ResizableBox>
 
       <img className="w-[661px] h-[667px] left-[55vw] top-[20vh] absolute" src={mirandaImage} />

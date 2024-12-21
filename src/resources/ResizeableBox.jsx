@@ -1,12 +1,12 @@
 import React from "react";
 import { Rnd } from "react-rnd";
 
-export default function ResizableBox({ defaultWidth, defaultHeight, children }) {
+export default function ResizableBox({ defaultWidth, defaultHeight, x, y, children }) {
   return (
     <Rnd
       default={{
-        x: 100,
-        y: 50,
+        x: x,
+        y: y,
         width: defaultWidth,
         height: defaultHeight,
       }}
@@ -18,7 +18,7 @@ export default function ResizableBox({ defaultWidth, defaultHeight, children }) 
         position: "relative",
       }}
     >
-    <div className="p-4 flex flex-col items-start justify-center">{children}</div>
+    <div>{children}</div>
 
       {/* Add draggable corners */}
       <div className="absolute w-[15px] h-[15px] bg-white border-2 border-[#3395ff]" style={{ top: -8, left: -8 }}></div>

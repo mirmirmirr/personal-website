@@ -1,9 +1,9 @@
 [
      {
         "experiences": [
-        { "id": 1, "title": "Software Engineer Intern", "company": "Lockheed Martin", "duration": "May 2024 - August 2024" },
-        { "id": 2, "title": "Data Analyst", "company": "Johnson & Johnson", "duration": "September 2024 - December 2024" },
-        { "id": 3, "title": "Researcher", "company": "NASA", "duration": "January 2024 - May 2024" }
+        { "id": 1, "title": "Software Engineer Intern", "company": "Lockheed Martin", "duration": "May 2024 - August 2024", "images": [ "src/assets/logos/lockheed.png" ], "bgColor": "lockheedBlue", "description": "Worked on the Software team supporting the MK41 Vertical Launch Systems (VLS) and collaborated with a team to design tracking algorithms for a search radar system."},
+        { "id": 2, "title": "Data Analyst", "company": "Johnson & Johnson", "duration": "September 2024 - December 2024", "images": [ "src/assets/logos/jj.png" ], "bgColor": "jjRed", "description": "Standardized data across 18 Johnson & Johnson sites using a centralized database to improve GMP compliance and Product Quality Review analytics. Created interactive dashboards in Excel and Looker Studio, streamlining global manufacturing processes. This was a part of a term project."},
+        { "id": 3, "title": "Student Researcher", "company": "NASA", "duration": "January 2024 - May 2024", "images": [ "src/assets/logos/nasa.png", "src/assets/logos/research.png"], "description": "Worked on processing video data from heat pipe experiments that were run on the ISS. Researched machine learning methods to more clearly render flow boiling images, testing the use of the skimage library and a Mask R-CNN on datasets."  }
       ],
     
          "projects": [

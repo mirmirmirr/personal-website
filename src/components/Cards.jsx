@@ -54,10 +54,13 @@ export function GroupCard({ groupName, isSelected: initialSelected, onGroupSelec
   ); 
 }
 
-export function ExperienceCard( {title, company, stack, duration, description, isSelected: initialSelected, onCardSelect} ) {
+export function ExperienceCard( {items, isSelected: initialSelected, onCardSelect} ) {
   const [isSelected, setIsSelected] = useState(initialSelected);
-  const [size, setSize] = useState({ width: "30vw", height: "20vh" });
+  const [showDescription, setShowDescription] = useState(false);
+
   const cardRef = useRef(null);
+
+  const { title, company, stack, duration, description, images = [], bgColor } = items;
 
   useEffect(() => {
     const handleOutsideClick = (e) => {
@@ -72,6 +75,17 @@ export function ExperienceCard( {title, company, stack, duration, description, i
     };
   }, []);
 
+  useEffect(() => {
+    if (isSelected) {
+      const timer = setTimeout(() => {
+        setShowDescription(true);
+      }, 300);
+      return () => clearTimeout(timer);
+    } else {
+      setShowDescription(false);
+    }
+  }, [isSelected]);
+
   const handleCardClick = () => {
     setIsSelected(true);
     if (onCardSelect) onCardSelect();
@@ -79,7 +93,7 @@ export function ExperienceCard( {title, company, stack, duration, description, i
 
   return (
     <div  ref={cardRef} onClick={handleCardClick} 
-          className={`relative flex flex-col items-center h-[20vh] justify-center transition-all duration-300 ${
+          className={`relative flex flex-col items-center h-[200px] justify-center transition-all duration-300 ${
         isSelected ? "flex-[4]" : "flex-[1]"
       }`}
 >
@@ -97,14 +111,25 @@ export function ExperienceCard( {title, company, stack, duration, description, i
       }} 
     >
      <div 
-      className={`border-2 p-4 rounded-[15px] bg-gray ${isSelected ? "" : "hover:border-[#3395ff]"}`}
+      className={`flex flex-row gap-8 border-2 p-4 rounded-[15px] ${isSelected ? "" : `hover:border-[#3395ff] hover:bg-${bgColor} hover:bg-opacity-40 hover:text-${bgColor}`}`}
       style={{ width: "100%", height: "100%"}}
-> 
+    >  
+      <div className="w-[100%]">
+        <div className="flex mb-2">
+          {images.map((image, index) => (
+              <img key={index} src={image} alt={`${title} logo ${index}`} className="w-16 h-auto object-contain"/>
+            ))}
+        </div>
         <div>{title}</div>
         <div className="font-[600] text-[14px]">{company}</div>
         <div className="text-[14px]">{stack}</div>
         <div className="text-[14px]">{duration}</div>
       </div>
+
+      {showDescription && (
+        <div>{description}</div>
+      )}
+    </div>
       
       {isSelected && (
         <>

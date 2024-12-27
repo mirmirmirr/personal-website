@@ -18,10 +18,7 @@ export default function Projects() {
       {items.map((item) => (
         <ExperienceCard
           key={item.id}
-          title={item.title}
-          company={item.company}
-          stack={item.stack}
-          duration={item.duration}
+          items={item}
           isSelected={selectedCard === item.id}
           onCardSelect={() => handleCardSelect(item.id)}
         />

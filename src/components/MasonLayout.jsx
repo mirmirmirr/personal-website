@@ -2,11 +2,7 @@ import React from 'react';
 import Masonry from 'react-masonry-css';
 import { ImageCard } from './Cards';
 
-import items from "../resources/portfolio.json";
-
-export default function MasonLayout() {
-  const allPieces = items[0].all;
-  // console.log(allPieces)
+export default function MasonLayout({ items }) {
 
   const calculateBreakpoints = () => {
     const screenWidth = window.innerWidth;
@@ -31,7 +27,7 @@ export default function MasonLayout() {
       className="my-masonry-grid"
       columnClassName="my-masonry-grid_column"
     >
-      {allPieces.map((item, index) => (
+      {items.map((item, index) => (
         <div key={index} className="bg-gray-200 p-4 rounded shadow-md">
           <ImageCard key={index} imageSrc={item.src} title={item.title} />
         </div>

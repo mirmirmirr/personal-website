@@ -14,10 +14,42 @@ export function ImageCard({ imageSrc, title}) {
   );
 };
 
-export function GroupCard( {groupName} ) {
+export function GroupCard({ groupName, isSelected: initialSelected, onGroupSelect}) {
+  const [isSelected, setIsSelected] = useState(initialSelected);
+  const cardRef = useRef(null);
+
+  useEffect(() => {
+    const handleOutsideClick = (e) => {
+      if (cardRef.current && !cardRef.current.contains(e.target)) {
+        setIsSelected(false);
+      }
+    };
+
+    document.addEventListener("click", handleOutsideClick);
+    return () => {
+      document.removeEventListener("click", handleOutsideClick);
+    };
+  }, []);
+
+  const handleGroupSelect = () => {
+    setIsSelected(true);
+    if (onGroupSelect) onGroupSelect();
+  };
+
   return (
-    <div className="bg-gray-200 w-[250px] p-4 rounded-[15px] "> 
-      {groupName}
+    <div ref={cardRef} className={`relative flex transition-all duration-300 ${isSelected ? "border-2 border-[#3395ff] flex-[4]" : "flex-[1]"}`} onClick={handleGroupSelect}>
+      <div className={`bg-gray-200 w-[100%] p-4 rounded-[15px] border-2 ${isSelected ? "" : "hover:border-[#3395ff]"}`}>
+        {groupName}
+      </div>
+
+      {isSelected && (
+        <>
+            <div className="absolute w-[15px] h-[15px] bg-white border-2 border-[#3395ff]" style={{ top: -8, left: -8 }}></div>
+            <div className="absolute w-[15px] h-[15px] bg-white border-2 border-[#3395ff]" style={{ top: -8, right: -8 }}></div>
+            <div className="absolute w-[15px] h-[15px] bg-white border-2 border-[#3395ff]" style={{ bottom: -8, left: -8 }}></div>
+            <div className="absolute w-[15px] h-[15px] bg-white border-2 border-[#3395ff]" style={{ bottom: -8, right: -8 }}></div>   
+            </>   
+      )}
     </div>
   ); 
 }
@@ -65,7 +97,7 @@ export function ExperienceCard( {title, company, stack, duration, description, i
       }} 
     >
      <div 
-      className={`border-2 p-4 rounded-[15px] bg-gray-200 ${isSelected ? "" : "hover:border-[#3395ff]"}`}
+      className={`border-2 p-4 rounded-[15px] bg-gray ${isSelected ? "" : "hover:border-[#3395ff]"}`}
       style={{ width: "100%", height: "100%"}}
 > 
         <div>{title}</div>

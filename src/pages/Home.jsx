@@ -1,5 +1,5 @@
 import mirandaImage from '../assets/miranda.png';
-import ResizableBox from "../resources/ResizeableBox";
+import ResizableBox from "../components/ResizeableBox";
 
 export default function Landing() {
   return (

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import MasonLayout from "../resources/MasonLayout";
-import { GroupCard } from "../resources/Cards"
+import MasonLayout from "../components/MasonLayout";
+import { GroupCard } from "../components/Cards"
 
 export default function Portfolio() {
   return (

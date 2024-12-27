@@ -1,0 +1,12 @@
+[
+	{ "all": 
+		[
+			{ "src": "src/assets/images/Bread16.jpg", "title": "Bread16" },
+			{ "src": "src/assets/images/cookiesOfFortune.jpg", "title": "Cookies of Fortune"},
+			{ "src": "src/assets/images/pursuitOfHappiness.jpg", "title": "Pursuit of Happiness" },
+			{ "src": "src/assets/images/rescuedBa-Na-Nas.jpg", "title": "Rescused Ba Na Nas" },
+			{ "src": "src/assets/images/onlyPickFive.png", "title": "only pick 5"},
+			{ "src": "src/assets/images/Use_35_Carrots.jpg", "title": "Use's 35 Carrots"}
+		]
+	}
+]

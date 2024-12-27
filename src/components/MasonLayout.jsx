@@ -2,20 +2,11 @@ import React from 'react';
 import Masonry from 'react-masonry-css';
 import { ImageCard } from './Cards';
 
-import Bread16 from '../assets/images/Bread16.jpg';
-import cookiesofFortune from "../assets/images/cookiesOfFortune.jpg";
-import pursuitOfHappiness from "../assets/images/pursuitOfHappiness.jpg";
-import rescuedBananas from "../assets/images/rescuedBa-Na-Nas.jpg";
-import onlyPickFive from "../assets/images/onlyPickFive.png";
+import items from "../resources/portfolio.json";
 
 export default function MasonLayout() {
-  const items = [
-    { src: Bread16, title: "Bread16" },
-    { src: cookiesofFortune, title: "Cookies of Fortune"},
-    { src: pursuitOfHappiness, title: "Pursuit of Happiness" },
-    { src: rescuedBananas, title: "Rescused Ba Na Nas" },
-    { src: onlyPickFive, title: "only pick 5"},
-  ];
+  const allPieces = items[0].all;
+  // console.log(allPieces)
 
   const calculateBreakpoints = () => {
     const screenWidth = window.innerWidth;
@@ -40,7 +31,7 @@ export default function MasonLayout() {
       className="my-masonry-grid"
       columnClassName="my-masonry-grid_column"
     >
-      {items.map((item, index) => (
+      {allPieces.map((item, index) => (
         <div key={index} className="bg-gray-200 p-4 rounded shadow-md">
           <ImageCard key={index} imageSrc={item.src} title={item.title} />
         </div>

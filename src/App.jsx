@@ -4,7 +4,7 @@ import Portfolio from './pages/Portfolio.jsx';
 import Projects from './pages/Projects.jsx';
 import About from './pages/About.jsx';
 import Resume from './pages/Resume.jsx'; // Add Resume page
-import Header from './resources/Header.jsx';
+import Header from './components/Header.jsx';
 
 function App() {
   return (

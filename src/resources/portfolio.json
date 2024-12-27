@@ -2,11 +2,26 @@
 	{ "all": 
 		[
 			{ "src": "src/assets/images/Bread16.jpg", "title": "Bread16" },
-			{ "src": "src/assets/images/cookiesOfFortune.jpg", "title": "Cookies of Fortune"},
+			{ "src": "src/assets/images/cookiesOfFortune.jpg", "title": "Cookies of Fortune" },
 			{ "src": "src/assets/images/pursuitOfHappiness.jpg", "title": "Pursuit of Happiness" },
+			{ "src": "src/assets/images/sunsetTwilight.jpg", "title": "Sunset Twilight" },
 			{ "src": "src/assets/images/rescuedBa-Na-Nas.jpg", "title": "Rescused Ba Na Nas" },
-			{ "src": "src/assets/images/onlyPickFive.png", "title": "only pick 5"},
-			{ "src": "src/assets/images/Use_35_Carrots.jpg", "title": "Use's 35 Carrots"}
+			{ "src": "src/assets/images/onlyPickFive.png", "title": "only pick 5" },
+			{ "src": "src/assets/images/Use_35_Carrots.jpg", "title": "Use's 35 Carrots" },
+			{ "src": "src/assets/images/chickenWithChick.jpg", "title": "Chicken Wings" },
+			{ "src": "src/assets/images/fishing.png", "title": "fishing" },
+			{ "src": "src/assets/images/usesPlaying.jpg", "title": "Use's Playing" }
+
+		],
+	"logos" :
+		[
+			{ "src": "src/assets/images/logos/saseLogo.png", "title": "Society of Asian Scientists and Engineers 2022-23" },
+			{ "src": "src/assets/images/logos/carpiLogo.png", "title": "CARPI" },
+			{ "src": "src/assets/images/logos/palHaul.png", "title": "Pal Haul" },
+			{ "src": "src/assets/images/logos/casa.png", "title": "CASA" },
+			{ "src": "src/assets/images/logos/ksa.PNG", "title": "KSA" },
+			{ "src": "src/assets/images/logos/NSU.png", "title": "NSU" },
+			{ "src": "src/assets/images/logos/pal.png", "title": "PAL" }
 		]
 	}
 ]

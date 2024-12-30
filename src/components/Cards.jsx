@@ -92,10 +92,7 @@ export function ExperienceCard( {type, items, isSelected: initialSelected, onCar
 
   return (
     <div  ref={cardRef} onClick={handleCardClick} 
-          className={`relative flex flex-col items-center h-[200px] justify-center transition-all duration-300 ${
-          isSelected ? "flex-[4]" : "flex-[1]"
-      }`}
->
+          className={`relative flex flex-col items-center h-[200px] justify-center transition-all duration-300`}>
       <Rnd       
         className={`relative ${isSelected ? "border-2 border-[#3395ff]" : ""}`}
         enableResizing={isSelected}

@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { Rnd } from "react-rnd";
+import { Link } from "react-router-dom";
 
 export function ImageCard({ imageSrc, title}) {
   return (
@@ -54,13 +55,11 @@ export function GroupCard({ groupName, isSelected: initialSelected, onGroupSelec
   ); 
 }
 
-export function ExperienceCard( {items, isSelected: initialSelected, onCardSelect} ) {
+export function ExperienceCard( {type, items, isSelected: initialSelected, onCardSelect} ) {
   const [isSelected, setIsSelected] = useState(initialSelected);
   const [showDescription, setShowDescription] = useState(false);
 
   const cardRef = useRef(null);
-
-  const { title, company, stack, duration, description, images = [], bgColor } = items;
 
   useEffect(() => {
     const handleOutsideClick = (e) => {
@@ -94,42 +93,29 @@ export function ExperienceCard( {items, isSelected: initialSelected, onCardSelec
   return (
     <div  ref={cardRef} onClick={handleCardClick} 
           className={`relative flex flex-col items-center h-[200px] justify-center transition-all duration-300 ${
-        isSelected ? "flex-[4]" : "flex-[1]"
+          isSelected ? "flex-[4]" : "flex-[1]"
       }`}
 >
       <Rnd       
-      className={`relative ${isSelected ? "border-2 border-[#3395ff]" : ""}`}
-      enableResizing={isSelected}
-      disableDragging={true}
+        className={`relative ${isSelected ? "border-2 border-[#3395ff]" : ""}`}
+        enableResizing={isSelected}
+        disableDragging={true}
 
-      style={{ width: "100%", height: "100%" }}
-      size={{ width: "100%", height: "100%" }}
+        style={{ width: "100%", height: "100%" }}
+        size={{ width: "100%", height: "100%" }}
 
-      // size={{ width: size.width, height: size.height }}
-      onResizeStop={(e, direction, ref) => {
-        setSize({ width: ref.style.width, height: ref.style.height });
-      }} 
-    >
-     <div 
-      className={`flex flex-row gap-8 border-2 p-4 rounded-[15px] ${isSelected ? "" : `hover:border-[#3395ff] hover:bg-${bgColor} hover:bg-opacity-40 hover:text-${bgColor}`}`}
-      style={{ width: "100%", height: "100%"}}
-    >  
-      <div className="w-[100%]">
-        <div className="flex mb-2">
-          {images.map((image, index) => (
-              <img key={index} src={image} alt={`${title} logo ${index}`} className="w-16 h-auto object-contain"/>
-            ))}
-        </div>
-        <div>{title}</div>
-        <div className="font-[600] text-[14px]">{company}</div>
-        <div className="text-[14px]">{stack}</div>
-        <div className="text-[14px]">{duration}</div>
-      </div>
-
-      {showDescription && (
-        <div>{description}</div>
+        onResizeStop={(e, direction, ref) => {
+          setSize({ width: ref.style.width, height: ref.style.height });
+        }} 
+      >
+      
+      {type === "experience" && (
+        <WorkDetails items={items} isSelected={isSelected} showDescription={showDescription}/>
       )}
-    </div>
+
+      {type === "project" && (
+        <ProjectDetails items={items} isSelected={isSelected} showDescription={showDescription}/>
+      )}
       
       {isSelected && (
         <>
@@ -141,6 +127,69 @@ export function ExperienceCard( {items, isSelected: initialSelected, onCardSelec
       )}
     </Rnd> 
 
-    </div>
+    </div> 
   ); 
+}
+
+function WorkDetails({ items, isSelected, showDescription }) {
+  const { title, company, duration, description, images = [], bgColor } = items;
+
+  return (
+    <div
+      className={`flex flex-row gap-8 border-2 p-4 rounded-[15px] ${
+        isSelected ? "" : `hover:border-[#3395ff] hover:bg-${bgColor} hover:bg-opacity-40 hover:text-${bgColor}`
+      }`}
+      style={{ width: "100%", height: "100%" }}
+    >
+      <div className="w-[100%]">
+        <div className="flex mb-2">
+          {images.map((image, index) => (
+            <img key={index} src={image} alt={`${title} logo ${index}`} className="w-16 h-auto object-contain" />
+          ))}
+        </div>
+        <div>{title}</div>
+        <div className="font-[600] text-[14px]">{company}</div>
+        <div className="text-[14px]">{duration}</div>
+      </div>
+      {showDescription && (
+        <div className="text-[14px]">{description}</div>
+      )}
+    </div>
+  );
+}
+
+function ProjectDetails({ items, isSelected, showDescription }) {
+  const { title, stack, duration, description, images = [], github } = items;
+
+  return (
+    <div
+      className={`relative flex flex-row gap-8 border-2 p-4 rounded-[15px] ${
+        isSelected ? "" : `hover:border-[#3395ff]`
+      }`}
+      style={{ width: "100%", height: "100%" }}
+    >
+      <div className="w-[100%] items-end">
+        <div className="flex mb-2">
+          {images.map((image, index) => (
+            <img key={index} src={image} alt={`${title} logo ${index}`} className="w-16 h-auto object-contain" />
+          ))}
+        </div>
+        <div>{title}</div>
+        <div className="text-[14px]">{stack}</div>
+        <div className="text-[14px]">{duration}</div>
+        <Link to={github} target="_blank" 
+          rel="noopener noreferrer" 
+          className="text-[14px] underline hover:text-highlightBlue" 
+          onClick={(e) => e.stopPropagation()}
+        > 
+          Github
+        </Link>
+      </div>
+      {showDescription && (
+        <div className="w-[100%] text-[14px]">
+            {description}         
+        </div>
+      )}
+    </div>
+  );
 }

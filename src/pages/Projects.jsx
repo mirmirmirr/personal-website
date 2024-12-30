@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { ExperienceCard } from "../components/Cards"
+import { ExperienceCard } from "../components/Cards";
+import Masonry from 'react-masonry-css';
 import items from "../resources/projects.json";
 
 export default function Projects() {
@@ -14,14 +15,19 @@ export default function Projects() {
   };
 
   const renderCards = (items, type) => (
-    <div className="flex items-center justify-center gap-4 mb-[2vh] border-2 p-6">
-      {items.map((item) => (
+
+<div className="flex flex-wrap w-full border-2 p-6 gap-4 mb-4 relative">
+{items.map((item) => (
+      // <div key={item.id}>
+
         <ExperienceCard
           key={item.id}
+          type={type}
           items={item}
           isSelected={selectedCard === item.id}
           onCardSelect={() => handleCardSelect(item.id)}
         />
+      // </div>
       ))}
     </div>
   );

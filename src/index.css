@@ -15,6 +15,7 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+
 .my-masonry-grid {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -32,6 +33,9 @@
   background: none;
   box-shadow: none;
   border: none;
+
+  flex-grow: unset;
+  width: auto;
   /* margin-bottom: 10px; */
 }
 

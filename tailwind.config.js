@@ -15,6 +15,10 @@ export default {
         savoryblue: '#6369D1',
         violetblue: '4357ad'
       },
+      flex: {
+        1: '1',
+        4: '4',
+      },
     },
   },
   plugins: [],

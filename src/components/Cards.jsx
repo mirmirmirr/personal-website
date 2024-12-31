@@ -100,13 +100,12 @@ export function ExperienceCard( {type, items, isSelected: initialSelected, onCar
         enableResizing={isSelected}
         disableDragging={true}
 
-        style={{ width: "100%", height: "100%" }}
+        size={{ width: "100%", height: "100%" }}
 
         onResizeStop={(e, direction, ref) => {
           setSize({ width: ref.style.width, height: ref.style.height });
         }} 
       >
-      
         {type === "experience" && (
           <WorkDetails items={items} isSelected={isSelected} showDescription={showDescription}/>
         )}

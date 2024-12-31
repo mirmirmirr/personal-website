@@ -91,39 +91,39 @@ export function ExperienceCard( {type, items, isSelected: initialSelected, onCar
   };
 
   return (
-    <div  ref={cardRef} onClick={handleCardClick} 
-          className={`relative flex flex-col items-center h-[200px] justify-center transition-all duration-300`}>
+    <div  
+      ref={cardRef} onClick={handleCardClick} 
+      className={`relative flex flex-col items-center h-[200px] justify-center transition-all duration-300`}
+    >
       <Rnd       
         className={`relative ${isSelected ? "border-2 border-[#3395ff]" : ""}`}
         enableResizing={isSelected}
         disableDragging={true}
 
         style={{ width: "100%", height: "100%" }}
-        size={{ width: "100%", height: "100%" }}
 
         onResizeStop={(e, direction, ref) => {
           setSize({ width: ref.style.width, height: ref.style.height });
         }} 
       >
       
-      {type === "experience" && (
-        <WorkDetails items={items} isSelected={isSelected} showDescription={showDescription}/>
-      )}
+        {type === "experience" && (
+          <WorkDetails items={items} isSelected={isSelected} showDescription={showDescription}/>
+        )}
 
-      {type === "project" && (
-        <ProjectDetails items={items} isSelected={isSelected} showDescription={showDescription}/>
-      )}
-      
-      {isSelected && (
-        <>
+        {type === "project" && (
+          <ProjectDetails items={items} isSelected={isSelected} showDescription={showDescription}/>
+        )}
+        
+        {isSelected && (
+          <>
             <div className="absolute w-[15px] h-[15px] bg-white border-2 border-[#3395ff]" style={{ top: -8, left: -8 }}></div>
             <div className="absolute w-[15px] h-[15px] bg-white border-2 border-[#3395ff]" style={{ top: -8, right: -8 }}></div>
             <div className="absolute w-[15px] h-[15px] bg-white border-2 border-[#3395ff]" style={{ bottom: -8, left: -8 }}></div>
             <div className="absolute w-[15px] h-[15px] bg-white border-2 border-[#3395ff]" style={{ bottom: -8, right: -8 }}></div>   
-            </>   
-      )}
-    </Rnd> 
-
+          </>   
+        )}
+      </Rnd> 
     </div> 
   ); 
 }
@@ -174,7 +174,8 @@ function ProjectDetails({ items, isSelected, showDescription }) {
         <div>{title}</div>
         <div className="text-[14px]">{stack}</div>
         <div className="text-[14px]">{duration}</div>
-        <Link to={github} target="_blank" 
+        <Link 
+          to={github} target="_blank" 
           rel="noopener noreferrer" 
           className="text-[14px] underline hover:text-highlightBlue" 
           onClick={(e) => e.stopPropagation()}

@@ -148,7 +148,7 @@ function WorkDetails({ items, isSelected, showDescription }) {
         <div className="text-[14px]">{duration}</div>
       </div>
       {showDescription && (
-        <div className="text-[14px]">{description}</div>
+        <div className="w-[100%] text-[14px]">{description}</div>
       )}
     </div>
   );

@@ -132,8 +132,8 @@ function WorkDetails({ items, isSelected, showDescription }) {
 
   return (
     <div
-      className={`flex flex-row gap-8 border-2 p-4 rounded-[15px] ${
-        isSelected ? "" : `hover:border-[#3395ff] hover:bg-${bgColor} hover:bg-opacity-40 hover:text-${bgColor}`
+      className={`flex flex-row gap-8 p-4 rounded-[15px] ${
+        isSelected ? "" : `hover:border-2 hover:border-[#3395ff]`
       }`}
       style={{ width: "100%", height: "100%" }}
     >
@@ -143,8 +143,8 @@ function WorkDetails({ items, isSelected, showDescription }) {
             <img key={index} src={image} alt={`${title} logo ${index}`} className="w-16 h-auto object-contain" />
           ))}
         </div>
-        <div>{title}</div>
-        <div className="font-[600] text-[14px]">{company}</div>
+        <div>{company}</div>
+        <div className="font-[600] text-[14px]">{title}</div>
         <div className="text-[14px]">{duration}</div>
       </div>
       {showDescription && (
@@ -159,8 +159,8 @@ function ProjectDetails({ items, isSelected, showDescription }) {
 
   return (
     <div
-      className={`relative flex flex-row gap-8 border-2 p-4 rounded-[15px] ${
-        isSelected ? "" : `hover:border-[#3395ff]`
+      className={`relative flex flex-row gap-4 p-4 rounded-[15px] ${
+        isSelected ? "" : `hover:border-2 hover:border-[#3395ff]`
       }`}
       style={{ width: "100%", height: "100%" }}
     >
@@ -170,8 +170,7 @@ function ProjectDetails({ items, isSelected, showDescription }) {
             <img key={index} src={image} alt={`${title} logo ${index}`} className="w-16 h-auto object-contain" />
           ))}
         </div>
-        <div>{title}</div>
-        <div className="text-[14px]">{stack}</div>
+        <div className="font-[600]">{title}</div>
         <div className="text-[14px]">{duration}</div>
         <Link 
           to={github} target="_blank" 
@@ -181,6 +180,11 @@ function ProjectDetails({ items, isSelected, showDescription }) {
         > 
           Github
         </Link>
+        <div className="flex flex-row flex-wrap gap-2 mt-4">
+          {stack.map((tech, index) => (
+            <div className="text-[12px] p-[5px] rounded-lg bg-gray-200">{tech}</div>
+          ))}
+        </div>
       </div>
       {showDescription && (
         <div className="w-[100%] text-[14px]">

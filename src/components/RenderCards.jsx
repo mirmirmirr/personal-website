@@ -1,7 +1,7 @@
 import { useRef, useState, useEffect } from "react";
 import { ExperienceCard } from "../components/Cards";
 
-export default function RenderCards({items, type}) {
+export default function RenderCards({ items, type }) {
   const [selectedCard, setSelectedCard] = useState(null);
 
   const cardsRef = useRef(null);

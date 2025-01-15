@@ -9,46 +9,47 @@ export function ImageCard({ imageSrc, title}) {
         src={imageSrc}
         alt={title}
         className="rounded-[15px]"
+        loading="lazy"
       />
       <div className="m-[10px] font-[500]">{title}</div>
     </div>
   );
 };
 
-export function GroupCard({ groupName, isSelected: initialSelected, onGroupSelect}) {
-  const [isSelected, setIsSelected] = useState(initialSelected);
+export function GroupCard({ groupName, isSelected, onGroupSelect}) {
+  // const [isSelected, setIsSelected] = useState(initialSelected);
   const cardRef = useRef(null);
 
-  useEffect(() => {
-    const handleOutsideClick = (e) => {
-      if (cardRef.current && !cardRef.current.contains(e.target)) {
-        setIsSelected(false);
-      }
-    };
+  // useEffect(() => {
+  //   const handleOutsideClick = (e) => {
+  //     if (cardRef.current && !cardRef.current.contains(e.target)) {
+  //       setIsSelected(false);
+  //     }
+  //   };
 
-    document.addEventListener("click", handleOutsideClick);
-    return () => {
-      document.removeEventListener("click", handleOutsideClick);
-    };
-  }, []);
+  //   document.addEventListener("click", handleOutsideClick);
+  //   return () => {
+  //     document.removeEventListener("click", handleOutsideClick);
+  //   };
+  // }, []);
 
   const handleGroupSelect = () => {
-    setIsSelected(true);
+    // setIsSelected(true);
     if (onGroupSelect) onGroupSelect();
   };
 
   return (
-    <div ref={cardRef} className={`relative flex transition-all duration-300 ${isSelected ? "border-2 border-[#3395ff] flex-[4]" : "flex-[1]"}`} onClick={handleGroupSelect}>
-      <div className={`bg-gray-200 w-[100%] p-4 rounded-[15px] border-2 ${isSelected ? "" : "hover:border-[#3395ff]"}`}>
+    <div ref={cardRef} className={`relative flex ${isSelected ? "border-2 border-[#3395ff]" : ""}`} onClick={handleGroupSelect}>
+      <div className={`w-[100%] p-4 rounded-[20px] text-[14px] border-2 ${isSelected ? "" : "hover:border-[#3395ff]"}`}>
         {groupName}
       </div>
 
       {isSelected && (
         <>
-            <div className="absolute w-[15px] h-[15px] bg-white border-2 border-[#3395ff]" style={{ top: -8, left: -8 }}></div>
-            <div className="absolute w-[15px] h-[15px] bg-white border-2 border-[#3395ff]" style={{ top: -8, right: -8 }}></div>
-            <div className="absolute w-[15px] h-[15px] bg-white border-2 border-[#3395ff]" style={{ bottom: -8, left: -8 }}></div>
-            <div className="absolute w-[15px] h-[15px] bg-white border-2 border-[#3395ff]" style={{ bottom: -8, right: -8 }}></div>   
+            <div className="absolute w-[15px] h-[15px] bg-backgroundLight dark:bg-backgroundDark border-2 border-[#3395ff]" style={{ top: -8, left: -8 }}></div>
+            <div className="absolute w-[15px] h-[15px] bg-backgroundLight dark:bg-backgroundDark border-2 border-[#3395ff]" style={{ top: -8, right: -8 }}></div>
+            <div className="absolute w-[15px] h-[15px] bg-backgroundLight dark:bg-backgroundDark border-2 border-[#3395ff]" style={{ bottom: -8, left: -8 }}></div>
+            <div className="absolute w-[15px] h-[15px] bg-backgroundLight dark:bg-backgroundDark border-2 border-[#3395ff]" style={{ bottom: -8, right: -8 }}></div>   
             </>   
       )}
     </div>

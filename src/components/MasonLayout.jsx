@@ -1,9 +1,9 @@
 import React from 'react';
 import Masonry from 'react-masonry-css';
 import { ImageCard } from './Cards';
+import { useState, useEffect } from 'react';
 
-export default function MasonLayout({ items }) {
-
+const MasonLayout = React.memo(({ items }) => {
   const calculateBreakpoints = () => {
     const screenWidth = window.innerWidth;
 
@@ -18,8 +18,14 @@ export default function MasonLayout({ items }) {
     };
   };
 
-  // Get the calculated breakpoints
-  const breakpointCols = calculateBreakpoints();
+  const [breakpointCols, setBreakpointCols] = useState(calculateBreakpoints());
+
+  useEffect(() => {
+    const handleResize = () => setBreakpointCols(calculateBreakpoints());
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   return (
     <Masonry
@@ -34,4 +40,6 @@ export default function MasonLayout({ items }) {
       ))}
     </Masonry>
   );
-}
+});
+
+export default MasonLayout;

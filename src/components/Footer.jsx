@@ -1,6 +1,6 @@
 import useTheme from './useTheme';
 import { Link } from 'react-router-dom'; // Correct import for Router
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 import homeWhite from '../assets/icons/home.svg';
 import githubIcon from '../assets/icons/github.svg';
@@ -18,7 +18,7 @@ export default function Footer() {
     <div className='flex justify-center sticky bottom-[50px] z-50'>
       <div className="bg-backgroundLight dark:bg-backgroundDark border-2 shadow-md shadow-blue-200 dark:shadow-highlightBlue rounded-[25px] p-2 gap-2 flex items-center hover:scale-110 transition-transform duration-300 ease-in-out">
         <LinkGroup iconSrc={homeWhite} alt="Home" link="/" />
-        <LinkGroup iconSrc={paperIcon} alt="Art" link="/projects" />
+        <LinkGroup iconSrc={paperIcon} alt="Art" link="/portfolio" />
         <div className="flex gap-2 border-l-2 border-r-2 pl-2 pr-2">
           <LinkGroup iconSrc={githubIcon} alt="GitHub" link="https://github.com/mirmirmirr" isExternal={true} />
           <LinkGroup iconSrc={linkedinIcon} alt="LinkedIn" link="https://www.linkedin.com/in/miranda-zheng-6b0895252/" isExternal={true} />

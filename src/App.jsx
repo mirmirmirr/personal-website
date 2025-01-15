@@ -10,7 +10,7 @@ import Footer from './components/Footer.jsx';
 function App() {
   return (
     <Router>
-      <div className='grid grid-cols-[1fr_1220px_1fr] p-4'>
+      <div className='grid grid-cols-[1fr_10fr_1fr] p-4'>
         {/* <Header /> */}
         <div className='col-start-2'>
           <Routes>

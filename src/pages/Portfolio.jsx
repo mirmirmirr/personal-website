@@ -11,16 +11,22 @@ export default function Portfolio() {
   const [chosenGroup, setChosenGroup] = useState("1");
 
   const handleGroupSelect = (id, groupName) => {
-    setChosenGroup((prev) => (prev === id ? null : id));
-    setActiveGroup(groupName);
+    if (chosenGroup !== id) {
+      setChosenGroup(id);
+      setActiveGroup(groupName);
+    }
   };
+  
+  if (!items || items.length === 0) {
+    return <div>Loading...</div>;
+  }  
 
   return (
     <div className="flex flex-col m-8 mt-0">
         <div className="flex flex-row items-center justify-center gap-4 mb-[2vh]">
             <GroupCard key="1" groupName="All Pieces" isSelected={chosenGroup === "1"} onGroupSelect={() => handleGroupSelect("1", allPieces)}/>
             <GroupCard key="2" groupName="Logos" isSelected={chosenGroup === "2"} onGroupSelect={() => handleGroupSelect("2", logos)} />
-            <GroupCard key="3" groupName="HackRPI" isSelected={chosenGroup === "3"}/>
+            {/* <GroupCard key="3" groupName="HackRPI" isSelected={chosenGroup === "3"}/> */}
         </div>
 
         <MasonLayout items={activeGroup}/>

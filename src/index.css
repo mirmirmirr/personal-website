@@ -15,6 +15,20 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+body {
+  @apply bg-backgroundLight text-foregroundLight;
+}
+
+body.dark {
+  @apply bg-backgroundDark text-foregroundDark;
+}
+
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+} */
 
 .my-masonry-grid {
   display: -webkit-box;

@@ -13,7 +13,11 @@ export default {
         jjRed: '#D71600',
         black: "#000000",
         savoryblue: '#6369D1',
-        violetblue: '4357ad'
+        violetblue: '4357ad',
+        backgroundLight: '#ffffff',
+        foregroundLight: '#222222',
+        backgroundDark: '#222222',
+        foregroundDark: '#ffffff',
       },
       flex: {
         1: '1',
@@ -22,4 +26,5 @@ export default {
     },
   },
   plugins: [],
+  darkMode: 'class',
 };

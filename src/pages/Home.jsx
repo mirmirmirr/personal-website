@@ -11,7 +11,7 @@ export default function Landing() {
             <div className="text-xl font-normal mt-4 -mb-[30px] ml-2">
               hello! my name is
             </div>
-            <div className="text-black text-[10vw] font-normal underline decoration-[#3395ff] decoration-2">Miranda</div>
+            <div className="text-[10vw] font-normal underline decoration-[#3395ff] decoration-2">Miranda</div>
           </div>
         </ResizableBox>
 

@@ -21,10 +21,10 @@ export default function ResizableBox({ defaultWidth, defaultHeight, x, y, childr
     <div>{children}</div>
 
       {/* Add draggable corners */}
-      <div className="absolute w-[15px] h-[15px] bg-white border-2 border-[#3395ff]" style={{ top: -8, left: -8 }}></div>
-      <div className="absolute w-[15px] h-[15px] bg-white border-2 border-[#3395ff]" style={{ top: -8, right: -8 }}></div>
-      <div className="absolute w-[15px] h-[15px] bg-white border-2 border-[#3395ff]" style={{ bottom: -8, left: -8 }}></div>
-      <div className="absolute w-[15px] h-[15px] bg-white border-2 border-[#3395ff]" style={{ bottom: -8, right: -8 }}></div>
+      <div className="absolute w-[15px] h-[15px] bg-backgroundLight dark:bg-backgroundDark border-2 border-[#3395ff]" style={{ top: -8, left: -8 }}></div>
+      <div className="absolute w-[15px] h-[15px] bg-backgroundLight dark:bg-backgroundDark border-2 border-[#3395ff]" style={{ top: -8, right: -8 }}></div>
+      <div className="absolute w-[15px] h-[15px] bg-backgroundLight dark:bg-backgroundDark border-2 border-[#3395ff]" style={{ bottom: -8, left: -8 }}></div>
+      <div className="absolute w-[15px] h-[15px] bg-backgroundLight dark:bg-backgroundDark border-2 border-[#3395ff]" style={{ bottom: -8, right: -8 }}></div>
     </Rnd>
   );
 }

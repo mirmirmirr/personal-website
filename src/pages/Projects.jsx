@@ -49,7 +49,7 @@ export default function Projects() {
   };
 
   return (
-    <div className="mt-8 mt-[0px]">
+    <div className="">
       <p className="text-[20px] font-[700] mb-2">WORK EXPERIENCE & RESEARCH</p>
       {renderCards(experiences, "experience")}
 

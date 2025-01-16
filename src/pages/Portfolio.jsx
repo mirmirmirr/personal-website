@@ -27,7 +27,7 @@ export default function Portfolio() {
   }  
 
   return (
-    <div className="flex flex-col m-8 min-h-screen">
+    <div className="flex flex-col min-h-screen">
         <div className="flex flex-row items-center justify-center gap-4 mb-[2vh]">
             <GroupCard key="1" groupName="All Pieces" isSelected={chosenGroup === "1"} onGroupSelect={() => handleGroupSelect("1", allPieces)}/>
             <GroupCard key="2" groupName="Logos" isSelected={chosenGroup === "2"} onGroupSelect={() => handleGroupSelect("2", logos)} />

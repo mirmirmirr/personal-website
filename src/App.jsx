@@ -10,9 +10,9 @@ import Footer from './components/Footer.jsx';
 function App() {
   return (
     <Router>
-      <div className="p-4 flex justify-center">
+      <div className="p-8 flex justify-center">
         {/* <Header /> */}
-        <div className='max-w-[1200px]'>
+        <div className='max-w-[1000px] w-[80vw]'>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/portfolio" element={<Portfolio />} />

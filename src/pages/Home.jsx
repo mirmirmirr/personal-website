@@ -6,25 +6,20 @@ import rightArrow from '../assets/icons/rightarrow.svg'
 
 export default function Landing() {
   return (
-    <div className=''>
-      {/* <div className='flex justify-center'> */}
-        <ResizableBox>
-            <div className="p-4 flex flex-col items-center md:items-start justify-center">
-              <div className="text-xl font-normal mt-4 -mb-[20px] md:-mb-[30px] ml-2">
-                hello! my name is
-              </div>
-              <div style={{ fontSize: 'clamp(40px, 10vw, 160px)' }} className="text-[10vw] max-text-[40px] font-normal underline decoration-[#3395ff] decoration-2">Miranda</div>
-              <img className="w-[90%] md:hidden mt-2" src={mirandaImage} />
-            </div>
-          </ResizableBox>
+    <>
+      <ResizableBox>
+        <div className="p-4 flex flex-col items-center md:items-start justify-center">
+          <div className="text-xl font-normal mt-4 -mb-[20px] md:-mb-[30px] ml-2">
+            hello! my name is
+          </div>
+          <div style={{ fontSize: 'clamp(40px, 10vw, 160px)' }} className="text-[10vw] max-text-[40px] font-normal underline decoration-[#3395ff] decoration-2">Miranda</div>
+          <img className="w-[90%] md:hidden mt-2" src={mirandaImage} />
+        </div>
+      </ResizableBox>
 
-      {/* </div> */}
-
-        <img className="hidden md:block max-w-[520px] w-[38%] left-[58%] top-[25%] z-10 absolute" src={mirandaImage} />
+      <img className="hidden md:block max-w-[520px] w-[38%] left-[58%] top-[25%] z-10 absolute" src={mirandaImage} />
 
       <div style={{ height: 'clamp(0px, 50vh, 500px)' }} className="hidden md:block overflow-hidden relative z-50">
-        {/* <img className="max-w-[520px] w-[38%] left-[58%] top-[25%] z-10 absolute" src={mirandaImage} /> */}
-
         <div className="w-[331px] h-[133px] top-[50%] absolute text-xl">
           i’m studying <span className="font-bold">computer science </span> and <span className="font-bold">information technology and web sciences </span>at Rensselaer Polytechnic Insititute
 
@@ -48,6 +43,6 @@ export default function Landing() {
 
       <Projects />
 
-    </div>
+    </>
   );
 }

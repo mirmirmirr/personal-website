@@ -24,10 +24,9 @@ export default function RenderCards({ items, type }) {
   };
 
   return (
-    <div ref={cardsRef} className="flex flex-wrap w-full mb-4 gap-4 relative">
+    <div ref={cardsRef} className="flex flex-col md:flex-row w-full mb-4 gap-4 relative">
       {items.map((item) => (
         <>
-
           <div className={`hidden md:block transition-all duration-300 h-[225px] ${selectedCard === item.id ? "w-[60%]" : selectedCard === null ? "w-[32%]" : "w-[18%]"}`}>
             <ExperienceCard
               key={item.id}

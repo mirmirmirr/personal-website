@@ -56,6 +56,44 @@ export function GroupCard({ groupName, isSelected, onGroupSelect}) {
   ); 
 }
 
+export function ExperienceCardSm({type, items, isSelected, onCardSelect}) {
+  return (
+    <div  
+      ref={cardRef} onClick={handleCardClick} 
+      className={`relative flex flex-col items-center h-[200px] justify-center transition-all duration-300`}
+    >
+      <Rnd       
+        className={`relative ${isSelected ? "border-2 border-[#3395ff]" : ""}`}
+        enableResizing={isSelected}
+        disableDragging={true}
+
+        size={{ width: "100%", height: "100%" }}
+
+        onResizeStop={(e, direction, ref) => {
+          setSize({ width: ref.style.width, height: ref.style.height });
+        }} 
+      >
+        {type === "experience" && (
+          <WorkDetails items={items} isSelected={isSelected} showDescription={showDescription}/>
+        )}
+
+        {type === "project" && (
+          <ProjectDetails items={items} isSelected={isSelected} showDescription={showDescription}/>
+        )}
+        
+        {isSelected && (
+          <>
+            <div className="absolute w-[15px] h-[15px] bg-white border-2 border-[#3395ff]" style={{ top: -8, left: -8 }}></div>
+            <div className="absolute w-[15px] h-[15px] bg-white border-2 border-[#3395ff]" style={{ top: -8, right: -8 }}></div>
+            <div className="absolute w-[15px] h-[15px] bg-white border-2 border-[#3395ff]" style={{ bottom: -8, left: -8 }}></div>
+            <div className="absolute w-[15px] h-[15px] bg-white border-2 border-[#3395ff]" style={{ bottom: -8, right: -8 }}></div>   
+          </>   
+        )}
+      </Rnd> 
+    </div> 
+  )
+}
+
 export function ExperienceCard( {type, items, isSelected: initialSelected, onCardSelect} ) {
   const [isSelected, setIsSelected] = useState(initialSelected);
   const [showDescription, setShowDescription] = useState(false);
@@ -87,14 +125,14 @@ export function ExperienceCard( {type, items, isSelected: initialSelected, onCar
   }, [isSelected]);
 
   const handleCardClick = () => {
-    setIsSelected(true);
+    setIsSelected(!isSelected);
     if (onCardSelect) onCardSelect();
   };
 
   return (
     <div  
       ref={cardRef} onClick={handleCardClick} 
-      className={`relative flex flex-col items-center h-[200px] justify-center transition-all duration-300`}
+      className={`relative flex flex-col items-center h-full justify-center transition-all duration-300`}
     >
       <Rnd       
         className={`relative ${isSelected ? "border-2 border-[#3395ff]" : ""}`}
@@ -133,7 +171,7 @@ function WorkDetails({ items, isSelected, showDescription }) {
 
   return (
     <div
-      className={`flex flex-row gap-8 p-4 rounded-[15px] ${
+      className={`flex flex-col md:flex-row gap-8 p-4 rounded-[15px] border-[2px] border-gray-300 ${
         isSelected ? "" : `hover:border-2 hover:border-[#3395ff]`
       }`}
       style={{ width: "100%", height: "100%" }}
@@ -160,7 +198,7 @@ function ProjectDetails({ items, isSelected, showDescription }) {
 
   return (
     <div
-      className={`relative flex flex-row gap-4 p-4 rounded-[15px] ${
+      className={`relative flex flex-col md:flex-row gap-4 p-4 rounded-[15px] border-[2px] border-gray-300 ${
         isSelected ? "" : `hover:border-2 hover:border-[#3395ff]`
       }`}
       style={{ width: "100%", height: "100%" }}
@@ -183,7 +221,7 @@ function ProjectDetails({ items, isSelected, showDescription }) {
         </Link>
         <div className="flex flex-row flex-wrap gap-2 mt-4">
           {stack.map((tech, index) => (
-            <div className="text-[12px] p-[5px] rounded-lg bg-gray-200">{tech}</div>
+            <div key={index} className="text-[12px] p-[5px] rounded-lg dark:text-black bg-gray-200">{tech}</div>
           ))}
         </div>
       </div>

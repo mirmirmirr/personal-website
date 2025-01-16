@@ -26,16 +26,28 @@ export default function RenderCards({ items, type }) {
   return (
     <div ref={cardsRef} className="flex flex-wrap w-full mb-4 gap-4 relative">
       {items.map((item) => (
-        <div key={item.id} className={`transition-all duration-300 ${selectedCard === item.id ? "w-[60%]" : selectedCard === null ? "w-[32%]" : "w-[18%]"}`}>
+        <>
 
-        <ExperienceCard
-          key={item.id}
-          type={type}
-          items={item}
-          isSelected={selectedCard === item.id}
-          onCardSelect={() => handleCardSelect(item.id)}
-        />
-        </div>
+          <div className={`hidden md:block transition-all duration-300 h-[200px] ${selectedCard === item.id ? "w-[60%]" : selectedCard === null ? "w-[32%]" : "w-[18%]"}`}>
+            <ExperienceCard
+              key={item.id}
+              type={type}
+              items={item}
+              isSelected={selectedCard === item.id}
+              onCardSelect={() => handleCardSelect(item.id)}
+            />
+          </div>
+
+          <div className={`md:hidden transition-all duration-300 w-full ${selectedCard === item.id ? "h-[400px]" : "h-[200px]"}`}>
+            <ExperienceCard
+              key={item.id}
+              type={type}
+              items={item}
+              isSelected={selectedCard === item.id}
+              onCardSelect={() => handleCardSelect(item.id)}
+            />
+          </div>
+        </>
       ))}
     </div>
   );

@@ -1,14 +1,17 @@
 import React from "react";
 import { Rnd } from "react-rnd";
 
-export default function ResizableBox({ defaultWidth, defaultHeight, x, y, children }) {
+export default function ResizableBox({ children }) {
+  const vw = window.innerWidth;
+  const vh = window.innerHeight;
+
   return (
     <Rnd
       default={{
-        x: x,
-        y: y,
-        width: defaultWidth,
-        height: defaultHeight,
+        x: -20,
+        y: vh * 0.1,
+        width: Math.min(vw * 0.8, 1000),
+        height: Math.min(vh * 0.5, 400),
       }}
       minWidth={50}
       minHeight={50}

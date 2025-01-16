@@ -12,7 +12,7 @@ function App() {
     <Router>
       <div className="p-4 flex justify-center">
         {/* <Header /> */}
-        <div className='max-w-[1200px] '>
+        <div className='max-w-[1200px]'>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/portfolio" element={<Portfolio />} />

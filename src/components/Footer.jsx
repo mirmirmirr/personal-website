@@ -8,7 +8,8 @@ import emailIcon from '../assets/icons/email.svg';
 import linkedinIcon from '../assets/icons/linkedin.svg';
 import sunIcon from '../assets/icons/sun.svg';
 import moonIcon from '../assets/icons/moon.svg';
-import paperIcon from '../assets/icons/paper.svg'
+import paperIcon from '../assets/icons/paper.svg';
+import faceIcon from '../assets/icons/face.svg';
 
 export default function Footer() {
   const { isDarkMode, toggleTheme } = useTheme();
@@ -19,6 +20,7 @@ export default function Footer() {
       <div className="bg-backgroundLight dark:bg-backgroundDark border-2 shadow-md shadow-blue-200 dark:shadow-highlightBlue rounded-[25px] p-2 gap-2 flex items-center hover:scale-110 transition-transform duration-300 ease-in-out">
         <LinkGroup iconSrc={homeWhite} alt="Home" link="/" />
         <LinkGroup iconSrc={paperIcon} alt="Art" link="/portfolio" />
+        <LinkGroup iconSrc={faceIcon} alt="About" link="/about" />
         <div className="flex gap-2 border-l-2 border-r-2 pl-2 pr-2">
           <LinkGroup iconSrc={githubIcon} alt="GitHub" link="https://github.com/mirmirmirr" isExternal={true} />
           <LinkGroup iconSrc={linkedinIcon} alt="LinkedIn" link="https://www.linkedin.com/in/miranda-zheng-6b0895252/" isExternal={true} />

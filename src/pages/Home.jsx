@@ -1,6 +1,8 @@
 import mirandaImage from '../assets/miranda.png';
 import ResizableBox from "../components/ResizeableBox";
 import Projects from './Projects';
+import { Link } from 'react-router-dom'; // Correct import for Router
+import rightArrow from '../assets/icons/rightarrow.svg'
 
 export default function Landing() {
   return (
@@ -20,11 +22,21 @@ export default function Landing() {
 
         <img className="hidden md:block max-w-[520px] w-[38%] left-[58%] top-[25%] z-10 absolute" src={mirandaImage} />
 
-      <div style={{ height: 'clamp(0px, 50vh, 500px)' }} className="hidden md:block overflow-hidden relative">
+      <div style={{ height: 'clamp(0px, 50vh, 500px)' }} className="hidden md:block overflow-hidden relative z-50">
         {/* <img className="max-w-[520px] w-[38%] left-[58%] top-[25%] z-10 absolute" src={mirandaImage} /> */}
 
         <div className="w-[331px] h-[133px] top-[50%] absolute text-xl">
-          i’m studying <span className="font-bold">computer science </span> and <span className="font-bold">information technology and web sciences </span>at Rensselaer Polytechnic Insititute.
+          i’m studying <span className="font-bold">computer science </span> and <span className="font-bold">information technology and web sciences </span>at Rensselaer Polytechnic Insititute
+
+          <Link to="/about" className='flex flex-row gap-2 text-highlightBlue hover:font-[600]'> 
+             more about me
+            <img
+              src={rightArrow}
+              className="w-[20px] h-[20px] fill-highlightBlue dark:invert transition-transform duration-300 group-hover:scale-110"
+              alt="right arrow"
+            />
+          </Link>
+
         </div>
       </div>
 

@@ -198,33 +198,36 @@ function ProjectDetails({ items, isSelected, showDescription }) {
 
   return (
     <div
-      className={`relative flex flex-col md:flex-row gap-4 p-4 rounded-[15px] border-[2px] border-gray-300 ${
+      className={`relative flex flex-col md:flex-row gap-4 p-4 rounded-[15px] border-[2px] border-gray-300 overflow-hidden ${
         isSelected ? "" : `hover:border-2 hover:border-[#3395ff]`
       }`}
       style={{ width: "100%", height: "100%" }}
     >
-      <div className="w-[100%] items-end">
-        <div className="flex mb-2">
-          {images.map((image, index) => (
-            <img key={index} src={image} alt={`${title} logo ${index}`} className="w-16 h-auto object-contain" />
-          ))}
+      <div className="flex flex-col w-[100%] group ">
+        <div className="w-[100%] items-end group-hover:scale-90 group-hover:-translate-y-2 transition-transform duration-300 ease-in-out">
+          <div className="font-[600]">{title}</div>
+          <div className="text-[14px]">{duration}</div>
+          <Link 
+            to={github} target="_blank" 
+            rel="noopener noreferrer" 
+            className="text-[14px] underline hover:text-highlightBlue" 
+            onClick={(e) => e.stopPropagation()}
+          > 
+            Github
+          </Link>
+          <div className="flex flex-row flex-wrap gap-2 mt-4">
+            {stack.map((tech, index) => (
+              <div key={index} className="text-[12px] p-[5px] rounded-lg bg-blue-100 dark:bg-highlightBlue">{tech}</div>
+            ))}
+          </div>
         </div>
-        <div className="font-[600]">{title}</div>
-        <div className="text-[14px]">{duration}</div>
-        <Link 
-          to={github} target="_blank" 
-          rel="noopener noreferrer" 
-          className="text-[14px] underline hover:text-highlightBlue" 
-          onClick={(e) => e.stopPropagation()}
-        > 
-          Github
-        </Link>
-        <div className="flex flex-row flex-wrap gap-2 mt-4">
-          {stack.map((tech, index) => (
-            <div key={index} className="text-[12px] p-[5px] rounded-lg bg-blue-100 dark:bg-highlightBlue">{tech}</div>
-          ))}
+
+        <div className="flex mt-8 mb-2">
+          <img src={images[0]} className="w-full md:w-[320px] h-auto rounded-[15px] object-contain group-hover:scale-110 group-hover:-translate-y-4 transition-transform duration-300 ease-in-out origin-bottom bottom-8" />
         </div>
+
       </div>
+
       {showDescription && (
         <div className="w-[100%] text-[14px]">
             {description}         

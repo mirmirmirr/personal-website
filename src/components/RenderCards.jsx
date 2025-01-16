@@ -28,7 +28,7 @@ export default function RenderCards({ items, type }) {
       {items.map((item) => (
         <>
 
-          <div className={`hidden md:block transition-all duration-300 h-[200px] ${selectedCard === item.id ? "w-[60%]" : selectedCard === null ? "w-[32%]" : "w-[18%]"}`}>
+          <div className={`hidden md:block transition-all duration-300 h-[225px] ${selectedCard === item.id ? "w-[60%]" : selectedCard === null ? "w-[32%]" : "w-[18%]"}`}>
             <ExperienceCard
               key={item.id}
               type={type}

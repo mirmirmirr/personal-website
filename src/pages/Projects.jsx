@@ -50,10 +50,10 @@ export default function Projects() {
 
   return (
     <div className="mt-8 mt-[0px]">
-      <p className="text-[20px] font-[700]">WORK EXPERIENCE & RESEARCH</p>
+      <p className="text-[20px] font-[700] mb-2">WORK EXPERIENCE & RESEARCH</p>
       {renderCards(experiences, "experience")}
 
-      <p className="text-[20px] font-[700]">PROJECTS</p>
+      <p className="text-[20px] font-[700] mb-2">PROJECTS</p>
       {renderCards(projects, "project")}
     </div>
   );

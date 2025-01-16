@@ -11,10 +11,10 @@ const MasonLayout = React.memo(({ items }) => {
     const columns = Math.floor(screenWidth / 300);
 
     return {
-      default: columns,
-      1100: Math.min(columns, Math.floor(1100 / 300)),
-      700: Math.min(columns, Math.floor(700 / 300)),
-      500: Math.min(columns, 1),
+      default: 4,
+      1100: Math.min(4, Math.floor(1100 / 300)),
+      700: Math.min(4, Math.floor(700 / 300)),
+      500: Math.min(1, 1),
     };
   };
 

@@ -221,7 +221,7 @@ function ProjectDetails({ items, isSelected, showDescription }) {
         </Link>
         <div className="flex flex-row flex-wrap gap-2 mt-4">
           {stack.map((tech, index) => (
-            <div key={index} className="text-[12px] p-[5px] rounded-lg dark:text-black bg-gray-200">{tech}</div>
+            <div key={index} className="text-[12px] p-[5px] rounded-lg bg-blue-100 dark:bg-highlightBlue">{tech}</div>
           ))}
         </div>
       </div>

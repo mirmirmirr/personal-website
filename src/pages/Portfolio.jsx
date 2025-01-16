@@ -9,11 +9,16 @@ export default function Portfolio() {
 
   const [activeGroup, setActiveGroup] = useState(allPieces);
   const [chosenGroup, setChosenGroup] = useState("1");
+  const [isTransitioning, setIsTransitioning] = useState(false);
 
   const handleGroupSelect = (id, groupName) => {
     if (chosenGroup !== id) {
-      setChosenGroup(id);
-      setActiveGroup(groupName);
+      setIsTransitioning(true); // Start transition
+      setTimeout(() => {
+        setChosenGroup(id);
+        setActiveGroup(groupName);
+        setIsTransitioning(false); // End transition
+      }, 300); // Match this duration with the Tailwind transition
     }
   };
   
@@ -22,14 +27,20 @@ export default function Portfolio() {
   }  
 
   return (
-    <div className="flex flex-col m-8 mt-0">
+    <div className="flex flex-col m-8 min-h-screen">
         <div className="flex flex-row items-center justify-center gap-4 mb-[2vh]">
             <GroupCard key="1" groupName="All Pieces" isSelected={chosenGroup === "1"} onGroupSelect={() => handleGroupSelect("1", allPieces)}/>
             <GroupCard key="2" groupName="Logos" isSelected={chosenGroup === "2"} onGroupSelect={() => handleGroupSelect("2", logos)} />
             {/* <GroupCard key="3" groupName="HackRPI" isSelected={chosenGroup === "3"}/> */}
         </div>
 
-        <MasonLayout items={activeGroup}/>
+        <div
+        className={`transition-opacity duration-700 ${
+          isTransitioning ? "opacity-0" : "opacity-100"
+        }`}
+      >
+        <MasonLayout items={activeGroup} />
+      </div>
     </div>
   );
 }

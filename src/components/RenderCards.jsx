@@ -37,7 +37,7 @@ export default function RenderCards({ items, type }) {
             />
           </div>
 
-          <div className={`md:hidden transition-all duration-300 w-full ${selectedCard === item.id ? "h-[400px]" : "h-[200px]"}`}>
+          <div className={`md:hidden transition-all duration-300 w-full ${selectedCard === item.id ? "h-[550px]" : "h-[200px]"}`}>
             <ExperienceCard
               key={item.id}
               type={type}

@@ -1,27 +1,25 @@
 [
 	{ "all": 
 		[
-			{ "src": "src/assets/images/Bread16.jpg", "title": "Bread16" },
-			{ "src": "src/assets/images/cookiesOfFortune.jpg", "title": "Cookies of Fortune" },
-			{ "src": "src/assets/images/pursuitOfHappiness.jpg", "title": "Pursuit of Happiness" },
-			{ "src": "src/assets/images/sunsetTwilight.jpg", "title": "Sunset Twilight" },
-			{ "src": "src/assets/images/rescuedBa-Na-Nas.jpg", "title": "Rescused Ba Na Nas" },
-			{ "src": "src/assets/images/onlyPickFive.jpg", "title": "only pick 5" },
-			{ "src": "src/assets/images/Use_35_Carrots.jpg", "title": "Use's 35 Carrots" },
-			{ "src": "src/assets/images/chickenWithChick.jpg", "title": "Chicken Wings" },
-			{ "src": "src/assets/images/fishing.jpg", "title": "fishing" },
-			{ "src": "src/assets/images/usesPlaying.jpg", "title": "Use's Playing" }
-
+			{ "src": "/Bread16.jpeg", "title": "Bread16" },
+			{ "src": "/cookiesOfFortune.jpeg", "title": "Cookies of Fortune" },
+			{ "src": "/pursuitOfHappiness.jpeg", "title": "Pursuit of Happiness" },
+			{ "src": "/sunsetTwilight.jpeg", "title": "Sunset Twilight" },
+			{ "src": "/rescuedBa-Na-Nas.jpeg", "title": "Rescused Ba Na Nas" },
+			{ "src": "/onlyPickFive.jpeg", "title": "only pick 5" },
+			{ "src": "/Use_35_Carrots.jpeg", "title": "Use's 35 Carrots" },
+			{ "src": "/chickenWithChick.jpeg", "title": "Chicken Wings" },
+			{ "src": "/fishing.jpeg", "title": "fishing" }
 		],
 	"logos" :
 		[
-			{ "src": "src/assets/images/logos/saseLogo.png", "title": "Society of Asian Scientists and Engineers (SASE)" },
-			{ "src": "src/assets/images/logos/carpiLogo.png", "title": "Cool Academic RPI Bot (CARPI)" },
-			{ "src": "src/assets/images/logos/palHaul.png", "title": "PAL Haul" },
-			{ "src": "src/assets/images/logos/casa.png", "title": "Chinese American Student Association (CASA)" },
-			{ "src": "src/assets/images/logos/ksa.PNG", "title": "Korean Student Association (KSA)" },
-			{ "src": "src/assets/images/logos/NSU.png", "title": "Nikkei Student Union (NSU)" },
-			{ "src": "src/assets/images/logos/pal.png", "title": "Philipino American League (PAL)" }
+			{ "src": "/logos/saseLogo.png", "title": "Society of Asian Scientists and Engineers (SASE)" },
+			{ "src": "/logos/carpiLogo.png", "title": "Cool Academic RPI Bot (CARPI)" },
+			{ "src": "/logos/palHaul.png", "title": "PAL Haul" },
+			{ "src": "/logos/casa.png", "title": "Chinese American Student Association (CASA)" },
+			{ "src": "/logos/ksa.PNG", "title": "Korean Student Association (KSA)" },
+			{ "src": "/logos/NSU.png", "title": "Nikkei Student Union (NSU)" },
+			{ "src": "/logos/pal.png", "title": "Philipino American League (PAL)" }
 		]
 	}
 ]

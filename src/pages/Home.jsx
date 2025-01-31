@@ -1,8 +1,8 @@
-import mirandaImage from '../assets/miranda.png';
+import mirandaImage from '/miranda.png';
 import ResizableBox from "../components/ResizeableBox";
 import Projects from './Projects';
 import { Link } from 'react-router-dom'; // Correct import for Router
-import rightArrow from '../assets/icons/rightarrow.svg'
+import rightArrow from '/icons/rightarrow.svg'
 
 export default function Landing() {
   return (

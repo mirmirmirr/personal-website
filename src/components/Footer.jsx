@@ -2,14 +2,14 @@ import useTheme from './useTheme';
 import { Link } from 'react-router-dom'; // Correct import for Router
 import { useState } from 'react';
 
-import homeWhite from '../assets/icons/home.svg';
-import githubIcon from '../assets/icons/github.svg';
-import emailIcon from '../assets/icons/email.svg';
-import linkedinIcon from '../assets/icons/linkedin.svg';
-import sunIcon from '../assets/icons/sun.svg';
-import moonIcon from '../assets/icons/moon.svg';
-import paperIcon from '../assets/icons/paper.svg';
-import faceIcon from '../assets/icons/face.svg';
+import homeWhite from '/icons/home.svg';
+import githubIcon from '/icons/github.svg';
+import emailIcon from '/icons/email.svg';
+import linkedinIcon from '/icons/linkedin.svg';
+import sunIcon from '/icons/sun.svg';
+import moonIcon from '/icons/moon.svg';
+import paperIcon from '/icons/paper.svg';
+import faceIcon from '/icons/face.svg';
 
 export default function Footer() {
   const { isDarkMode, toggleTheme } = useTheme();

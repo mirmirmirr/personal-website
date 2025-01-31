@@ -19,7 +19,7 @@ export default function Footer() {
     <div className='flex justify-center sticky bottom-[50px] z-50'>
       <div className="bg-backgroundLight dark:bg-backgroundDark border-2 shadow-md shadow-blue-200 dark:shadow-highlightBlue rounded-[25px] p-2 gap-2 flex items-center hover:scale-110 transition-transform duration-300 ease-in-out">
         <LinkGroup iconSrc={homeWhite} alt="Home" link="/" />
-        <LinkGroup iconSrc={paperIcon} alt="Art" link="/portfolio" />
+        <LinkGroup iconSrc={paperIcon} alt="Creative Work" link="/portfolio" />
         <LinkGroup iconSrc={faceIcon} alt="About" link="/about" />
         <div className="flex gap-2 border-l-2 border-r-2 pl-2 pr-2">
           <LinkGroup iconSrc={githubIcon} alt="GitHub" link="https://github.com/mirmirmirr" isExternal={true} />
@@ -73,7 +73,9 @@ function LinkGroup({ iconSrc, alt, link, isExternal = false }) {
           </div>
         </Link>
       )}
-      <span className="absolute -top-10 left-[50%] -translate-x-[50%] z-20 origin-left scale-0 px-3 rounded-lg border border-blue-100 bg-white py-[2px] text-[12px] shadow-md transition-all duration-300 ease-in-out group-hover:scale-100 text-highlightBlue">{alt}</span>
+      <span className="absolute inline-block -top-10 left-[50%] -translate-x-[50%] z-20 origin-left scale-0 px-3 rounded-lg border border-blue-100 bg-white py-[2px] text-[12px] shadow-md transition-all duration-300 ease-in-out group-hover:scale-100 text-highlightBlue whitespace-nowrap">
+        {alt}
+      </span>
     </div>
   )
 }

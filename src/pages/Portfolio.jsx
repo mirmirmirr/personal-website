@@ -2,6 +2,8 @@ import { useState } from "react";
 import MasonLayout from "../components/MasonLayout";
 import { GroupCard } from "../components/Cards"
 import items from "../resources/portfolio.json";
+import ReactGridLayout from "../components/GridLayout";
+import { Component } from "../components/component";
 
 export default function Portfolio() {
   const allPieces = items[0].all;
@@ -79,6 +81,7 @@ export default function Portfolio() {
           isTransitioning ? "opacity-0" : "opacity-100"
         }`}
       >
+        {/* <Component items={activeGroup}/> */}
         <MasonLayout items={activeGroup} />
       </div>
     </div>

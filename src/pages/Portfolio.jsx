@@ -1,6 +1,6 @@
 import { useState } from "react";
 import MasonLayout from "../components/MasonLayout";
-import { GroupCard } from "../components/Cards"
+import GroupCard from "../components/cards/GroupCard";
 import items from "../resources/portfolio.json";
 import ReactGridLayout from "../components/GridLayout";
 import { Component } from "../components/component";

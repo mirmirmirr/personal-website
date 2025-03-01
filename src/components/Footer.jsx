@@ -1,6 +1,5 @@
 import useTheme from './useTheme';
-import { Link } from 'react-router-dom'; // Correct import for Router
-import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 import homeWhite from '/icons/home.svg';
 import githubIcon from '/icons/github.svg';
@@ -13,7 +12,6 @@ import faceIcon from '/icons/face.svg';
 
 export default function Footer() {
   const { isDarkMode, toggleTheme } = useTheme();
-  const [isHovered, setIsHovered] = useState(false);
 
   return (
     <div className='flex justify-center sticky bottom-[50px] z-50'>
@@ -27,14 +25,12 @@ export default function Footer() {
           <LinkGroup iconSrc={emailIcon} alt="Email" link="mailto:miranda.mzheng@gmail.com" isExternal={true} />
         </div>
 
-        <div
-          className="w-[35px] h-[35px] flex items-center justify-center rounded-full transition-transform duration-300 ease-in-out hover:bg-blue-100 dark:hover:bg-highlightBlue"
+        <div 
+          className="group w-[35px] h-[35px] flex items-center justify-center rounded-full transition-transform duration-300 ease-in-out hover:bg-blue-100 dark:hover:bg-highlightBlue"
           onClick={toggleTheme}
-          onMouseEnter={() => setIsHovered(true)}
-          onMouseLeave={() => setIsHovered(false)}
         >
           <img
-            src={isHovered ? isDarkMode ? sunIcon : moonIcon : isDarkMode ? moonIcon : sunIcon }
+            src={isDarkMode ? moonIcon : sunIcon}
             className="w-[20px] h-[20px] filter dark:invert dark:brightness-0 dark:contrast-200 transition-transform duration-300 group-hover:scale-110"
             alt="mode"
           />

@@ -1,8 +1,7 @@
 import items from "../resources/projects.json";
 import RenderCards from "../components/RenderCards";
 import { useRef, useState, useEffect } from "react";
-import { ExperienceCard } from "../components/Cards";
-
+import ExperienceCard from "../components/cards/ExperienceCard";
 
 export default function Projects() {
     const [selectedCard, setSelectedCard] = useState(null);

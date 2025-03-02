@@ -14,7 +14,7 @@ export default function Footer() {
   const { isDarkMode, toggleTheme } = useTheme();
 
   return (
-    <div className='flex justify-center sticky bottom-[50px] z-50'>
+    <div className='fixed bottom-[50px] left-1/2 transform -translate-x-1/2 z-50'>
       <div className="bg-backgroundLight dark:bg-backgroundDark border-2 shadow-md shadow-blue-200 dark:shadow-highlightBlue rounded-[25px] p-2 gap-2 flex items-center hover:scale-110 transition-transform duration-300 ease-in-out">
         <LinkGroup iconSrc={homeWhite} alt="Home" link="/" />
         <LinkGroup iconSrc={paperIcon} alt="Creative Work" link="/portfolio" />

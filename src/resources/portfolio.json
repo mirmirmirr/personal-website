@@ -1,25 +1,121 @@
 [
 	{ "all": 
 		[
-			{ "src": "/Bread16.jpeg", "title": "Bread16" },
-			{ "src": "/cookiesOfFortune.jpeg", "title": "Cookies of Fortune" },
-			{ "src": "/pursuitOfHappiness.jpeg", "title": "Pursuit of Happiness" },
-			{ "src": "/sunsetTwilight.jpeg", "title": "Sunset Twilight" },
-			{ "src": "/rescuedBa-Na-Nas.jpeg", "title": "Rescused Ba Na Nas" },
-			{ "src": "/onlyPickFive.jpeg", "title": "only pick 5" },
-			{ "src": "/Use_35_Carrots.jpeg", "title": "Use's 35 Carrots" },
-			{ "src": "/chickenWithChick.jpeg", "title": "Chicken Wings" },
-			{ "src": "/fishing.jpeg", "title": "fishing" }
+			{
+				"src": "/Bread16.jpeg",
+				"title": "Bread16",
+				"top": "35%",
+				"left": "50%",
+				"className": "w-24 md:w-48"
+			},
+			{
+				"src": "/cookiesOfFortune.jpeg",
+				"title": "Cookies of Fortune",
+				"top": "35%",
+				"left": "50%",
+				"className": "w-24 md:w-48" 
+			},
+			{
+				"src": "/pursuitOfHappiness.jpeg",
+				"title": "Pursuit of Happiness",
+				"top": "35%",
+				"left": "50%",
+				"className": "w-24 md:w-48" 
+			},
+			{
+				"src": "/sunsetTwilight.jpeg",
+				"title": "Sunset Twilight",
+				"top": "35%",
+				"left": "50%",
+				"className": "w-24 md:w-48" 
+			},
+			{
+				"src": "/rescuedBa-Na-Nas.jpeg",
+				"title": "Rescused Ba Na Nas",
+				"top": "35%",
+				"left": "50%",
+				"className": "w-24 md:w-48" 
+			},
+			{
+				"src": "/onlyPickFive.jpeg",
+				"title": "only pick 5", 
+				"top": "35%",
+				"left": "50%",
+				"className": "w-24 md:w-48" 
+			},
+			{
+				"src": "/Use_35_Carrots.jpeg",
+				"title": "Use's 35 Carrots",
+				"top": "35%",
+				"left": "50%",
+				"className": "w-24 md:w-48"  
+			},
+			{
+				"src": "/chickenWithChick.jpeg",
+				"title": "Chicken Wings",
+				"top": "35%",
+				"left": "50%",
+				"className": "w-24 md:w-48"  
+			},
+			{
+				"src": "/fishing.jpeg",
+				"title": "fishing",
+				"top": "35%",
+				"left": "50%",
+				"className": "w-24 md:w-48"
+			 }
 		],
 	"logos" :
 		[
-			{ "src": "/logos/saseLogo.png", "title": "Society of Asian Scientists and Engineers (SASE)" },
-			{ "src": "/logos/carpiLogo.png", "title": "Cool Academic RPI Bot (CARPI)" },
-			{ "src": "/logos/palHaul.png", "title": "PAL Haul" },
-			{ "src": "/logos/casa.png", "title": "Chinese American Student Association (CASA)" },
-			{ "src": "/logos/ksa.PNG", "title": "Korean Student Association (KSA)" },
-			{ "src": "/logos/NSU.png", "title": "Nikkei Student Union (NSU)" },
-			{ "src": "/logos/pal.png", "title": "Philipino American League (PAL)" }
+			{
+				"src": "/logos/saseLogo.png",
+				"title": "Society of Asian Scientists and Engineers (SASE)",
+				"top": "35%",
+				"left": "50%",
+				"className": "w-24 md:w-48"  
+			},
+			{
+				"src": "/logos/carpiLogo.png",
+				"title": "Cool Academic RPI Bot (CARPI)",
+				"top": "35%",
+				"left": "50%",
+				"className": "w-24 md:w-48"  
+			},
+			{
+				"src": "/logos/palHaul.png",
+				"title": "PAL Haul",
+				"top": "35%",
+				"left": "50%",
+				"className": "w-24 md:w-48"  
+			},
+			{
+				"src": "/logos/casa.png",
+				"title": "Chinese American Student Association (CASA)",
+				"top": "35%",
+				"left": "50%",
+				"className": "w-24 md:w-48"  
+			},
+			{
+				"src": "/logos/ksa.PNG",
+				"title": "Korean Student Association (KSA)",
+				"top": "35%",
+				"left": "50%",
+				"className": "w-24 md:w-48"  
+			},
+			{
+				"src": "/logos/NSU.png",
+				"title": "Nikkei Student Union (NSU)",
+				"top": "35%",
+				"left": "50%",
+				"className": "w-24 md:w-48"  
+			},
+			{
+				"src": "/logos/pal.png",
+				"title": "Philipino American League (PAL)",
+				"top": "35%",
+				"left": "50%",
+				"className": "w-24 md:w-48" 
+			 }
 		]
 	}
 ]

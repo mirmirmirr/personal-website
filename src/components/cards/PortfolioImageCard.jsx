@@ -6,7 +6,7 @@ export default function PortfolioImageCard({ imageSrc, title, top, left, classNa
   return (
     <div 
       className={twMerge(
-        "absolute w-80",  // Ensure absolute positioning
+        "absolute w-96",  // Ensure absolute positioning
         className    // This applies the width settings like md:w-48
       )}
       style={{ top, left }}
@@ -15,7 +15,7 @@ export default function PortfolioImageCard({ imageSrc, title, top, left, classNa
         ref={innerRef}
         src={imageSrc}
         alt={title}
-        className="rounded-[15px] w-full h-auto object-cover"
+        // className="rounded-[15px] w-full h-auto object-cover"
         loading="lazy"
       />
     </div>

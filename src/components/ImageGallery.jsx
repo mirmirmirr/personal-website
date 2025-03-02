@@ -23,12 +23,12 @@ export default function ImageGallery({ items, dimensions }) {
     let placedPositions = [
       {
         top: 64,
-        left: 800,
+        left: 1050,
         width: 400,
         height: 230,
       }
     ];
-    const maxTries = 50;
+    const maxTries = 100;
 
     items.forEach((_, index) => {
       let validPosition = false;
@@ -95,9 +95,9 @@ export default function ImageGallery({ items, dimensions }) {
 
 const isOverlapping = (pos1, pos2) => {
   return !(
-    pos1.left + pos1.width + 10 < pos2.left ||
-    pos2.left + pos2.width + 10 < pos1.left ||
-    pos1.top + pos1.height + 10 < pos2.top ||
-    pos2.top + pos2.height + 10 < pos1.top
+    pos1.left + pos1.width + 20 < pos2.left ||
+    pos2.left + pos2.width + 20 < pos1.left ||
+    pos1.top + pos1.height + 20 < pos2.top ||
+    pos2.top + pos2.height + 20 < pos1.top
   );
 };

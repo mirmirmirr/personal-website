@@ -21,7 +21,7 @@ const Port = ({ containerRef, images }) => {
     <motion.div
       drag
       dragConstraints={containerRef}
-      className="w-[2160px] h-[1170px] relative place-items-center"
+      className="w-[2500px] h-[1500px] relative place-items-center"
     >
 
       <div className="flex items-center flex-col w-[400px] pt-16 text-center">
@@ -30,8 +30,9 @@ const Port = ({ containerRef, images }) => {
         <p>I used to love creating art, especially drawing. I don't have a lot of time to do it now, but when I can I still try to keep in touch with my creative side.</p>
       </div>
 
-      <ImageGallery items={images[0].all} dimensions={[900, 10, 800, 10]} />
-      <ImageGallery items={images[0].logos} dimensions={[500, 10, 650, 1250]} />
+      <ImageGallery items={images.all} dimensions={[900, 10, 1000, 10]} />
+      <ImageGallery items={images.logos} dimensions={[500, 10, 1100, 1200]} />
+      <ImageGallery items={images.hackrpi} dimensions={[650, 600, 1000, 1200]} />
       
     </motion.div>
   );

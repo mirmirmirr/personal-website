@@ -30,8 +30,8 @@ const Port = ({ containerRef, images }) => {
         <p>I used to love creating art, especially drawing. I don't have a lot of time to do it now, but when I can I still try to keep in touch with my creative side.</p>
       </div>
 
-      <ImageGallery items={images[0].all} dimensions={[800, 10, 800, 10]} />
-      <ImageGallery items={images[0].logos} dimensions={[450, 10, 650, 1250]} />
+      <ImageGallery items={images[0].all} dimensions={[900, 10, 800, 10]} />
+      <ImageGallery items={images[0].logos} dimensions={[500, 10, 650, 1250]} />
       
     </motion.div>
   );

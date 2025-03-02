@@ -59,7 +59,7 @@ export default function ImageGallery({ items, dimensions }) {
         attempts++;
       }
 
-      console.log(`Image ${index} placed at:`, newPos);
+      console.log(`attempt #${attempts} Image ${index} placed at:`, newPos);
       placedPositions.push(newPos);
     });
 

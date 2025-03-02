@@ -6,63 +6,63 @@
 				"title": "Bread16",
 				"top": "35%",
 				"left": "50%",
-				"className": "w-24 md:w-48"
+				"className": "w-64"
 			},
 			{
 				"src": "/cookiesOfFortune.jpeg",
 				"title": "Cookies of Fortune",
 				"top": "35%",
 				"left": "50%",
-				"className": "w-24 md:w-48" 
+				"className": "w-64" 
 			},
 			{
 				"src": "/pursuitOfHappiness.jpeg",
 				"title": "Pursuit of Happiness",
 				"top": "35%",
 				"left": "50%",
-				"className": "w-24 md:w-48" 
+				"className": "w-64" 
 			},
 			{
 				"src": "/sunsetTwilight.jpeg",
 				"title": "Sunset Twilight",
 				"top": "35%",
 				"left": "50%",
-				"className": "w-24 md:w-48" 
+				"className": "w-48" 
 			},
 			{
 				"src": "/rescuedBa-Na-Nas.jpeg",
 				"title": "Rescused Ba Na Nas",
 				"top": "35%",
 				"left": "50%",
-				"className": "w-24 md:w-48" 
+				"className": "w-64" 
 			},
 			{
 				"src": "/onlyPickFive.jpeg",
 				"title": "only pick 5", 
 				"top": "35%",
 				"left": "50%",
-				"className": "w-24 md:w-48" 
+				"className": "w-48" 
 			},
 			{
 				"src": "/Use_35_Carrots.jpeg",
 				"title": "Use's 35 Carrots",
 				"top": "35%",
 				"left": "50%",
-				"className": "w-24 md:w-48"  
+				"className": "w-48"  
 			},
 			{
 				"src": "/chickenWithChick.jpeg",
 				"title": "Chicken Wings",
 				"top": "35%",
 				"left": "50%",
-				"className": "w-24 md:w-48"  
+				"className": "w-48"  
 			},
 			{
 				"src": "/fishing.jpeg",
 				"title": "fishing",
 				"top": "35%",
 				"left": "50%",
-				"className": "w-24 md:w-48"
+				"className": "w-48"
 			 }
 		],
 	"logos" :
@@ -72,49 +72,49 @@
 				"title": "Society of Asian Scientists and Engineers (SASE)",
 				"top": "35%",
 				"left": "50%",
-				"className": "w-24 md:w-48"  
+				"className": "w-48"  
 			},
 			{
 				"src": "/logos/carpiLogo.png",
 				"title": "Cool Academic RPI Bot (CARPI)",
 				"top": "35%",
 				"left": "50%",
-				"className": "w-24 md:w-48"  
+				"className": "w-48"  
 			},
 			{
 				"src": "/logos/palHaul.png",
 				"title": "PAL Haul",
 				"top": "35%",
 				"left": "50%",
-				"className": "w-24 md:w-48"  
+				"className": "w-48"  
 			},
 			{
 				"src": "/logos/casa.png",
 				"title": "Chinese American Student Association (CASA)",
 				"top": "35%",
 				"left": "50%",
-				"className": "w-24 md:w-48"  
+				"className": "w-48"  
 			},
 			{
 				"src": "/logos/ksa.PNG",
 				"title": "Korean Student Association (KSA)",
 				"top": "35%",
 				"left": "50%",
-				"className": "w-24 md:w-48"  
+				"className": "w-48"  
 			},
 			{
 				"src": "/logos/NSU.png",
 				"title": "Nikkei Student Union (NSU)",
 				"top": "35%",
 				"left": "50%",
-				"className": "w-24 md:w-48"  
+				"className": "w-48"  
 			},
 			{
 				"src": "/logos/pal.png",
 				"title": "Philipino American League (PAL)",
 				"top": "35%",
 				"left": "50%",
-				"className": "w-24 md:w-48" 
+				"className": "w-48" 
 			 }
 		]
 	}

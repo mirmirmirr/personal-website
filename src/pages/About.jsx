@@ -6,7 +6,7 @@ export default function About() {
   const vh = window.innerHeight;
 
   return (
-    <div className="flex flex-col justify-center w-full transition-all duration-300 ease-in-out">
+    <div className="flex flex-col justify-center w-full transition-all duration-700 ease-in-out">
       <div className="flex flex-col items-center justify-center gap-4 p-16">
         <img
           src="headshot_circle.png"

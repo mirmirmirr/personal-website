@@ -73,7 +73,7 @@ export default function ImageGallery({ items, dimensions }) {
           key={index}
           imageSrc={item.src}
           title={item.title}
-          className={item.className}
+          width={item.width}
           top={positions[index + 1]?.top}
           left={positions[index + 1]?.left}
           innerRef={(el) => {

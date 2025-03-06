@@ -32,7 +32,7 @@ const Port = ({ containerRef, images }) => {
 
       <ImageGallery items={images.all} dimensions={[900, 10, 1000, 10]} />
       <ImageGallery items={images.logos} dimensions={[500, 10, 1100, 1200]} />
-      <ImageGallery items={images.hackrpi} dimensions={[650, 600, 1000, 1200]} />
+      <ImageGallery items={images.hackrpi} dimensions={[650, 650, 1000, 1200]} />
       
     </motion.div>
   );

@@ -9,15 +9,10 @@ export default {
     extend: {
       colors: {
         highlightBlue: '#3395ff',
-        lockheedBlue: '#003478',
-        jjRed: '#D71600',
-        black: "#000000",
-        savoryblue: '#6369D1',
-        violetblue: '4357ad',
-        backgroundLight: '#ffffff',
-        foregroundLight: '#222222',
-        backgroundDark: '#222222',
-        foregroundDark: '#ffffff',
+        backgroundLight: '#FCFCFC',
+        foregroundLight: '#111113',
+        backgroundDark: '#111113',
+        foregroundDark: '#FCFCFC',
       },
       flex: {
         1: '1',

@@ -6,30 +6,43 @@ export default function About() {
   const vh = window.innerHeight;
 
   return (
-    <div className="relative flex flex-col gap-32 items-center justify-center">
-      <ResizableBox 
-        x={0}
-        y={vh * 0.1}
-        width={Math.min(vw * 0.85, 1000)}
-        height={vh * 0.75}
-        dragging={false}
+    <div className="flex flex-col justify-center w-full transition-all duration-300 ease-in-out">
+      <div className="flex flex-col items-center justify-center gap-4 p-16">
+        <img
+          src="headshot_circle.png"
+          alt="Miranda Headshot 2024"
+          className="w-36 h-full object-cover"
+        />
+        <h1 className="text-[40px] font-[700]">mirmirmirr</h1>
+        <p>
+          Hi! I'm Miranda, a junior at Rensselaer Polytechnic Institute, pursuing a dual degree in Computer Science and Information Technology & Web Sciences. My passion for technology started when I became the go-to 'tech person' in my family — I spent hours troubleshooting phone and computer issues and teaching my grandpa easier ways to use his phone.  At the end of high school, my sister inspired me to choose computer sicence as my major, and I've been loving it ever since.
+        </p>
+      </div>
+
+      <div className="flex items-center justify-center w-full max-w-4xl">
+        <ResizableBox
+          x={0}
+          y={0}
+          width={Math.min(vw * 0.85, 1000)}
+          height={Math.min(vh * 0.45, 400)}
+          dragging={false}
+        >
+          <DragCards />
+        </ResizableBox>
+      </div>
+
+      <div className="flex flex-col items-center justify-center gap-4 p-16">
+        <p>
+          I love solving programming problems and finding ways to use technology to make life simpler. I especially love working on projects that sit at the intersection of development and design—creating experiences that are not only visually appealing but also optimized for performance and usability. Fascinated by the endless possibilities of technology, I'm always looking for new ways to learn and grow!
+        </p>
+      </div>
+
+      <button
+        className="bg-blue-100 hover:bg-highlightBlue hover:text-white dark:hover:bg-[#9CC4F5] dark:hover:text-black dark:bg-highlightBlue rounded-[15px] px-6 py-2 mx-auto mb-32"
+        onClick={() => window.open('/MirandaZheng_Resume.pdf', '_blank')}
       >
-        <div className="absolute top-0 mx-auto flex flex-col items-center justify-center gap-4 p-16 pt-0 -mt-16">
-          <img
-            src="headshot_circle.png"
-            alt="Miranda Headshot 2024"
-            className="w-36 h-full object-cover"
-          />
-          <h1 className="text-[40px] font-[700]">mirmirmirr</h1>
-          <p>Hello! My name is Miranda and I'm a junior at Rensselaer Polytechnic Institute, studying Computer Science (CS) and Information Technology and Web Sciences (ITWS). My younger sister actually introduced me to computer science in high school and I was drawn to the field because of the versatility it offered. Later, I added ITWS because I wanted to learn more about the "real-world" applications of technology.</p>
-        </div>
-
-        <DragCards />
-      </ResizableBox>
-
-      <p>
-        I love solving programming problems and finding ways to use technology to make life simpler. I especially love working on projects that sit at the intersection of development and design—creating experiences that are not only visually appealing but also optimized for performance and usability.
-      </p>
+        Get my resume!
+      </button>
     </div>
   );
 }

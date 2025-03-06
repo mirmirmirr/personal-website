@@ -12,7 +12,7 @@ export default function DragCards() {
         src="/group.png"
         alt="Example image"
         rotate="6deg"
-        bottom="5%"
+        bottom="15%"
         left="7%"
         className="w-36 md:w-80"
       />
@@ -21,7 +21,7 @@ export default function DragCards() {
         src="/family.jpg"
         alt="Example image"
         rotate="12deg"
-        bottom="5%"
+        bottom="15%"
         left="60%"
         className="w-36 md:w-80"
       />
@@ -30,7 +30,7 @@ export default function DragCards() {
         src="/picture.JPEG"
         alt="Example image"
         rotate="-6deg"
-        bottom="5%"
+        bottom="15%"
         left="40%"
         className="w-36 md:w-80"
       />
@@ -39,7 +39,7 @@ export default function DragCards() {
         src="/littleme.png"
         alt="Example image"
         rotate="8deg"
-        bottom="5%"
+        bottom="15%"
         left="35%"
         className="w-24 md:w-36"
       />

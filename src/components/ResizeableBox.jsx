@@ -1,18 +1,20 @@
-import React from "react";
+import React, { useRef } from "react";
 import { Rnd } from "react-rnd";
+import { cn } from "../resources/utils";
 
-export default function ResizableBox({ children }) {
+export default function ResizableBox({ x, y, width, height, children, dragging=true}) {
   const vw = window.innerWidth;
   const vh = window.innerHeight;
 
   return (
     <Rnd
       default={{
-        x: -20,
-        y: vh * 0.1,
-        width: Math.min(vw * 0.8, 1000),
-        height: Math.min(vh * 0.5, 400),
+        x: x,
+        y: y,
+        width: width,
+        height: height,
       }}
+      disableDragging={!dragging}
       minWidth={50}
       minHeight={50}
       style={{
@@ -20,6 +22,7 @@ export default function ResizableBox({ children }) {
         borderRadius: "4px",
         position: "relative",
       }}
+      className="h-fit"
     >
     <div>{children}</div>
 

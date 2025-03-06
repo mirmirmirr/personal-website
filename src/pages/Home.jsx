@@ -5,9 +5,17 @@ import { Link } from 'react-router-dom'; // Correct import for Router
 import rightArrow from '/icons/rightarrow.svg'
 
 export default function Landing() {
+  const vw = window.innerWidth;
+  const vh = window.innerHeight;
+  
   return (
     <>
-      <ResizableBox>
+      <ResizableBox
+        x={-20}
+        y={vh * 0.1}
+        width={Math.min(vw * 0.8, 1000)}
+        height={Math.min(vh * 0.5, 400)}
+      >
         <div className="p-4 flex flex-col items-center md:items-start justify-center">
           <div className="text-xl font-normal mt-4 -mb-[20px] md:-mb-[30px] ml-2">
             hello! my name is

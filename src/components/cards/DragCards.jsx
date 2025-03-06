@@ -3,7 +3,10 @@ import { motion } from "framer-motion";
 import { cn } from "../../resources/utils";
 
 export default function DragCards() {
+  const vw = window.innerWidth;
   const containerRef = useRef(null);
+
+  const isSmallScreen = vw < 640;
 
   return (
     <div className="absolute inset-0 z-10" ref={containerRef}>
@@ -12,36 +15,36 @@ export default function DragCards() {
         src="/group.png"
         alt="Example image"
         rotate="6deg"
-        bottom="15%"
-        left="7%"
-        className="w-36 md:w-80"
+        bottom={isSmallScreen ? "50%" : "15%"}
+        left={isSmallScreen ? "5%" : "7%"}
+        className="w-60 md:w-80"
       />
       <Card
         containerRef={containerRef}
         src="/family.jpg"
         alt="Example image"
         rotate="12deg"
-        bottom="15%"
-        left="60%"
-        className="w-36 md:w-80"
+        bottom={isSmallScreen ? "0%" : "15%"}
+        left={isSmallScreen ? "40%" : "60%"}
+        className="w-60 md:w-80"
       />
       <Card
         containerRef={containerRef}
         src="/picture.JPEG"
         alt="Example image"
         rotate="-6deg"
-        bottom="15%"
-        left="40%"
-        className="w-36 md:w-80"
+        bottom={isSmallScreen ? "40%" : "15%"}
+        left={isSmallScreen ? "55%" : "40%"}
+        className="w-60 md:w-80"
       />
       <Card
         containerRef={containerRef}
         src="/littleme.png"
         alt="Example image"
         rotate="8deg"
-        bottom="15%"
-        left="35%"
-        className="w-24 md:w-36"
+        bottom={isSmallScreen ? "0%" : "15%"}
+        left={isSmallScreen ? "10%" : "35%"}
+        className="w-32 md:w-36"
       />
     </div>
   );

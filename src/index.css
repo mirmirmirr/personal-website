@@ -53,6 +53,40 @@ body.dark {
   /* margin-bottom: 10px; */
 }
 
+.exp-description {
+  display: grid;
+  /* grid-template-columns: 0fr; */
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 500ms;
+}
+
+.exp-description[aria-hidden="false"] {
+  /* grid-template-columns: 1fr; */
+  grid-template-rows: 1fr;
+}
+
+.exp-description > div {
+  overflow: hidden;
+}
+
+/* .exp-description {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 500ms;
+}
+
+.exp-description[aria-hidden="false"] {
+  grid-template-rows: 1fr;
+}
+
+.exp-description > div {
+  overflow: hidden;
+} */
+
+/* .example-card > div {
+  overflow: hidden;
+} */
+
 /* a {
   font-weight: 500;
   color: #646cff;

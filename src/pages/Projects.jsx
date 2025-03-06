@@ -1,11 +1,7 @@
 import items from "../resources/projects.json";
 import RenderCards from "../components/RenderCards";
-import { useRef, useState, useEffect } from "react";
-import ExperienceCard from "../components/cards/ExperienceCard";
 
-export default function Projects() {
-    const [selectedCard, setSelectedCard] = useState(null);
-  
+export default function Projects() {  
   const experiences = items[0].experiences;
   const projects = items[0].projects;
 
@@ -17,43 +13,25 @@ export default function Projects() {
     return result;
   };
 
-  const handleCardSelect = (id) => {
-    setSelectedCard((prev) => (prev === id ? null : id));
-  };
-
   const renderCards = (items, type) => {
     const groups = chunkProjects(items, 3);
     
     return (
-      <>
-        {/* <div className="md:hidden">
-          {items.map((exp, index) => (
-            <ExperienceCard
-              key={exp.id}
-              type={type}
-              items={exp}
-              isSelected={true}
-              onCardSelect={() => handleCardSelect(item.id)}
-            />
-          ))}
-        </div> */}
-
-        <div className="w-full gap-4 mb-4 pb-4">
-          {groups.map((group, groupIndex) => (
-            <RenderCards key={groupIndex} items={group} type={type}/>
-          ))}
-        </div>
-      </>
+      <div className="w-full gap-4 mb-4 pb-4">
+        {groups.map((group, groupIndex) => (
+          <RenderCards key={groupIndex} items={group} type={type}/>
+        ))}
+      </div>
     )
   };
 
   return (
-    <div className="">
+    <>
       <p className="text-[20px] font-[700] mb-2">WORK EXPERIENCE & RESEARCH</p>
       {renderCards(experiences, "experience")}
 
       <p className="text-[20px] font-[700] mb-2">PROJECTS</p>
       {renderCards(projects, "project")}
-    </div>
+    </>
   );
 }

@@ -40,7 +40,7 @@ export default function ExperienceCard( {type, items, isSelected: initialSelecte
   return (
     <div  
       ref={cardRef} onClick={handleCardClick} 
-      className={`relative flex flex-col items-center h-full justify-center transition-all duration-300 ${isSelected ? "border-2 border-[#3395ff]" : ""}`}
+      className={`relative items-center h-full justify-center transition-all duration-300 ${isSelected ? "border-2 border-[#3395ff]" : ""}`}
     >
       {type === "experience" ? (
         <WorkDetails items={items} isSelected={isSelected} showDescription={showDescription} />
@@ -58,12 +58,12 @@ function WorkDetails({ items, isSelected, showDescription }) {
 
   return (
     <div
-      className={`flex flex-col md:flex-row gap-8 p-4 rounded-[15px] border-[2px] border-gray-300 ${
+      className={`gap-8 p-4 rounded-[15px] border-[2px] border-gray-300 ${showDescription ? "flex flex-col md:flex-row" : ""} ${
         isSelected ? "" : `hover:border-2 hover:border-[#3395ff]`
       }`}
       style={{ width: "100%", height: "100%" }}
     >
-      <div className="w-[100%] hover:scale-90 hover:-translate-y-2 transition-transform duration-300 ease-in-out">
+      <div className={`w-[100%] ${isSelected ? "min-w-[160px]" : "hover:scale-90 hover:-translate-y-2"} transition-transform duration-300 ease-in-out`}>
         <div className="flex mb-2 ">
           {images.map((image, index) => (
             <img key={index} src={image} alt={`${title} logo ${index}`} className="w-16 h-auto object-contain" />
@@ -73,9 +73,11 @@ function WorkDetails({ items, isSelected, showDescription }) {
         <div className="font-[600] text-[14px]">{title}</div>
         <div className="text-[14px]">{duration}</div>
       </div>
-      {showDescription && (
-        <div className="w-[100%] text-[14px]">{description}</div>
-      )}
+
+      <div aria-hidden={!showDescription} className={`exp-description text-[14px]`}>
+        <div>{description}</div>
+      </div>
+
     </div>
   );
 }
@@ -99,13 +101,13 @@ function ProjectDetails({ items, isSelected, showDescription }) {
 
   return (
     <div
-      ref={cardRef}
-      className={`relative flex flex-col md:flex-row gap-4 p-4 rounded-[15px] border-[2px] border-gray-300 overflow-hidden ${
+      className={`relative gap-4 p-4 rounded-[15px] border-[2px] border-gray-300 overflow-hidden ${showDescription ? "flex flex-col md:flex-row" : ""} ${
         isSelected ? "" : `hover:border-2 hover:border-[#3395ff]`
       }`}
       style={{ width: "100%", height: "100%" }}
     >
-      <div className="w-[100%] h-full group">
+      
+      <div ref={cardRef} className={`w-[100%] ${isSelected ? "min-w-[160px]" : "group h-[225px]"} `}>
 
         <div className="w-[100%] h-[120px] md:h-[140px] items-end group-hover:scale-90 group-hover:-translate-y-2 transition-transform duration-300 ease-in-out">
           <div className="font-[600]">{title}</div>
@@ -136,11 +138,9 @@ function ProjectDetails({ items, isSelected, showDescription }) {
 
       </div>
 
-      {showDescription && (
-        <div className="w-[100%] text-[14px]">
-            {description}         
-        </div>
-      )}
+      <div aria-hidden={!showDescription} className={`exp-description text-[14px]`}>
+        <div>{description}</div>
+      </div>
     </div>
   );
 }

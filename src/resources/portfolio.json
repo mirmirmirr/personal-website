@@ -167,5 +167,168 @@
 			"left": "50%",
 			"width": "200px"  
 		}
+	],
+	"art" : [
+		{
+			"src": "/Bread16.jpeg",
+			"title": "Bread16",
+			"top": "35%",
+			"left": "50%",
+			"width": "250px"
+		},
+		{
+			"src": "/cookiesOfFortune.jpeg",
+			"title": "Cookies of Fortune",
+			"top": "35%",
+			"left": "50%",
+			"width": "250px" 
+		},
+		{
+			"src": "/pursuitOfHappiness.jpeg",
+			"title": "Pursuit of Happiness",
+			"top": "35%",
+			"left": "50%",
+			"width": "250px" 
+		},
+		{
+			"src": "/sunsetTwilight.jpeg",
+			"title": "Sunset Twilight",
+			"top": "35%",
+			"left": "50%",
+			"width": "225px" 
+		},
+		{
+			"src": "/rescuedBa-Na-Nas.jpeg",
+			"title": "Rescused Ba Na Nas",
+			"top": "35%",
+			"left": "50%",
+			"width": "225px" 
+		},
+		{
+			"src": "/onlyPickFive.jpeg",
+			"title": "only pick 5", 
+			"top": "35%",
+			"left": "50%",
+			"width": "225px" 
+		},
+		{
+			"src": "/Use_35_Carrots.jpeg",
+			"title": "Use's 35 Carrots",
+			"top": "35%",
+			"left": "50%",
+			"width": "225px"  
+		},
+		{
+			"src": "/chickenWithChick.jpeg",
+			"title": "Chicken Wings",
+			"top": "35%",
+			"left": "50%",
+			"width": "225px"  
+		},
+		{
+			"src": "/fishing.jpeg",
+			"title": "fishing",
+			"top": "35%",
+			"left": "50%",
+			"width": "225px"
+			},
+			{
+				"src": "/logos/saseLogo.png",
+				"title": "Society of Asian Scientists and Engineers (SASE)",
+				"top": "35%",
+				"left": "50%",
+				"width": "200px"  
+			},
+			{
+				"src": "/logos/carpiLogo.png",
+				"title": "Cool Academic RPI Bot (CARPI)",
+				"top": "35%",
+				"left": "50%",
+				"width": "200px"  
+			},
+			{
+				"src": "/logos/palHaul.png",
+				"title": "PAL Haul",
+				"top": "35%",
+				"left": "50%",
+				"width": "200px"  
+			},
+			{
+				"src": "/logos/casa.png",
+				"title": "Chinese American Student Association (CASA)",
+				"top": "35%",
+				"left": "50%",
+				"width": "200px"  
+			},
+			{
+				"src": "/logos/ksa.PNG",
+				"title": "Korean Student Association (KSA)",
+				"top": "35%",
+				"left": "50%",
+				"width": "200px"  
+			},
+			{
+				"src": "/logos/NSU.png",
+				"title": "Nikkei Student Union (NSU)",
+				"top": "35%",
+				"left": "50%",
+				"width": "200px"  
+			},
+			{
+				"src": "/logos/pal.png",
+				"title": "Philipino American League (PAL)",
+				"top": "35%",
+				"left": "50%",
+				"width": "200px" 
+				},
+				{
+					"src": "/hackrpi/banner2024.png",
+					"title": "HackRPI 1",
+					"top": "35%",
+					"left": "50%",
+					"width": "400px"  
+				},
+				{
+					"src": "/hackrpi/banner2023.png",
+					"title": "HackRPI 2",
+					"top": "35%",
+					"left": "50%",
+					"width": "400px"  
+				},
+				{
+					"src": "/hackrpi/brand2024.png",
+					"title": "HackRPI 3",
+					"top": "35%",
+					"left": "50%",
+					"width": "375px"  
+				},
+				{
+					"src": "/hackrpi/infoPoster.png",
+					"title": "HackRPI 3",
+					"top": "35%",
+					"left": "50%",
+					"width": "200px"  
+				},
+				{
+					"src": "/hackrpi/map.png",
+					"title": "HackRPI 3",
+					"top": "35%",
+					"left": "50%",
+					"width": "275px"  
+				},
+				{
+					"src": "/hackrpi/numbers2023.png",
+					"title": "HackRPI 3",
+					"top": "35%",
+					"left": "50%",
+					"width": "200px"  
+				},
+				{
+					"src": "/hackrpi/poster1.png",
+					"title": "HackRPI 3",
+					"top": "35%",
+					"left": "50%",
+					"width": "200px"  
+				}
 	]
 }

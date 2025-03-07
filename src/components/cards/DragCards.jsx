@@ -15,8 +15,8 @@ export default function DragCards() {
         src="/group.png"
         alt="Example image"
         rotate="6deg"
-        bottom={isSmallScreen ? "50%" : "15%"}
-        left={isSmallScreen ? "5%" : "7%"}
+        bottom={isSmallScreen ? "85%" : "15%"}
+        left={isSmallScreen ? "-5%" : "7%"}
         className="w-60 md:w-80"
       />
       <Card
@@ -33,8 +33,8 @@ export default function DragCards() {
         src="/picture.JPEG"
         alt="Example image"
         rotate="-6deg"
-        bottom={isSmallScreen ? "40%" : "15%"}
-        left={isSmallScreen ? "55%" : "40%"}
+        bottom={isSmallScreen ? "50%" : "15%"}
+        left={isSmallScreen ? "60%" : "40%"}
         className="w-60 md:w-80"
       />
       <Card
@@ -43,7 +43,7 @@ export default function DragCards() {
         alt="Example image"
         rotate="8deg"
         bottom={isSmallScreen ? "0%" : "15%"}
-        left={isSmallScreen ? "10%" : "35%"}
+        left={isSmallScreen ? "5%" : "35%"}
         className="w-32 md:w-36"
       />
     </div>
@@ -86,6 +86,7 @@ const Card = ({ containerRef, src, alt, bottom, left, rotate, className }) => {
       )}
       src={src}
       alt={alt}
+      loading="lazy"
       drag
       dragConstraints={containerRef}
       // Uncomment below and remove dragElastic to remove movement after release

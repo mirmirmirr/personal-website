@@ -17,7 +17,7 @@ export default function Projects() {
     const groups = chunkProjects(items, 3);
     
     return (
-      <div className="w-full gap-4 mb-4 pb-4">
+      <div className="w-full gap-4">
         {groups.map((group, groupIndex) => (
           <RenderCards key={groupIndex} items={group} type={type}/>
         ))}
@@ -30,7 +30,7 @@ export default function Projects() {
       <p className="text-[20px] font-[700] mb-2">WORK EXPERIENCE & RESEARCH</p>
       {renderCards(experiences, "experience")}
 
-      <p className="text-[20px] font-[700] mb-2">PROJECTS</p>
+      <p className="text-[20px] font-[700] mb-2 mt-8">PROJECTS</p>
       {renderCards(projects, "project")}
     </>
   );

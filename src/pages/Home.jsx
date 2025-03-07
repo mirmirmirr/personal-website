@@ -1,4 +1,3 @@
-import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 import mirandaImage from "/miranda.png";
@@ -7,34 +6,22 @@ import ResizableBox from "../components/ResizeableBox";
 import Projects from "./Projects";
 
 export default function Landing() {
-  const [windowSize, setWindowSize] = useState({
-    width: window.innerWidth,
-    height: window.innerHeight,
-  });
+  const vw = window.innerWidth;
+  const vh = window.innerHeight;
 
-  // Update window size dynamically
-  useEffect(() => {
-    const handleResize = () => {
-      setWindowSize({ width: window.innerWidth, height: window.innerHeight });
-    };
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
-  const { width: vw, height: vh } = windowSize;
-  const isSmallScreen = vw < 768;
+  const isSmallScreen = vw < 640;
 
   return (
     <>
       {/* Resizable Box with Intro */}
-      <div className="h-screen md:h-fit relative mt-16">
+      <div className="h-svh md:h-fit relative mt-4">
         <ResizableBox
           x={isSmallScreen ? 0 : -25}
           y={0}
           width={Math.min(vw * 0.8, 1000)}
-          height={Math.min(vh * 0.5, 400)}
+          height={isSmallScreen ? vh * 0.8 : 350}
         >
-          <div className="p-4 flex flex-col items-center md:items-start justify-center transition-all duration-700 ease-in-out">
+          <div className="p-2 h-[80dvh] md:h-fit flex flex-col items-center md:items-start justify-center transition-all duration-700 ease-in-out">
             <div className="text-xl font-normal mt-4 -mb-[20px] md:-mb-[30px] ml-2">
               hello! my name is
             </div>

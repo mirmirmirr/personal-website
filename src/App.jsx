@@ -27,7 +27,7 @@ function AppLayout() {
   }, [isPortfolioPage]);
 
   return (
-    <div className={isPortfolioPage ? "" : "p-8 flex justify-center"}>
+    <div className={`mb-32 ${isPortfolioPage ? "" : "p-8 flex justify-center"}`}>
       <div className={isPortfolioPage ? "w-full" : "max-w-[1000px] w-[80vw]"}>
         <Routes>
           <Route path="/" element={<Home />} />

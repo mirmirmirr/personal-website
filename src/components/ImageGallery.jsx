@@ -55,8 +55,6 @@ export default function ImageGallery({ items }) {
             { top: randomInt(pos.top + pos.height + padding, pos.top + pos.height + padding + imgHeight/4), left: pos.left + Math.random() * padding }
           ]
 
-          console.log(candidatePositions);
-
           for (let candidate of candidatePositions) {
             newPos = {
               top: candidate.top,
@@ -79,6 +77,8 @@ export default function ImageGallery({ items }) {
               }
             }
           }
+
+          console.log("looping..", validPosition, newPos);
         }
 
         if (validPosition) {

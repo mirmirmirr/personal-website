@@ -14,12 +14,13 @@ export default function Landing() {
   return (
     <>
       {/* Resizable Box with Intro */}
-      <div className="h-svh md:h-fit relative mt-4">
+      <div className="h-svh md:h-fit relative mt-4 md:mt-16">
         <ResizableBox
           x={isSmallScreen ? 0 : -25}
           y={0}
           width={Math.min(vw * 0.8, 1000)}
           height={isSmallScreen ? vh * 0.8 : 350}
+          dragging={isSmallScreen ? false : true}
         >
           <div className="p-2 h-[80dvh] md:h-fit flex flex-col items-center md:items-start justify-center transition-all duration-700 ease-in-out">
             <div className="text-xl font-normal mt-4 -mb-[20px] md:-mb-[30px] ml-2">

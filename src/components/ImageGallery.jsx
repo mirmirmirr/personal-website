@@ -7,6 +7,8 @@ export default function ImageGallery({ items }) {
 
   const top = 10;
   const left = 10;
+  const width = 2000;
+  const height = 1800;
 
   const generatePositions = () => {
     let placedPositions = [
@@ -14,11 +16,11 @@ export default function ImageGallery({ items }) {
         top: 890,
         left: 800,
         width: 400,
-        height: 230,
+        height: 175,
       },
     ];
-    const maxTries = 100;
-    const padding = 30;
+    const maxTries = 50;
+    const padding = 50;
 
     items.forEach((_, index) => {
       const imgElement = imageRefs.current[index];
@@ -49,10 +51,10 @@ export default function ImageGallery({ items }) {
           attempts++;
 
           const candidatePositions = [
-            { top: randomInt(pos.top - padding, pos.top - padding - imgHeight), left: pos.left + Math.random() * padding },
-            { top: pos.top + Math.random() * padding, left: randomInt(pos.left - padding, pos.left - padding - imgWidth) },
-            { top: pos.top + Math.random() * padding, left: randomInt(pos.left + pos.width + padding, pos.left + pos.width + padding + imgWidth/4) },
-            { top: randomInt(pos.top + pos.height + padding, pos.top + pos.height + padding + imgHeight/4), left: pos.left + Math.random() * padding }
+            { top: randomInt(pos.top - padding, pos.top - padding - imgHeight), left: pos.left + Math.random() * pos.width/4 },
+            { top: pos.top + Math.random() * pos.height/4, left: randomInt(pos.left - padding, pos.left - padding - imgWidth) },
+            { top: pos.top + Math.random() * pos.height/4, left: randomInt(pos.left + pos.width + padding, pos.left + pos.width + padding + imgWidth/4) },
+            { top: randomInt(pos.top + pos.height + padding, pos.top + pos.height + padding + imgHeight/4), left: pos.left + Math.random() * pos.width/4 }
           ]
 
           for (let candidate of candidatePositions) {
@@ -63,9 +65,14 @@ export default function ImageGallery({ items }) {
               height: imgHeight,
             }
 
-            validPosition = placedPositions.every(
-              (pos) => !isOverlapping(pos, newPos)
+            const inBounds = (
+              newPos.left >= 0 &&
+              newPos.top >= 0 &&
+              newPos.left + newPos.width <= width &&
+              newPos.top + newPos.height <= height
             );
+
+            validPosition = inBounds && !placedPositions.some(pos => isOverlapping(newPos, pos));
 
             console.log(validPosition, newPos);
 
@@ -143,7 +150,7 @@ const computeOpenSpace = (newPos, placedPositions) => {
   for (let pos of placedPositions) {
     const xGap = Math.abs(newPos.left - pos.left);
     const yGap = Math.abs(newPos.top - pos.top);
-    openSpace += xGap + yGap; // Sum of distances to all placed images
+    openSpace += xGap + 1.5 * yGap;
   }
 
   return openSpace;

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Responsive, WidthProvider } from "react-grid-layout";
-import ImageCard from "./cards/ImageCard";
+import ImageCard from "../../components/cards/ImageCard";
 import "react-grid-layout/css/styles.css";
 import "react-resizable/css/styles.css";
 

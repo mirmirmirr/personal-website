@@ -30,19 +30,19 @@ const Port = ({ containerRef, images }) => {
     <motion.div
       drag
       dragConstraints={containerRef}
-      initial={{ x: center.x, y: center.y }}
+      initial={{ x: 0, y: 0 }}
       animate={{ x: center.x, y: center.y }}
-      transition={{ duration: 0.5 }}
+      transition={{ duration: 1 }}
       className="w-[2000px] h-[2000px] absolute flex justify-center items-center"
     >
-      <div className="flex items-center flex-col w-[75vw] max-w-[400px] text-center">
+      <div className="flex items-center flex-col w-[75vw] max-w-[400px] text-center transition-all duration-700 ease-in-out">
         <p>Drag to Explore!</p>
         <h1 className="text-[30px] font-[700]">Creative Works</h1>
-        <p>
-          I used to love creating art, especially drawing. I don't have a lot of
-          time to do it now, but when I can I still try to keep in touch with my
-          creative side.
-        </p>
+        <div className="flex flex-col gap-2">
+          <p>I love creating art in my free time.</p>
+          <p>Although I don't have much time to draw anymore, I still try to find ways to stay connected to my creative side.</p>
+          <p>Whether it be creating club logos are designing posters and graphics, I love creating things.</p>
+        </div>
       </div>
 
       <ImageGallery items={images.art} />

@@ -1,4 +1,4 @@
-import MasonLayout from "../../components/MasonLayout"
+import MasonLayout from "../../archive/components/MasonLayout"
 import items from "../../resources/portfolio.json";
 
 export default function Logos() {

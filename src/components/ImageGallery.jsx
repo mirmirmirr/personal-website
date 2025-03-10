@@ -13,14 +13,14 @@ export default function ImageGallery({ items }) {
   const generatePositions = () => {
     let placedPositions = [
       {
-        top: 890,
+        top: 875,
         left: 800,
         width: 400,
-        height: 175,
+        height: 225,
       },
     ];
     const maxTries = 50;
-    const padding = 50;
+    const padding = 30;
 
     items.forEach((_, index) => {
       const imgElement = imageRefs.current[index];

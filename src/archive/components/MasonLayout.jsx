@@ -1,6 +1,6 @@
 import React from 'react';
 import Masonry from 'react-masonry-css';
-import ImageCard from './cards/ImageCard';
+import ImageCard from '../../components/cards/ImageCard';
 import { useState, useEffect } from 'react';
 
 const MasonLayout = React.memo(({ items }) => {

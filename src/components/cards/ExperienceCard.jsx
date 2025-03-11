@@ -66,7 +66,7 @@ function WorkDetails({ items, isSelected, showDescription }) {
       <div className={`w-[100%] ${isSelected ? "min-w-[160px]" : "hover:scale-90 hover:-translate-y-2"} transition-transform duration-300 ease-in-out`}>
         <div className="flex mb-2 ">
           {images.map((image, index) => (
-            <img key={index} src={image} alt={`${title} logo ${index}`} className="w-16 h-auto object-contain" />
+            <img key={index} src={image} alt={title} className="w-16 h-auto object-contain" />
           ))}
         </div>
         <div>{company}</div>
@@ -75,7 +75,11 @@ function WorkDetails({ items, isSelected, showDescription }) {
       </div>
 
       <div aria-hidden={!showDescription} className={`exp-description text-[14px]`}>
-        <div>{description}</div>
+        <div className="flex flex-col gap-4">
+          {description.map((element, index) => (
+            <p key={index}>{element}</p>
+          ))}
+        </div>
       </div>
 
     </div>
@@ -131,6 +135,7 @@ function ProjectDetails({ items, isSelected, showDescription }) {
           <div className="flex mt-8 mb-2">
             <img 
               src={images[0]} 
+              alt={title}
               className="w-full md:w-[320px] h-auto max-h-[200px] object-cover object-top rounded-[15px] group-hover:scale-110 group-hover:-translate-y-4 transition-transform duration-300 ease-in-out origin-bottom bottom-8" 
             />
           </div>
@@ -139,7 +144,11 @@ function ProjectDetails({ items, isSelected, showDescription }) {
       </div>
 
       <div aria-hidden={!showDescription} className={`exp-description text-[14px]`}>
-        <div>{description}</div>
+        <div className="flex flex-col gap-4">
+          {description.map((element, index) => (
+            <p key={index}>{element}</p>
+          ))}
+        </div>
       </div>
     </div>
   );

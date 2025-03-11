@@ -1,14 +1,31 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import PortfolioImageCard from "../components/cards/PortfolioImageCard";
 
 export default function ImageGallery({ items }) {
   const [positions, setPositions] = useState([]);
+  const [imagesLoaded, setImagesLoaded] = useState(new Array(items.length).fill(false));
   const imageRefs = useRef([]);
 
   const top = 10;
   const left = 10;
   const width = 2400;
   const height = 1700;
+
+  useEffect(() => {
+    if (positions.length - 1 === items.length) {
+      setTimeout(() => {
+        imagesLoaded.forEach((_, index) => {
+          setTimeout(() => {
+            setImagesLoaded((prev) => {
+              const updated = [...prev];
+              updated[index] = true;
+              return updated;
+            });
+          }, index * 100);
+        });
+      }, 1250);
+    }
+  }, [positions]);
 
   const generatePositions = () => {
     let placedPositions = [
@@ -74,7 +91,7 @@ export default function ImageGallery({ items }) {
 
             validPosition = inBounds && !placedPositions.some(pos => isOverlapping(newPos, pos));
 
-            console.log(validPosition, newPos);
+            // console.log(validPosition, newPos);
 
             if (validPosition) {
               const openSpace = computeOpenSpace(newPos, placedPositions);
@@ -85,7 +102,7 @@ export default function ImageGallery({ items }) {
             }
           }
 
-          console.log("looping..", validPosition, newPos);
+          // console.log("looping..", validPosition, newPos);
         }
 
         if (validPosition) {
@@ -102,7 +119,7 @@ export default function ImageGallery({ items }) {
         };
       }
 
-      console.log(`Image ${imgElement.alt} placed at:`, bestPosition);
+      // console.log(`Image ${imgElement.alt} placed at:`, bestPosition);
       placedPositions.push(bestPosition);
     });
 
@@ -123,11 +140,12 @@ export default function ImageGallery({ items }) {
             imageRefs.current[index] = el;
             if (el && index === items.length - 1) {
               el.onload = () => {
-                console.log(`Image ${index} loaded.`);
                 generatePositions();
               };
             }
           }}
+
+          showImage={imagesLoaded[index]}
         />
       ))}
     </>

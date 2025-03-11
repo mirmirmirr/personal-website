@@ -1,13 +1,13 @@
 import { twMerge } from "tailwind-merge";
 
-export default function PortfolioImageCard({ imageSrc, title, top, left, width, innerRef }) {
+export default function PortfolioImageCard({ imageSrc, title, top, left, width, innerRef, showImage }) {
   // console.log("Class applied to div:", className);
 
   return (
     <div 
       className={twMerge(
         "absolute",  // Ensure absolute positioning
-        // className    // This applies the width settings like md:w-48
+        `${showImage ? "opacity-100 transition-opacity duration-500 ease-in-out" : "opacity-0"}`
       )}
       style={{ top, left, width }}
     >

@@ -50,14 +50,10 @@ export default function ImageGallery({ items }) {
       const imgWidth = imgElement.offsetWidth;
       const imgHeight = imgElement.offsetHeight;
 
-
       let bestPosition = null;
       let minOpenSpace = Infinity;
 
-      let loopPositions = [];
-
-      if (placedPositions.length < 10) loopPositions = placedPositions;
-      else loopPositions = placedPositions.slice(placedPositions.length - 10);
+      let loopPositions = placedPositions.length < 10 ? placedPositions : placedPositions.slice(-10);
 
       for (let pos of loopPositions) {
         let validPosition = false;
@@ -105,9 +101,7 @@ export default function ImageGallery({ items }) {
           // console.log("looping..", validPosition, newPos);
         }
 
-        if (validPosition) {
-          break;
-        }
+        if (validPosition) break;
       }
 
       if (!bestPosition) {
@@ -164,13 +158,11 @@ const isOverlapping = (pos1, pos2) => {
 
 const computeOpenSpace = (newPos, placedPositions) => {
   let openSpace = 0;
-
   for (let pos of placedPositions) {
     const xGap = Math.abs(newPos.left - pos.left);
     const yGap = Math.abs(newPos.top - pos.top);
     openSpace += xGap + 1.5 * yGap;
   }
-
   return openSpace;
 };
 

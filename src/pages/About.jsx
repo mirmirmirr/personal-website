@@ -14,6 +14,7 @@ export default function About() {
           src="headshot_circle.png"
           alt="Miranda Headshot 2024"
           className="w-36 h-full object-cover"
+          fetchpriority="high"
         />
         <h1 className="text-[40px] font-[700]">mirmirmirr</h1>
         <p className="text-center">

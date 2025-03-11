@@ -20,7 +20,7 @@ const Port = ({ containerRef, images }) => {
     if (containerRef.current) {
       const { width, height } = containerRef.current.getBoundingClientRect();
       setCenter({
-        x: width / 2 - 1000, // Half of container width minus half of Port width
+        x: width / 2 - 1250, // Half of container width minus half of Port width
         y: height / 2 - 1000, // Half of container height minus half of Port height
       });
     }
@@ -33,7 +33,7 @@ const Port = ({ containerRef, images }) => {
       initial={{ x: 0, y: 0 }}
       animate={{ x: center.x, y: center.y }}
       transition={{ duration: 1 }}
-      className="w-[2000px] h-[2000px] absolute flex justify-center items-center"
+      className="w-[2500px] h-[2000px] absolute flex justify-center items-center"
     >
       <div className="flex items-center flex-col w-[75vw] max-w-[400px] text-center transition-all duration-700 ease-in-out">
         <p>Drag to Explore!</p>

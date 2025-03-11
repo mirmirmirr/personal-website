@@ -205,6 +205,16 @@
 			"width": "200px" 
 		},
 		{
+			"src": "/casa_merch.png",
+			"title": "CASA Merch",
+			"width": "225px"
+		},
+		{
+			"src": "/lawganma.png",
+			"title": "Lawganma",
+			"width": "225px"
+		},
+		{
 			"src": "/hackrpi/banner2024.png",
 			"title": "HackRPI Event Banner 2024",									
 			"width": "400px"  

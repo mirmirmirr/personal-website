@@ -7,19 +7,19 @@ export default function ImageGallery({ items }) {
 
   const top = 10;
   const left = 10;
-  const width = 2000;
-  const height = 1800;
+  const width = 2400;
+  const height = 1700;
 
   const generatePositions = () => {
     let placedPositions = [
       {
-        top: 875,
-        left: 800,
+        top: 860,
+        left: 1050,
         width: 400,
         height: 225,
       },
     ];
-    const maxTries = 50;
+    const maxTries = 100;
     const padding = 30;
 
     items.forEach((_, index) => {

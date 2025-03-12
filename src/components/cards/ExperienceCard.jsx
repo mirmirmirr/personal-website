@@ -131,7 +131,7 @@ function ProjectDetails({ items, isSelected, showDescription }) {
           </div>
         </div>
 
-        {cardWidth >= 200 && (
+        {cardWidth >= 200 && images.length > 0 && (
           <div className="flex mt-8 mb-2">
             <img 
               src={images[0]} 

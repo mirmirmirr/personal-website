@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-import mirandaImage from "/miranda.png";
+import Image from "../components/Image";
 import rightArrow from "/icons/rightarrow.svg";
 import ResizableBox from "../components/ResizeableBox";
 import Projects from "./Projects";
@@ -34,19 +34,21 @@ export default function Landing() {
               <span className="font-bold">information technology and web sciences</span> at
               Rensselaer Polytechnic Institute.
             </div>
-            <img className="w-[90%] md:hidden mt-2" src={mirandaImage} alt="Miranda" />
+            <img className="w-[90%] md:hidden mt-2" src="/miranda.png" alt="Miranda" fetchpriority="high" />
           </div>
         </ResizableBox>
       </div>
 
       {/* Large Image on Bigger Screens */}
-      <img
-        className="hidden md:block max-w-[520px] w-[38%] left-[58%] top-[25%] z-10 absolute"
-        src={mirandaImage}
+      <Image
+        src="/miranda.png"
         alt="Miranda"
+        className="hidden md:block max-w-[520px] w-[38%] left-[58%] top-[25%] z-10 absolute"
+        priority={true}
+        lazy={false}
       />
 
-      {/* About Section (Desktop) */}
+        {/* About Section (Desktop) */}
       <div
         className="hidden md:block overflow-hidden relative z-50 transition-all duration-700 ease-in-out"
         style={{ height: "clamp(0px, 50vh, 500px)" }}

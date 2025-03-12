@@ -113,7 +113,7 @@ function WorkDetails({ items, isSelected, cardRef }) {
 
       {cardWidth >= 200 && (
         <div className="flex justify-center mt-2">
-          <div className="opacity-0 group-hover:opacity-100 group-hover:-translate-y-2 transition-all duration-300 ease-in-out origin-bottom text-center text-[14px] text-[#0071D5]">
+          <div className="opacity-0 group-hover:opacity-100 group-hover:-translate-y-2 transition-all duration-300 ease-in-out origin-bottom text-center text-[14px] text-[#0071D5] dark:text-[#3395FF]">
             Click for more information
           </div>
         </div>

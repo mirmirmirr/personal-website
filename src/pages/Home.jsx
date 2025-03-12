@@ -57,7 +57,7 @@ export default function Landing() {
           i'm studying <span className="font-bold">computer science</span> and{" "}
           <span className="font-bold">information technology and web sciences</span> at
           Rensselaer Polytechnic Institute.
-          <Link to="/about" className="flex flex-row gap-2 text-[#0071D5] hover:font-semibold">
+          <Link to="/about" className="flex flex-row gap-2 text-[#0071D5] dark:text-[#3395FF] hover:font-semibold">
             more about me
             <img
               src={rightArrow}

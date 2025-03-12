@@ -1,8 +1,11 @@
 import { useState, useRef, useEffect } from "react";
 import PortfolioImageCard from "../components/cards/PortfolioImageCard";
+import { use } from "react";
+import { image } from "motion/react-client";
 
 export default function ImageGallery({ items }) {
   const [positions, setPositions] = useState([]);
+  const [images, setImages] = useState([]);
   const [imagesLoaded, setImagesLoaded] = useState(new Array(items.length).fill(false));
   const imageRefs = useRef([]);
 
@@ -10,6 +13,12 @@ export default function ImageGallery({ items }) {
   const left = 10;
   const width = 2400;
   const height = 1700;
+
+  useEffect(() => {
+    if (images.length === items.length) {
+      generatePositions();
+    }
+  }, [images]);
 
   useEffect(() => {
     if (positions.length - 1 === items.length) {
@@ -36,7 +45,7 @@ export default function ImageGallery({ items }) {
         height: 225,
       },
     ];
-    const maxTries = 100;
+    const maxTries = 50;
     const padding = 30;
 
     items.forEach((_, index) => {
@@ -113,7 +122,7 @@ export default function ImageGallery({ items }) {
         };
       }
 
-      console.log(`Image ${imgElement.alt} placed at:`, bestPosition);
+      // console.log(`Image ${imgElement.alt} placed at:`, bestPosition);
       placedPositions.push(bestPosition);
     });
 
@@ -132,9 +141,9 @@ export default function ImageGallery({ items }) {
           left={positions[index + 1]?.left}
           innerRef={(el) => {
             imageRefs.current[index] = el;
-            if (el && index === items.length - 1) {
+            if (el) {
               el.onload = () => {
-                generatePositions();
+                setImages((prev) => [...prev, el]);
               };
             }
           }}

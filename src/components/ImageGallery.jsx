@@ -32,11 +32,11 @@ export default function ImageGallery({ items }) {
       {
         top: 860,
         left: 1050,
-        width: 400,
+        width: 380,
         height: 225,
       },
     ];
-    const maxTries = 500;
+    const maxTries = 100;
     const padding = 30;
 
     items.forEach((_, index) => {
@@ -52,11 +52,10 @@ export default function ImageGallery({ items }) {
 
       let bestPosition = null;
       let minOpenSpace = Infinity;
+      let validPosition = false;
 
       let loopPositions = placedPositions.length < 10 ? placedPositions : placedPositions.slice(-10);
-
       for (let pos of loopPositions) {
-        let validPosition = false;
         let newPos = null;
         let attempts = 0;
 
@@ -114,7 +113,7 @@ export default function ImageGallery({ items }) {
         };
       }
 
-      // console.log(`Image ${imgElement.alt} placed at:`, bestPosition);
+      console.log(`Image ${imgElement.alt} placed at:`, bestPosition);
       placedPositions.push(bestPosition);
     });
 

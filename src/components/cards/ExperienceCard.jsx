@@ -119,7 +119,7 @@ function WorkDetails({ items, isSelected, cardRef }) {
         </div>
       )}
 
-      <div className="md:hidden absolute bottom-4 w-[90%] text-center">
+      <div className={`md:hidden absolute bottom-4 w-[90%] text-center ${isSelected ? "opacity-0" : "opacity-100"} transition-opacity duration-300 ease-in-out`}>
         <div className="group-hover:-translate-y-2 transition-all duration-300 ease-in-out origin-bottom text-center text-[14px] text-[#0071D5]">
           Click for more information
         </div>

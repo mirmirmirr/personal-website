@@ -100,6 +100,7 @@ export default function ImageGallery({ items }) {
 
           // console.log("looping..", validPosition, newPos);
         }
+        console.log(`Attempts for image ${imgElement.alt}:`, attempts);
 
         if (validPosition) break;
       }
@@ -113,7 +114,7 @@ export default function ImageGallery({ items }) {
         };
       }
 
-      // console.log(`Image ${imgElement.alt} placed at:`, bestPosition);
+      console.log(`Image ${imgElement.alt} placed at:`, bestPosition);
       placedPositions.push(bestPosition);
     });
 

@@ -36,7 +36,7 @@ export default function ImageGallery({ items }) {
         height: 225,
       },
     ];
-    const maxTries = 100;
+    const maxTries = 500;
     const padding = 30;
 
     items.forEach((_, index) => {
@@ -100,7 +100,7 @@ export default function ImageGallery({ items }) {
 
           // console.log("looping..", validPosition, newPos);
         }
-        console.log(`Attempts for image ${imgElement.alt}:`, attempts);
+        // console.log(`Attempts for image ${imgElement.alt}:`, attempts, validPosition);
 
         if (validPosition) break;
       }
@@ -114,7 +114,7 @@ export default function ImageGallery({ items }) {
         };
       }
 
-      console.log(`Image ${imgElement.alt} placed at:`, bestPosition);
+      // console.log(`Image ${imgElement.alt} placed at:`, bestPosition);
       placedPositions.push(bestPosition);
     });
 

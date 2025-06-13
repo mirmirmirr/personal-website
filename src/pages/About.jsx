@@ -16,7 +16,7 @@ export default function About() {
           className="w-36 h-full object-cover"
           fetchpriority="high"
         />
-        <h1 className="text-[40px] font-[700]">mirmirmirr</h1>
+        <h1 className="text-[40px] font-bold">mirmirmirr</h1>
         <p className="text-center">
           Hi! I'm Miranda, a junior at Rensselaer Polytechnic Institute, pursuing a dual degree in Computer Science and Information Technology & Web Sciences. My passion for technology started when I became the go-to 'tech person' in my family — I spent hours troubleshooting phone and computer issues and teaching my grandpa easier ways to use his phone.  At the end of high school, my sister inspired me to choose computer sicence as my major, and I've been loving it ever since.
         </p>
@@ -41,7 +41,7 @@ export default function About() {
       </div>
 
       <button
-        className="bg-blue-100 hover:bg-highlightBlue hover:text-white dark:hover:bg-[#9CC4F5] dark:hover:text-black dark:bg-highlightBlue rounded-[15px] px-6 py-2 mx-auto"
+        className="bg-blue-100 hover:bg-highlight-blue hover:text-white dark:hover:bg-[#9CC4F5] dark:hover:text-black dark:bg-highlight-blue rounded-[15px] px-6 py-2 mx-auto"
         onClick={() => window.open('/MirandaZheng_Resume.pdf', '_blank')}
       >
         Get my resume!

@@ -41,7 +41,7 @@ export default function ExperienceCard( {type, items, isSelected: initialSelecte
   return (
     <div  
       ref={cardRef} onClick={handleCardClick} 
-      className={`relative items-center h-full justify-center transition-all duration-300 ${isSelected ? "border-2 border-[#3395ff]" : ""}`}
+      className={`relative items-center h-full justify-center transition-all duration-300 ${isSelected ? "border-2 border-highlight-blue" : ""}`}
     >
       <CardDetailWrapper items={items} isSelected={isSelected} showDescription={showDescription} cardDetailRef={cardDetailRef}>
         {type === "experience" ? <WorkDetails items={items} isSelected={isSelected} cardRef={cardDetailRef} /> : <ProjectDetails items={items} cardRef={cardDetailRef} />}
@@ -55,13 +55,13 @@ function CardDetailWrapper({ items, isSelected, showDescription, cardDetailRef, 
   return (
     <div
       className={`
-        relative gap-4 p-4 rounded-[15px] border-[2px] border-gray-300 overflow-hidden 
+        relative gap-4 p-4 rounded-[15px] border-2 border-gray-300 overflow-hidden 
         ${showDescription ? "flex flex-col md:flex-row" : ""} 
-        ${isSelected ? "" : `hover:border-2 hover:border-[#3395ff]`}
+        ${isSelected ? "" : `hover:border-2 hover:border-highlight-blue`}
       `}
       style={{ width: "100%", height: "100%" }}
     >
-      <div ref={cardDetailRef} className={`w-[100%] ${isSelected ? "min-w-[160px]" : "group h-[225px]"} `}>
+      <div ref={cardDetailRef} className={`w-full ${isSelected ? "min-w-[160px]" : "group h-[225px]"} `}>
         {children}
       </div>
 
@@ -95,7 +95,7 @@ function WorkDetails({ items, isSelected, cardRef }) {
   
   return (
     <>
-      <div className={`w-[100%] ${isSelected ? "min-w-[160px]" : "group-hover:scale-90 group-hover:-translate-y-2"} transition-transform duration-300 ease-in-out`}>
+      <div className={`w-full ${isSelected ? "min-w-[160px]" : "group-hover:scale-90 group-hover:-translate-y-2"} transition-transform duration-300 ease-in-out`}>
         <div className="flex mb-2 ">
           {images.map((image, index) => (
             <Image 
@@ -107,7 +107,7 @@ function WorkDetails({ items, isSelected, cardRef }) {
           ))}
         </div>
         <div>{company}</div>
-        <div className="font-[600] text-[14px]">{title}</div>
+        <div className="font-semibold text-[14px]">{title}</div>
         <div className="text-[14px]">{duration}</div>
       </div>
 
@@ -146,20 +146,20 @@ function ProjectDetails({ items, cardRef }) {
 
   return (
     <>
-      <div className="w-[100%] h-[120px] md:h-[140px] items-end group-hover:scale-90 group-hover:-translate-y-2 transition-transform duration-300 ease-in-out">
-        <div className="font-[600]">{title}</div>
+      <div className="w-full h-[120px] md:h-[140px] items-end group-hover:scale-90 group-hover:-translate-y-2 transition-transform duration-300 ease-in-out">
+        <div className="font-semibold">{title}</div>
         <div className="text-[14px]">{duration}</div>
         <Link 
           to={github} target="_blank" 
           rel="noopener noreferrer" 
-          className="text-[14px] underline hover:text-highlightBlue" 
+          className="text-[14px] underline hover:text-highlight-blue" 
           onClick={(e) => e.stopPropagation()}
         > 
           Github
         </Link>
         <div className="flex flex-row flex-wrap gap-2 mt-4">
           {stack.map((tech, index) => (
-            <div key={index} className="text-[12px] p-[5px] rounded-lg bg-blue-100 dark:bg-highlightBlue">{tech}</div>
+            <div key={index} className="text-[12px] p-[5px] rounded-lg bg-blue-100 dark:bg-highlight-blue">{tech}</div>
           ))}
         </div>
       </div>

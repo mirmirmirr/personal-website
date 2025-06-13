@@ -15,7 +15,7 @@ export default function Footer() {
 
   return (
     <div className='fixed bottom-[50px] left-1/2 transform -translate-x-1/2 z-50'>
-      <div className="bg-backgroundLight dark:bg-backgroundDark border-2 shadow-md shadow-blue-200 dark:shadow-highlightBlue rounded-[25px] p-2 gap-2 flex items-center hover:scale-110 transition-transform duration-300 ease-in-out">
+      <div className="bg-background-light dark:bg-background-dark border-2 shadow-md shadow-blue-200 dark:shadow-highlight-blue rounded-[25px] p-2 gap-2 flex items-center hover:scale-110 transition-transform duration-300 ease-in-out">
         <LinkGroup iconSrc={homeWhite} alt="Home" link="/" />
         <LinkGroup iconSrc={paperIcon} alt="Creative Work" link="/portfolio" />
         <LinkGroup iconSrc={faceIcon} alt="About" link="/about" />
@@ -26,7 +26,7 @@ export default function Footer() {
         </div>
 
         <div 
-          className="group w-[35px] h-[35px] flex items-center justify-center rounded-full transition-transform duration-300 ease-in-out hover:bg-blue-100 dark:hover:bg-highlightBlue"
+          className="group w-[35px] h-[35px] flex items-center justify-center rounded-full transition-transform duration-300 ease-in-out hover:bg-blue-100 dark:hover:bg-highlight-blue"
           onClick={toggleTheme}
         >
           <img
@@ -50,7 +50,7 @@ function LinkGroup({ iconSrc, alt, link, isExternal = false }) {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <div className="w-[35px] h-[35px] flex items-center justify-center rounded-full transition-all duration-300 ease-in-out group-hover:bg-blue-100 dark:group-hover:bg-highlightBlue">
+          <div className="w-[35px] h-[35px] flex items-center justify-center rounded-full transition-all duration-300 ease-in-out group-hover:bg-blue-100 dark:group-hover:bg-highlight-blue">
             <img
               src={iconSrc}
               className="w-[20px] h-[20px] filter dark:invert dark:brightness-0 dark:contrast-200 transition-transform duration-300 group-hover:scale-110"
@@ -60,7 +60,7 @@ function LinkGroup({ iconSrc, alt, link, isExternal = false }) {
         </a>
       ) : (
         <Link to={link}>
-          <div className="w-[35px] h-[35px] flex items-center justify-center rounded-full transition-all duration-300 ease-in-out group-hover:bg-blue-100 dark:group-hover:bg-highlightBlue">
+          <div className="w-[35px] h-[35px] flex items-center justify-center rounded-full transition-all duration-300 ease-in-out group-hover:bg-blue-100 dark:group-hover:bg-highlight-blue">
             <img
               src={iconSrc}
               className="w-[20px] h-[20px] filter dark:invert dark:brightness-0 dark:contrast-200 transition-transform duration-300 group-hover:scale-110"
@@ -69,7 +69,7 @@ function LinkGroup({ iconSrc, alt, link, isExternal = false }) {
           </div>
         </Link>
       )}
-      <span className="absolute inline-block -top-10 left-[50%] -translate-x-[50%] z-20 origin-left scale-0 px-3 rounded-lg border border-blue-100 bg-white py-[2px] text-[12px] shadow-md transition-all duration-300 ease-in-out group-hover:scale-100 text-highlightBlue whitespace-nowrap">
+      <span className="absolute inline-block -top-10 left-[50%] -translate-x-[50%] z-20 origin-left scale-0 px-3 rounded-lg border border-blue-100 bg-white py-[2px] text-[12px] shadow-md transition-all duration-300 ease-in-out group-hover:scale-100 text-highlight-blue whitespace-nowrap">
         {alt}
       </span>
     </div>

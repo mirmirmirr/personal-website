@@ -7,7 +7,7 @@ export default function ImageCard({ imageSrc, title}) {
         className="rounded-[15px]"
         loading="lazy"
       />
-      <div className="m-[10px] font-[500]">{title}</div>
+      <div className="m-[10px] font-medium">{title}</div>
     </div>
   );
 };

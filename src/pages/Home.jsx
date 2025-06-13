@@ -26,7 +26,7 @@ export default function Landing() {
             <div className="text-xl font-normal mt-4 -mb-[20px] md:-mb-[30px] ml-2">
               hello! my name is
             </div>
-            <h1 className="text-[10vw] max-text-[40px] font-normal underline decoration-[#3395ff] decoration-2">
+            <h1 className="text-[10vw] max-text-[40px] font-normal underline decoration-highlight-blue decoration-2">
               Miranda
             </h1>
             <div className="md:hidden text-center p-6 text-xl">
@@ -61,7 +61,7 @@ export default function Landing() {
             more about me
             <img
               src={rightArrow}
-              className="w-5 h-5 fill-highlightBlue dark:invert transition-transform duration-300 group-hover:scale-110"
+              className="w-5 h-5 fill-highlight-blue dark:invert transition-transform duration-300 group-hover:scale-110"
               alt="right arrow"
             />
           </Link>

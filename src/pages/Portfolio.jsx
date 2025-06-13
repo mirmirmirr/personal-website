@@ -37,7 +37,7 @@ const Port = ({ containerRef, images }) => {
     >
       <div className="flex items-center flex-col w-[75vw] max-w-[400px] text-center transition-all duration-700 ease-in-out">
         <p>Drag to Explore!</p>
-        <h1 className="text-[30px] font-[700]">Creative Works</h1>
+        <h1 className="text-[30px] font-bold">Creative Works</h1>
         <div className="flex flex-col gap-2">
           <p>I love creating art in my free time.</p>
           <p>Although I don't have much time to draw anymore, I still try to find ways to stay connected to my creative side.</p>

@@ -31,22 +31,22 @@ export default function Portfolio() {
   return (
     // <div className="flex flex-col gap-4 min-h-screen">
     //   <div
-    //     className="p-8 gap-8 rounded-[20px] group h-[200px] flex border-2 hover:border-highlightBlue cursor-pointer"
+    //     className="p-8 gap-8 rounded-[20px] group h-[200px] flex border-2 hover:border-highlight-blue cursor-pointer"
     //     onClick={() => window.location.href = '/portfolio/art'}
     //   >
     //     <div className="w-[450px] group-hover:scale-90 group-hover:-translate-y-2 transition-transform duration-300 ease-in-out flex flex-col justify-center">
-    //       <h1 className="text-[20px] font-[700]">Artwork</h1>
+    //       <h1 className="text-[20px] font-bold">Artwork</h1>
     //       <p className="text-[14px]">I used to love creating art, especially drawing. I don't have a lot of time to do it now, but when I can I still draw digitally.</p>
     //     </div>
     //     <div className="flex gap-4 group-hover:scale-90 transition-transform duration-300 ease-in-out">
     //       {allPieces.slice(0, 4).map((_, index) => (
-    //         <img key={index} src={allPieces[index].src} alt={allPieces[index].alt} className="w-[100px] object-cover rounded-[20px] bg-highlightBlue" />
+    //         <img key={index} src={allPieces[index].src} alt={allPieces[index].alt} className="w-[100px] object-cover rounded-[20px] bg-highlight-blue" />
     //       ))}
     //     </div>
     //   </div>
-    //   <div className="p-8 gap-8 rounded-[20px] group h-[200px] flex border-2 hover:border-highlightBlue">
+    //   <div className="p-8 gap-8 rounded-[20px] group h-[200px] flex border-2 hover:border-highlight-blue">
     //     <div className="w-[450px] group-hover:scale-90 group-hover:-translate-y-2 transition-transform duration-300 ease-in-out flex flex-col justify-center">
-    //       <h1 className="text-[20px] font-[700]">Logos</h1>
+    //       <h1 className="text-[20px] font-bold">Logos</h1>
     //       <p className="text-[14px]">To continue being involved with my creative side, I've offered to redesign a lot of logos for cultural clubs on RPI's campus and got involved in artistic roles in clubs like HackRPI and Chinese American Student Association (CASA).</p>
     //     </div>
     //     <div className="flex gap-4 group-hover:scale-90 transition-transform duration-300 ease-in-out">
@@ -55,15 +55,15 @@ export default function Portfolio() {
     //       ))}
     //     </div>
     //   </div>
-    //   <div className="p-8 gap-8 rounded-[20px] group h-[200px] flex flex-col justify-center border-2 hover:border-highlightBlue">
+    //   <div className="p-8 gap-8 rounded-[20px] group h-[200px] flex flex-col justify-center border-2 hover:border-highlight-blue">
     //     <div className="w-[450px] group-hover:scale-90 group-hover:-translate-y-2 transition-transform duration-300 ease-in-out flex flex-col justify-center">
-    //       <h1 className="text-[20px] font-[700]">HackRPI</h1>
+    //       <h1 className="text-[20px] font-bold">HackRPI</h1>
     //       <p className="text-[14px]">I served as the Director of Marketing for HackRPI for two years, helping with branding, recruitment, website creation, and marketing!</p>
     //     </div>
     //   </div>
-    //   <div className="p-8 gap-8 rounded-[20px] group h-[200px] flex flex-col justify-center border-2 hover:border-highlightBlue">
+    //   <div className="p-8 gap-8 rounded-[20px] group h-[200px] flex flex-col justify-center border-2 hover:border-highlight-blue">
     //     <div className="w-[450px] group-hover:scale-90 group-hover:-translate-y-2 transition-transform duration-300 ease-in-out flex flex-col justify-center">
-    //       <h1 className="text-[20px] font-[700]">Chinese American Student Association (CASA)</h1>
+    //       <h1 className="text-[20px] font-bold">Chinese American Student Association (CASA)</h1>
     //       <p className="text-[14px]">I joined CASA my sophmore year as the Graphics Chair and have been creating graphics and chinese-oriented merch since!</p>
     //     </div>
     //   </div>

@@ -34,7 +34,7 @@ const MasonLayout = React.memo(({ items }) => {
       columnClassName="my-masonry-grid_column"
     >
       {items.map((item, index) => (
-        <div key={index} className="bg-gray-200 p-4 rounded shadow-md">
+        <div key={index} className="bg-gray-200 p-4 rounded-sm shadow-md">
           <ImageCard key={index} imageSrc={item.src} title={item.title} />
         </div>
       ))}

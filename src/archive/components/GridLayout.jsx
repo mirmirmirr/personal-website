@@ -54,7 +54,7 @@ const MasonLayout = React.memo(({ items }) => {
       isResizable={true}
     >
       {items.map((item, index) => (
-        <div key={index} className="bg-gray-200 p-4 rounded shadow-md">
+        <div key={index} className="bg-gray-200 p-4 rounded-sm shadow-md">
           <ImageCard
             imageSrc={item.src}
             title={item.title}

@@ -7,7 +7,10 @@ export default function Portfolio() {
   const containerRef = useRef(null);
 
   return (
-    <section ref={containerRef} className="relative w-screen h-screen overflow-hidden">
+    <section
+      ref={containerRef}
+      className="relative h-screen w-screen overflow-hidden"
+    >
       <Port containerRef={containerRef} images={items} />
     </section>
   );
@@ -33,15 +36,21 @@ const Port = ({ containerRef, images }) => {
       initial={{ x: 0, y: 0 }}
       animate={{ x: center.x, y: center.y }}
       transition={{ duration: 1 }}
-      className="w-[2500px] h-[2000px] absolute flex justify-center items-center"
+      className="absolute flex h-[2000px] w-[2500px] items-center justify-center"
     >
-      <div className="flex items-center flex-col w-[75vw] max-w-[400px] text-center transition-all duration-700 ease-in-out">
+      <div className="flex w-[75vw] max-w-[400px] flex-col items-center text-center transition-all duration-700 ease-in-out">
         <p>Drag to Explore!</p>
         <h1 className="text-[30px] font-bold">Creative Works</h1>
         <div className="flex flex-col gap-2">
           <p>I love creating art in my free time.</p>
-          <p>Although I don't have much time to draw anymore, I still try to find ways to stay connected to my creative side.</p>
-          <p>Whether it be creating club logos are designing posters and graphics, I love creating things.</p>
+          <p>
+            Although I don't have much time to draw anymore, I still try to find
+            ways to stay connected to my creative side.
+          </p>
+          <p>
+            Whether it be creating club logos are designing posters and
+            graphics, I love creating things.
+          </p>
         </div>
       </div>
 

@@ -65,101 +65,130 @@
   Lab 7 is due by midnight Oct 29, 2012.
   
 */
-$(document).ready(function() {
-  
+$(document).ready(function () {
   // Excercise 1: Flickr feed
-  var option=1;	
-	
-	if (option==1) {
-	
-  	$.ajax({
-   	 	type: "GET",
-   	 	url: "flickrfeed.js",
-   	 	dataType: "json",
-   	 	success: function(responseData, status){
-   	  	var output = "<ul>";  
-    	 	$.each(responseData.items, function(i, item) {
-       		output += '<li><a href="' + item.link + '" target="_blank">';
-        	output += '<img title="' + item.title + '" src="' + item.media.m;
-        	output += '" alt="'; 
-        	output += item.title + '" />';
-        	output += '</a></li>';
-      	});
-      	output += "</ul>";
-      	$('#flickrOutput').html(output);
-    	}, error: function(msg) {
-      				// there was a problem
-      	alert("There was a problem: " + msg.status + " " + msg.statusText);
-    	}
-  	});
-	} else {  // OR - option 2
-  	$.ajax({
-    	type: "GET",
-    	url: "flickrfeed.js",
-    	dataType: "json",
-   		success: function(responseData, status){
-    	  var output = "<ul>"; 
-      	$.each(responseData.items, function() {
-        	  $("#flickrOutput").append(
-          	  "<li><a href='" + this.link + "' target='_blank'>" +
-           	 "<img title='"+ this.title + "'src='" + this.media.m + "' alt='"+ this.title + "' />" + "</a></li>");
-      	});
-      	output += "</ul>";
-    	}, error: function(msg) {
-      	// there was a problem
-      	alert("There was a problem: " + msg.status + " " + msg.statusText);
-    	}
-  	});	
-	};
-  
+  var option = 1;
+
+  if (option == 1) {
+    $.ajax({
+      type: "GET",
+      url: "flickrfeed.js",
+      dataType: "json",
+      success: function (responseData, status) {
+        var output = "<ul>";
+        $.each(responseData.items, function (i, item) {
+          output += '<li><a href="' + item.link + '" target="_blank">';
+          output += '<img title="' + item.title + '" src="' + item.media.m;
+          output += '" alt="';
+          output += item.title + '" />';
+          output += "</a></li>";
+        });
+        output += "</ul>";
+        $("#flickrOutput").html(output);
+      },
+      error: function (msg) {
+        // there was a problem
+        alert("There was a problem: " + msg.status + " " + msg.statusText);
+      },
+    });
+  } else {
+    // OR - option 2
+    $.ajax({
+      type: "GET",
+      url: "flickrfeed.js",
+      dataType: "json",
+      success: function (responseData, status) {
+        var output = "<ul>";
+        $.each(responseData.items, function () {
+          $("#flickrOutput").append(
+            "<li><a href='" +
+              this.link +
+              "' target='_blank'>" +
+              "<img title='" +
+              this.title +
+              "'src='" +
+              this.media.m +
+              "' alt='" +
+              this.title +
+              "' />" +
+              "</a></li>",
+          );
+        });
+        output += "</ul>";
+      },
+      error: function (msg) {
+        // there was a problem
+        alert("There was a problem: " + msg.status + " " + msg.statusText);
+      },
+    });
+  }
+
   // Excercise 2: NYT Bits Blog feed
   // your code goes here.
-	
-    if (option==1) {	 
-	  	$.ajax({
-	    	type: "GET",
- 	  		url: "NYTHomePage.xml",
-    		dataType: "xml",
-    		success: function(responseData, status){
-    			var output = "<ul>";  
-      		$(responseData).find("item").each(function() {
-       			output += '<li><a href="' + $(this).find("link").text() + '" target="_blank">';
-        		output += $(this).find("title").text();
-        		output += '</a></li>';
-        		output += "<div id='date'>" + $(this).find("pubDate").text() + "</div><br />";
-      		});
-      		output += "</ul>";
-      		$('#nytOutput').html(output);
-    		}, error: function(msg) {
-      		// there was a problem
-      		alert("There was a problem: " + msg.status + " " + msg.statusText);
-    		}
-  		});  
-		} else { // OR - option 2
- 			$.ajax({
-   	 		type: "GET",
-    		url: "http://www.nytimes.com/services/xml/rss/nyt/HomePage.xml",
-    		dataType: "xml",
-    		success: function(responseData, status){
-    			var output = "<ul>"; 
-    						//alert("Good: " + responseData.status + " " + responseData.title); 
-    			$(responseData).find("item").each(function() {
-      	  	$("#nytOutput").append(
-         	 	"<li><a href='" +$(this).find("link").text() + "' target='_blank'>" +
-         	 	$(this).find("title").text()+"</a><br />" +
-         	 	"<font class='smaller'>" + $(this).find("pubDate").text() + "</font><br /></li>" );
-      		});
-    			output += "</ul><br /><br >";
-    		}, error: function(msg) {
-      					// there was a problem
-      		alert("There was a problem: " + msg.status + " " + msg.statusText);
-    		}
-  		});
-		};
-  
-  
-  // Flickr jsonp example using getJSON: 
- /*
+
+  if (option == 1) {
+    $.ajax({
+      type: "GET",
+      url: "NYTHomePage.xml",
+      dataType: "xml",
+      success: function (responseData, status) {
+        var output = "<ul>";
+        $(responseData)
+          .find("item")
+          .each(function () {
+            output +=
+              '<li><a href="' +
+              $(this).find("link").text() +
+              '" target="_blank">';
+            output += $(this).find("title").text();
+            output += "</a></li>";
+            output +=
+              "<div id='date'>" +
+              $(this).find("pubDate").text() +
+              "</div><br />";
+          });
+        output += "</ul>";
+        $("#nytOutput").html(output);
+      },
+      error: function (msg) {
+        // there was a problem
+        alert("There was a problem: " + msg.status + " " + msg.statusText);
+      },
+    });
+  } else {
+    // OR - option 2
+    $.ajax({
+      type: "GET",
+      url: "http://www.nytimes.com/services/xml/rss/nyt/HomePage.xml",
+      dataType: "xml",
+      success: function (responseData, status) {
+        var output = "<ul>";
+        //alert("Good: " + responseData.status + " " + responseData.title);
+        $(responseData)
+          .find("item")
+          .each(function () {
+            $("#nytOutput").append(
+              "<li><a href='" +
+                $(this).find("link").text() +
+                "' target='_blank'>" +
+                $(this).find("title").text() +
+                "</a><br />" +
+                "<font class='smaller'>" +
+                $(this).find("pubDate").text() +
+                "</font><br /></li>",
+            );
+          });
+        output += "</ul><br /><br >";
+      },
+      error: function (msg) {
+        // there was a problem
+        alert("There was a problem: " + msg.status + " " + msg.statusText);
+      },
+    });
+  }
+
+  // Flickr jsonp example using getJSON:
+  /*
   $.getJSON("http://api.flickr.com/services/feeds/photos_public.gne?format=json&jsoncallback=?", outputPhotos);
   function outputPhotos(photoData) {
     var output = "<ul>";   
@@ -173,6 +202,5 @@ $(document).ready(function() {
     output += "</ul>";
     $('#flickrExample').html(output);
   }
-*/  
+*/
 });
-

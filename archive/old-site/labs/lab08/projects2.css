@@ -1,68 +1,68 @@
 #projectsTitle h1 {
-    padding: 0px 40px;
-    font-size: 5vh;
+  padding: 0px 40px;
+  font-size: 5vh;
 }
 
 .container {
-    overflow: auto;
-    display: flex;
-    width: 90%;
-    margin: 0 auto;
-    padding: 0 15px;
-  }
-  
-  .card {
-    background: rgba(255, 255, 255, 0.25);
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-    backdrop-filter: blur(7px);
-    border-radius: 10px;
-    padding: 1rem;
-    margin: 1rem;
-    width: 200px;
-    justify-content: center;
-  }
+  overflow: auto;
+  display: flex;
+  width: 90%;
+  margin: 0 auto;
+  padding: 0 15px;
+}
 
-  .card img {
-    width: 200px;
-  }
-  
-  .container:hover > :not(:hover) {
-    opacity: 0.2;
-  }
-  
-  .title {
-    width: 100%;
-    display: inline-block;
-    word-break: break-all;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    text-align: center;
-    margin: 1rem auto;
-  }
+.card {
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(7px);
+  border-radius: 10px;
+  padding: 1rem;
+  margin: 1rem;
+  width: 200px;
+  justify-content: center;
+}
 
-  #descriptions {
-    margin: 0px 40px;
-  }
+.card img {
+  width: 200px;
+}
 
-  .description img {
-    float: left;
-    width: 30vw;
-  }
-    .description img:hover {
-        z-index: 1;
-        opacity: 0.25;
-    }
+.container:hover > :not(:hover) {
+  opacity: 0.2;
+}
 
-    .description a {
-        color: blue;
-    }
+.title {
+  width: 100%;
+  display: inline-block;
+  word-break: break-all;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
+  margin: 1rem auto;
+}
 
-  .description .text {
-    float: right;
-    width: calc(100vw - 40vw - 40px);
-  }
+#descriptions {
+  margin: 0px 40px;
+}
 
-  .description .text h1{
-    font-size: 20px;
-  }
+.description img {
+  float: left;
+  width: 30vw;
+}
+.description img:hover {
+  z-index: 1;
+  opacity: 0.25;
+}
+
+.description a {
+  color: blue;
+}
+
+.description .text {
+  float: right;
+  width: calc(100vw - 40vw - 40px);
+}
+
+.description .text h1 {
+  font-size: 20px;
+}

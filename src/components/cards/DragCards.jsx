@@ -48,7 +48,7 @@ export default function DragCards() {
       />
     </div>
   );
-};
+}
 
 const Card = ({ containerRef, src, alt, bottom, left, rotate, className }) => {
   const [zIndex, setZIndex] = useState(0);
@@ -60,7 +60,7 @@ const Card = ({ containerRef, src, alt, bottom, left, rotate, className }) => {
 
     els.forEach((el) => {
       let zIndex = parseInt(
-        window.getComputedStyle(el).getPropertyValue("z-index")
+        window.getComputedStyle(el).getPropertyValue("z-index"),
       );
 
       if (!isNaN(zIndex) && zIndex > maxZIndex) {
@@ -82,7 +82,7 @@ const Card = ({ containerRef, src, alt, bottom, left, rotate, className }) => {
       }}
       className={cn(
         "drag-elements absolute w-48 bg-neutral-200 p-1 pb-4",
-        className
+        className,
       )}
       src={src}
       alt={alt}

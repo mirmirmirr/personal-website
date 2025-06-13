@@ -11,7 +11,7 @@ export default function SelectedBorderIndicators() {
       {positions.map((pos, index) => (
         <div
           key={index}
-          className="absolute w-[15px] h-[15px] bg-background-light dark:bg-background-dark border-2 border-highlight-blue"
+          className="absolute h-[15px] w-[15px] border-2 border-highlight-blue bg-background-light dark:bg-background-dark"
           style={pos}
         />
       ))}

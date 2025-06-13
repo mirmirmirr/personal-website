@@ -6,7 +6,9 @@ import { image } from "motion/react-client";
 export default function ImageGallery({ items }) {
   const [positions, setPositions] = useState([]);
   const [images, setImages] = useState([]);
-  const [imagesLoaded, setImagesLoaded] = useState(new Array(items.length).fill(false));
+  const [imagesLoaded, setImagesLoaded] = useState(
+    new Array(items.length).fill(false),
+  );
   const imageRefs = useRef([]);
 
   const top = 10;
@@ -63,7 +65,10 @@ export default function ImageGallery({ items }) {
       let minOpenSpace = Infinity;
       let validPosition = false;
 
-      let loopPositions = placedPositions.length < 10 ? placedPositions : placedPositions.slice(-10);
+      let loopPositions =
+        placedPositions.length < 10
+          ? placedPositions
+          : placedPositions.slice(-10);
       for (let pos of loopPositions) {
         let newPos = null;
         let attempts = 0;
@@ -72,11 +77,32 @@ export default function ImageGallery({ items }) {
           attempts++;
 
           const candidatePositions = [
-            { top: randomInt(pos.top - padding, pos.top - padding - imgHeight), left: pos.left + Math.random() * pos.width/4 },
-            { top: pos.top + Math.random() * pos.height/4, left: randomInt(pos.left - padding, pos.left - padding - imgWidth) },
-            { top: pos.top + Math.random() * pos.height/4, left: randomInt(pos.left + pos.width + padding, pos.left + pos.width + padding + imgWidth/4) },
-            { top: randomInt(pos.top + pos.height + padding, pos.top + pos.height + padding + imgHeight/4), left: pos.left + Math.random() * pos.width/4 }
-          ]
+            {
+              top: randomInt(pos.top - padding, pos.top - padding - imgHeight),
+              left: pos.left + (Math.random() * pos.width) / 4,
+            },
+            {
+              top: pos.top + (Math.random() * pos.height) / 4,
+              left: randomInt(
+                pos.left - padding,
+                pos.left - padding - imgWidth,
+              ),
+            },
+            {
+              top: pos.top + (Math.random() * pos.height) / 4,
+              left: randomInt(
+                pos.left + pos.width + padding,
+                pos.left + pos.width + padding + imgWidth / 4,
+              ),
+            },
+            {
+              top: randomInt(
+                pos.top + pos.height + padding,
+                pos.top + pos.height + padding + imgHeight / 4,
+              ),
+              left: pos.left + (Math.random() * pos.width) / 4,
+            },
+          ];
 
           for (let candidate of candidatePositions) {
             newPos = {
@@ -84,16 +110,17 @@ export default function ImageGallery({ items }) {
               left: candidate.left,
               width: imgWidth,
               height: imgHeight,
-            }
+            };
 
-            const inBounds = (
+            const inBounds =
               newPos.left >= 0 &&
               newPos.top >= 0 &&
               newPos.left + newPos.width <= width &&
-              newPos.top + newPos.height <= height
-            );
+              newPos.top + newPos.height <= height;
 
-            validPosition = inBounds && !placedPositions.some(pos => isOverlapping(newPos, pos));
+            validPosition =
+              inBounds &&
+              !placedPositions.some((pos) => isOverlapping(newPos, pos));
 
             // console.log(validPosition, newPos);
 
@@ -147,14 +174,12 @@ export default function ImageGallery({ items }) {
               };
             }
           }}
-
           showImage={imagesLoaded[index]}
         />
       ))}
     </>
   );
-};
-
+}
 
 const isOverlapping = (pos1, pos2) => {
   return !(
@@ -176,7 +201,14 @@ const computeOpenSpace = (newPos, placedPositions) => {
 };
 
 const randomInt = (min, max) => {
-  if (max == null) { max = min; min = 0; }
-  if (min > max) { var tmp = min; min = max; max = tmp; }
+  if (max == null) {
+    max = min;
+    min = 0;
+  }
+  if (min > max) {
+    var tmp = min;
+    min = max;
+    max = tmp;
+  }
   return Math.floor(min + (max - min + 1) * Math.random());
-}
+};

@@ -1,13 +1,18 @@
-import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
-import { useEffect } from 'react';
-import { Analytics } from '@vercel/analytics/react';
-import { SpeedInsights } from '@vercel/speed-insights/react';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useLocation,
+} from "react-router-dom";
+import { useEffect } from "react";
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 
-import Home from './pages/Home.jsx';
-import Portfolio from './pages/Portfolio.jsx';
-import Projects from './pages/Projects.jsx';
-import About from './pages/About.jsx';
-import Footer from './components/Footer.jsx';
+import Home from "./pages/Home.jsx";
+import Portfolio from "./pages/Portfolio.jsx";
+import Projects from "./pages/Projects.jsx";
+import About from "./pages/About.jsx";
+import Footer from "./components/Footer.jsx";
 
 function AppLayout() {
   const location = useLocation();
@@ -26,8 +31,10 @@ function AppLayout() {
   }, [isPortfolioPage]);
 
   return (
-    <div className={`mb-32 ${isPortfolioPage ? "" : "p-8 flex justify-center"}`}>
-      <div className={isPortfolioPage ? "w-full" : "max-w-[1000px] w-[80vw]"}>
+    <div
+      className={`mb-32 ${isPortfolioPage ? "" : "flex justify-center p-8"}`}
+    >
+      <div className={isPortfolioPage ? "w-full" : "w-[80vw] max-w-[1000px]"}>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/portfolio" element={<Portfolio />} />
@@ -47,7 +54,7 @@ function ScrollToTop() {
   }, [pathname]);
 
   return null;
-};
+}
 
 function App() {
   return (

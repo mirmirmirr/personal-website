@@ -14,7 +14,7 @@ export default function Landing() {
   return (
     <>
       {/* Resizable Box with Intro */}
-      <div className="h-svh md:h-fit relative mt-4 md:mt-16">
+      <div className="relative mt-4 h-svh md:mt-16 md:h-fit">
         <ResizableBox
           x={isSmallScreen ? 0 : -25}
           y={0}
@@ -22,19 +22,27 @@ export default function Landing() {
           height={isSmallScreen ? vh * 0.8 : 350}
           dragging={isSmallScreen ? false : true}
         >
-          <div className="p-2 h-[80dvh] md:h-fit flex flex-col items-center md:items-start justify-center transition-all duration-700 ease-in-out">
-            <div className="text-xl font-normal mt-4 -mb-[20px] md:-mb-[30px] ml-2">
+          <div className="flex h-[80dvh] flex-col items-center justify-center p-2 transition-all duration-700 ease-in-out md:h-fit md:items-start">
+            <div className="text-xl mt-4 -mb-[20px] ml-2 font-normal md:-mb-[30px]">
               hello! my name is
             </div>
-            <h1 className="text-[10vw] max-text-[40px] font-normal underline decoration-highlight-blue decoration-2">
+            <h1 className="max-text-[40px] text-[10vw] font-normal underline decoration-highlight-blue decoration-2">
               Miranda
             </h1>
-            <div className="md:hidden text-center p-6 text-xl">
-              i'm studying <span className="font-bold">computer science</span> and{" "}
-              <span className="font-bold">information technology and web sciences</span> at
-              Rensselaer Polytechnic Institute.
+            <div className="text-xl p-6 text-center md:hidden">
+              i'm studying <span className="font-bold">computer science</span>{" "}
+              and{" "}
+              <span className="font-bold">
+                information technology and web sciences
+              </span>{" "}
+              at Rensselaer Polytechnic Institute.
             </div>
-            <img className="w-[90%] md:hidden mt-2" src="/miranda.png" alt="Miranda" fetchpriority="high" />
+            <img
+              className="mt-2 w-[90%] md:hidden"
+              src="/miranda.png"
+              alt="Miranda"
+              fetchpriority="high"
+            />
           </div>
         </ResizableBox>
       </div>
@@ -43,25 +51,30 @@ export default function Landing() {
       <Image
         src="/miranda.png"
         alt="Miranda"
-        className="hidden md:block max-w-[520px] w-[38%] left-[58%] top-[25%] z-10 absolute"
+        className="absolute top-[25%] left-[58%] z-10 hidden w-[38%] max-w-[520px] md:block"
         priority={true}
         lazy={false}
       />
 
-        {/* About Section (Desktop) */}
+      {/* About Section (Desktop) */}
       <div
-        className="hidden md:block overflow-hidden relative z-50 transition-all duration-700 ease-in-out"
+        className="relative z-50 hidden overflow-hidden transition-all duration-700 ease-in-out md:block"
         style={{ height: "clamp(0px, 50vh, 500px)" }}
       >
-        <div className="w-[331px] h-[133px] mt-16 text-xl">
+        <div className="text-xl mt-16 h-[133px] w-[331px]">
           i'm studying <span className="font-bold">computer science</span> and{" "}
-          <span className="font-bold">information technology and web sciences</span> at
-          Rensselaer Polytechnic Institute.
-          <Link to="/about" className="flex flex-row gap-2 text-[#0071D5] dark:text-[#3395FF] hover:font-semibold">
+          <span className="font-bold">
+            information technology and web sciences
+          </span>{" "}
+          at Rensselaer Polytechnic Institute.
+          <Link
+            to="/about"
+            className="flex flex-row gap-2 text-[#0071D5] hover:font-semibold dark:text-[#3395FF]"
+          >
             more about me
             <img
               src={rightArrow}
-              className="w-5 h-5 fill-highlight-blue dark:invert transition-transform duration-300 group-hover:scale-110"
+              className="h-5 w-5 fill-highlight-blue transition-transform duration-300 group-hover:scale-110 dark:invert"
               alt="right arrow"
             />
           </Link>

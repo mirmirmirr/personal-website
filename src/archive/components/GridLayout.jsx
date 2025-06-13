@@ -25,7 +25,7 @@ const MasonLayout = React.memo(({ items }) => {
   // Generate layouts dynamically with measured heights
   const generateLayouts = () => {
     const layouts = { lg: [], md: [], sm: [] };
-    console.log(itemHeights)
+    console.log(itemHeights);
     items.forEach((item, index) => {
       const itemHeightInRows = itemHeights[index] || 10; // Default to 10 rows if not measured yet
 
@@ -54,7 +54,7 @@ const MasonLayout = React.memo(({ items }) => {
       isResizable={true}
     >
       {items.map((item, index) => (
-        <div key={index} className="bg-gray-200 p-4 rounded-sm shadow-md">
+        <div key={index} className="rounded-sm bg-gray-200 p-4 shadow-md">
           <ImageCard
             imageSrc={item.src}
             title={item.title}

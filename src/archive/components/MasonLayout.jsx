@@ -1,7 +1,7 @@
-import React from 'react';
-import Masonry from 'react-masonry-css';
-import ImageCard from '../../components/cards/ImageCard';
-import { useState, useEffect } from 'react';
+import React from "react";
+import Masonry from "react-masonry-css";
+import ImageCard from "../../components/cards/ImageCard";
+import { useState, useEffect } from "react";
 
 const MasonLayout = React.memo(({ items }) => {
   const calculateBreakpoints = () => {
@@ -34,7 +34,7 @@ const MasonLayout = React.memo(({ items }) => {
       columnClassName="my-masonry-grid_column"
     >
       {items.map((item, index) => (
-        <div key={index} className="bg-gray-200 p-4 rounded-sm shadow-md">
+        <div key={index} className="rounded-sm bg-gray-200 p-4 shadow-md">
           <ImageCard key={index} imageSrc={item.src} title={item.title} />
         </div>
       ))}

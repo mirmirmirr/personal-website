@@ -24,9 +24,13 @@ const BentoCard = ({ title, value, description, className, ...props }) => (
     {...props}
   >
     <div className="pointer-events-none z-10 flex flex-col gap-1 p-6">
-      <h3 className="text-[2rem] font-semibold text-[#0f4592] leading-tight mb-4">{title}</h3>
-      <h3 className="text-[4rem] md:text-[5rem] font-semibold text-[#0f4592]">{value}</h3>
-      <p className="max-w-lg text-neutral-500 text-[1.25rem]">{description}</p>
+      <h3 className="mb-4 text-[2rem] leading-tight font-semibold text-[#0f4592]">
+        {title}
+      </h3>
+      <h3 className="text-[4rem] font-semibold text-[#0f4592] md:text-[5rem]">
+        {value}
+      </h3>
+      <p className="max-w-lg text-[1.25rem] text-neutral-500">{description}</p>
     </div>
   </div>
 );

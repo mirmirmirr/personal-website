@@ -8,21 +8,27 @@ export default function About() {
   const isSmallScreen = vw < 640;
 
   return (
-    <div className="flex flex-col justify-center w-full transition-all duration-700 ease-in-out">
+    <div className="flex w-full flex-col justify-center transition-all duration-700 ease-in-out">
       <div className="flex flex-col items-center justify-center gap-4 p-2 md:p-16">
         <img
           src="headshot_circle.png"
           alt="Miranda Headshot 2024"
-          className="w-36 h-full object-cover"
+          className="h-full w-36 object-cover"
           fetchpriority="high"
         />
         <h1 className="text-[40px] font-bold">mirmirmirr</h1>
         <p className="text-center">
-          Hi! I'm Miranda, a junior at Rensselaer Polytechnic Institute, pursuing a dual degree in Computer Science and Information Technology & Web Sciences. My passion for technology started when I became the go-to 'tech person' in my family — I spent hours troubleshooting phone and computer issues and teaching my grandpa easier ways to use his phone.  At the end of high school, my sister inspired me to choose computer sicence as my major, and I've been loving it ever since.
+          Hi! I'm Miranda, a junior at Rensselaer Polytechnic Institute,
+          pursuing a dual degree in Computer Science and Information Technology
+          & Web Sciences. My passion for technology started when I became the
+          go-to 'tech person' in my family — I spent hours troubleshooting phone
+          and computer issues and teaching my grandpa easier ways to use his
+          phone. At the end of high school, my sister inspired me to choose
+          computer sicence as my major, and I've been loving it ever since.
         </p>
       </div>
 
-      <div className="flex items-center justify-center w-full max-w-4xl my-8 md:my-0">
+      <div className="my-8 flex w-full max-w-4xl items-center justify-center md:my-0">
         <ResizableBox
           x={0}
           y={0}
@@ -34,15 +40,20 @@ export default function About() {
         </ResizableBox>
       </div>
 
-      <div className="flex flex-col items-center justify-center gap-4 my-8 mt-0 md:my-0 p-2 md:p-16 text-center">
+      <div className="my-8 mt-0 flex flex-col items-center justify-center gap-4 p-2 text-center md:my-0 md:p-16">
         <p>
-          I love solving programming problems and finding ways to use technology to make life simpler. I especially love working on projects that sit at the intersection of development and design—creating experiences that are not only visually appealing but also optimized for performance and usability. Fascinated by the endless possibilities of technology, I'm always looking for new ways to learn and grow!
+          I love solving programming problems and finding ways to use technology
+          to make life simpler. I especially love working on projects that sit
+          at the intersection of development and design—creating experiences
+          that are not only visually appealing but also optimized for
+          performance and usability. Fascinated by the endless possibilities of
+          technology, I'm always looking for new ways to learn and grow!
         </p>
       </div>
 
       <button
-        className="bg-blue-100 hover:bg-highlight-blue hover:text-white dark:hover:bg-[#9CC4F5] dark:hover:text-black dark:bg-highlight-blue rounded-[15px] px-6 py-2 mx-auto"
-        onClick={() => window.open('/MirandaZheng_Resume.pdf', '_blank')}
+        className="mx-auto rounded-[15px] bg-blue-100 px-6 py-2 hover:bg-highlight-blue hover:text-white dark:bg-highlight-blue dark:hover:bg-[#9CC4F5] dark:hover:text-black"
+        onClick={() => window.open("/MirandaZheng_Resume.pdf", "_blank")}
       >
         Get my resume!
       </button>

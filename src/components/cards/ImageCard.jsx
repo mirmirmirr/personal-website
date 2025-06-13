@@ -1,6 +1,6 @@
-export default function ImageCard({ imageSrc, title}) {
+export default function ImageCard({ imageSrc, title }) {
   return (
-    <div className="rounded ">
+    <div className="rounded">
       <img
         src={imageSrc}
         alt={title}
@@ -10,4 +10,4 @@ export default function ImageCard({ imageSrc, title}) {
       <div className="m-[10px] font-medium">{title}</div>
     </div>
   );
-};
+}

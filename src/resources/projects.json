@@ -1,35 +1,40 @@
 [
-   {
-  "experiences": 
-    [
-      { 
-        "id": 1, 
-        "title": "Software Engineer Intern", 
-        "company": "Lockheed Martin", 
-        "duration": "May 2024 - August 2024", 
-        "images": [ "/cLogos/lockheed.png" ], 
-        "description": ["Worked on the Software team supporting the MK41 Vertical Launch Systems (VLS) by refactoring a Java Swing UI framework using on a NetBeans IDE, improving user experience. I also collaborated with a team to design tracking algorithms for a search radar system using Python, MATLAB, and Excel."]
+  {
+    "experiences": [
+      {
+        "id": 1,
+        "title": "Software Engineer Intern",
+        "company": "Lockheed Martin",
+        "duration": "May 2024 - August 2024",
+        "images": ["/cLogos/lockheed.png"],
+        "description": [
+          "Worked on the Software team supporting the MK41 Vertical Launch Systems (VLS) by refactoring a Java Swing UI framework using on a NetBeans IDE, improving user experience. I also collaborated with a team to design tracking algorithms for a search radar system using Python, MATLAB, and Excel."
+        ]
       },
-      { 
+      {
         "id": 2,
         "title": "Data Analyst",
         "company": "Johnson & Johnson",
-        "duration": "September 2024 - December 2024", 
-        "images": [ "/cLogos/jj.png" ], 
-        "description": ["This experience was part of a term project where my group was tasked to find a client and work with to complete a project based on company needs.", "We worked on standardizing data across 18 Johnson & Johnson sites using a centralized database to improve GMP compliance and Product Quality Review analytics. This standardization and automation of data collection and analysis has helped the company save time and resources."]
+        "duration": "September 2024 - December 2024",
+        "images": ["/cLogos/jj.png"],
+        "description": [
+          "This experience was part of a term project where my group was tasked to find a client and work with to complete a project based on company needs.",
+          "We worked on standardizing data across 18 Johnson & Johnson sites using a centralized database to improve GMP compliance and Product Quality Review analytics. This standardization and automation of data collection and analysis has helped the company save time and resources."
+        ]
       },
-      { 
+      {
         "id": 3,
         "title": "Student Researcher",
         "company": "NASA",
-        "duration": "January 2024 - May 2024", 
-        "images": [ "/cLogos/nasa.png", "/cLogos/research.png"], 
-        "description": ["Worked on processing video data from heat pipe experiments that were run on the International Space Station (ISS). This also came with researching machine learning methods to more clearly render flow boiling images, testing the use of the skimage library and a Mask R-CNN on datasets."]
+        "duration": "January 2024 - May 2024",
+        "images": ["/cLogos/nasa.png", "/cLogos/research.png"],
+        "description": [
+          "Worked on processing video data from heat pipe experiments that were run on the International Space Station (ISS). This also came with researching machine learning methods to more clearly render flow boiling images, testing the use of the skimage library and a Mask R-CNN on datasets."
+        ]
       }
     ],
-  
-  "projects": 
-    [
+
+    "projects": [
       {
         "id": 16,
         "title": "FlyBy",
@@ -37,53 +42,68 @@
         "duration": "February 2025",
         "images": ["/projects/flyby.png"],
         "github": "https://github.com/SameriteRL/FlyBy",
-        "description": ["Second place winner of the 2025 NSBE x SHPE Climate Change & Sustainability Hackathon @ Rensselaer Polytechnic Institute.", "FlyBy is a web application that leverages deep-learning computer vision to detect and analyze marine trash in aerial footage. It leverages a YOLOv5 vision model trained on the TACO dataset."]
+        "description": [
+          "Second place winner of the 2025 NSBE x SHPE Climate Change & Sustainability Hackathon @ Rensselaer Polytechnic Institute.",
+          "FlyBy is a web application that leverages deep-learning computer vision to detect and analyze marine trash in aerial footage. It leverages a YOLOv5 vision model trained on the TACO dataset."
+        ]
       },
-      { 
+      {
         "id": 15,
-        "title": "Asian Cafe Website + POS System", 
-        "stack": ["Next.js", "Django", "PostgreSQL", "Dart", "Flutter"], 
-        "duration": "December 2024 - Present", 
+        "title": "Asian Cafe Website + POS System",
+        "stack": ["Next.js", "Django", "PostgreSQL", "Dart", "Flutter"],
+        "duration": "December 2024 - Present",
         "images": ["/projects/asianCafeHome.png"],
         "github": "https://github.com/mirmirmirr/AsianCafe",
-        "description": ["I'm developing this website and POS system to support my parent's restaurant. The goal was to improve their ordering system and enhance customer convenience.", "The frontend is built with Next.js, the backend is powered by Django with a PostgreSQL database, and the POS system is developed using Flutter for seamless cross-platform functionality on both Windows and iPadOS." ]
+        "description": [
+          "I'm developing this website and POS system to support my parent's restaurant. The goal was to improve their ordering system and enhance customer convenience.",
+          "The frontend is built with Next.js, the backend is powered by Django with a PostgreSQL database, and the POS system is developed using Flutter for seamless cross-platform functionality on both Windows and iPadOS."
+        ]
       },
-      { 
+      {
         "id": 11,
         "title": "tomeeto",
         "stack": ["React", "TailwindCSS", "Flask", "MySQL"],
         "duration": "September 2024 - Present",
         "images": ["/projects/tomeetohome.png", "/projects/tomeeto.png"],
         "github": "https://github.com/tomeeto",
-        "description": ["tomeeto is a scheduling website that solves the logistics problem of figuring out when everyone is available to meet. Our goal was to simplify the process of communication with a simple and intuitive interface.", "The team and I worked on this project using Agile Methodologies, and I was responsible for frontend developement and design."]
+        "description": [
+          "tomeeto is a scheduling website that solves the logistics problem of figuring out when everyone is available to meet. Our goal was to simplify the process of communication with a simple and intuitive interface.",
+          "The team and I worked on this project using Agile Methodologies, and I was responsible for frontend developement and design."
+        ]
       },
-      { 
+      {
         "id": 12,
         "title": "AIpaca",
         "stack": ["React", "FlaskAPI", "MySQL"],
         "duration": "October 2024",
         "images": ["/projects/AIpaca.png"],
         "github": "https://github.com/LawrenceMiao/AI-paca",
-        "description": ["AI-paca, submitted for SASE Hacks 2024, is a mobile app that lets users photograph animal sightings, which are then analyzed by a deep learning classifier to identify species. The goal was to help adolescents participate in conservation efforts using their phones and help researches have more access to data."]
+        "description": [
+          "AI-paca, submitted for SASE Hacks 2024, is a mobile app that lets users photograph animal sightings, which are then analyzed by a deep learning classifier to identify species. The goal was to help adolescents participate in conservation efforts using their phones and help researches have more access to data."
+        ]
       },
-      { 
+      {
         "id": 13,
         "title": "Cool Academic RPI Bot (CARPI)",
         "stack": ["Discord.py", "React", "TailwindCSS"],
         "duration": "January 2023 - October 2024",
         "images": ["/projects/carpiScreen.png", "/projects/carpi.png"],
         "github": "https://github.com/Project-CARPI",
-        "description": ["CARPI started off as a discord bot that provided RPI students with easy access to university resources from an application that they use daily. With the progress on the bot completed, we have shifted to also create an online web resource, starting with a custom 4-year planner."]
+        "description": [
+          "CARPI started off as a discord bot that provided RPI students with easy access to university resources from an application that they use daily. With the progress on the bot completed, we have shifted to also create an online web resource, starting with a custom 4-year planner."
+        ]
       },
-      { 
+      {
         "id": 14,
         "title": "Lucid",
         "stack": ["Python", "Tensorflow", "OpenCV"],
         "duration": "June 2023 - August 2023",
         "images": [],
         "github": "https://github.com/mirmirmirr/lucid",
-        "description": ["Lucid was an image super-resolution model I implemented using the ESRGAN architecture. The goal was to upscale drawing and images for easier use. Integrated TensorFlow and OpenCV to optimize performance and enhance output quality."]
+        "description": [
+          "Lucid was an image super-resolution model I implemented using the ESRGAN architecture. The goal was to upscale drawing and images for easier use. Integrated TensorFlow and OpenCV to optimize performance and enhance output quality."
+        ]
       }
     ]
-   }
+  }
 ]

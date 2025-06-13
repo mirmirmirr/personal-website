@@ -3,9 +3,9 @@ import ExperienceCard from "./cards/ExperienceCard";
 
 export default function RenderCards({ items, type }) {
   const [selectedCard, setSelectedCard] = useState(null);
-  
+
   const cardsRef = useRef(null);
-  
+
   useEffect(() => {
     const handleOutsideClick = (e) => {
       if (cardsRef.current && !cardsRef.current.contains(e.target)) {
@@ -24,7 +24,10 @@ export default function RenderCards({ items, type }) {
   };
 
   return (
-    <div ref={cardsRef} className="flex flex-col md:flex-row w-full mb-4 gap-4 relative">
+    <div
+      ref={cardsRef}
+      className="relative mb-4 flex w-full flex-col gap-4 md:flex-row"
+    >
       {items.map((item) => (
         <div
           key={item.id}

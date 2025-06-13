@@ -1,12 +1,12 @@
 /* Lab 5 CSS File 
    Did you notice that CSS comments are the same as 
    multi-line javascript comments? */
- 
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 
 body {
-  font-family: Poppins; 
+  font-family: Poppins;
 }
 #bodyBlock {
   width: 700px;
@@ -20,7 +20,7 @@ body {
   border: 1px solid #ddd;
 }
 fieldset {
-  padding-top: 1em; 
+  padding-top: 1em;
 }
 .field {
   width: 120px;
@@ -36,7 +36,8 @@ fieldset {
   font-family: Poppins;
   float: right;
 }
-textarea:focus, input:focus {
+textarea:focus,
+input:focus {
   background-color: #fee;
 }
 #button {

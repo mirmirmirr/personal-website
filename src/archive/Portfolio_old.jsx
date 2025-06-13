@@ -23,10 +23,10 @@ export default function Portfolio() {
       }, 300); // Match this duration with the Tailwind transition
     }
   };
-  
+
   if (!items || items.length === 0) {
     return <div>Loading...</div>;
-  }  
+  }
 
   return (
     // <div className="flex flex-col gap-4 min-h-screen">
@@ -69,13 +69,23 @@ export default function Portfolio() {
     //   </div>
     // </div>
 
-    <div className="flex flex-col min-h-screen">
-        <div className="flex flex-row items-center justify-center gap-4 mb-[2vh]">
-            <GroupCard key="1" groupName="Artwork" isSelected={chosenGroup === "1"} onGroupSelect={() => handleGroupSelect("1", allPieces)}/>
-            <GroupCard key="2" groupName="Logos" isSelected={chosenGroup === "2"} onGroupSelect={() => handleGroupSelect("2", logos)} />
-        </div>
+    <div className="flex min-h-screen flex-col">
+      <div className="mb-[2vh] flex flex-row items-center justify-center gap-4">
+        <GroupCard
+          key="1"
+          groupName="Artwork"
+          isSelected={chosenGroup === "1"}
+          onGroupSelect={() => handleGroupSelect("1", allPieces)}
+        />
+        <GroupCard
+          key="2"
+          groupName="Logos"
+          isSelected={chosenGroup === "2"}
+          onGroupSelect={() => handleGroupSelect("2", logos)}
+        />
+      </div>
 
-        <div
+      <div
         className={`transition-opacity duration-700 ${
           isTransitioning ? "opacity-0" : "opacity-100"
         }`}

@@ -30,7 +30,7 @@ export default function DragCards() {
       />
       <Card
         containerRef={containerRef}
-        src="/picture.JPEG"
+        src="/photographer.JPEG"
         alt="Example image"
         rotate="-6deg"
         bottom={isSmallScreen ? "50%" : "15%"}

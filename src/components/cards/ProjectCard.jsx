@@ -55,7 +55,11 @@ function ProjectDetails({ items }) {
         className="h-[120px] w-full items-end transition-transform duration-300 ease-in-out group-hover:-translate-y-2 group-hover:scale-90 md:h-[140px]"
       >
         <div className="font-semibold">{title}</div>
-        <div className="text-[14px]">{duration}</div>
+        {duration.map((d, i) => (
+          <div key={i} className="text-[14px]">
+            {d}
+          </div>
+        ))}
         <Link
           to={github}
           target="_blank"

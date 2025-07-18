@@ -69,7 +69,11 @@ function WorkDetails({ items, isSelected }) {
         </div>
         <div>{company}</div>
         <div className="text-[14px] font-semibold">{title}</div>
-        <div className="text-[14px]">{duration}</div>
+        {duration.map((d, i) => (
+          <div key={i} className="text-[14px]">
+            {d}
+          </div>
+        ))}
       </div>
 
       {cardWidth >= 200 && (

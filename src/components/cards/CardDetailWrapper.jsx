@@ -19,7 +19,9 @@ export default function CardDetailWrapper({
         aria-hidden={!showDescription}
         className="exp-description overflow-y-auto text-[14px] md:[mask-image:linear-gradient(to_bottom,black_60%,transparent_100%)] md:[-webkit-mask-image:linear-gradient(to_bottom,black_60%,transparent_100%)]"
       >
-        <div className="flex flex-col gap-4 p-4">
+        <div
+          className={`${showDescription ? "" : "hidden"} flex flex-col gap-4 p-4`}
+        >
           {items.description.map((element, index) => (
             <p key={index}>{element}</p>
           ))}

@@ -1,9 +1,9 @@
-import { useRef, useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import ExperienceCard from "./cards/ExperienceCard";
+import ProjectCard from "./cards/ProjectCard";
 
 export default function RenderCards({ items, type }) {
   const [selectedCard, setSelectedCard] = useState(null);
-
   const cardsRef = useRef(null);
 
   useEffect(() => {
@@ -12,15 +12,18 @@ export default function RenderCards({ items, type }) {
         setSelectedCard(null);
       }
     };
-
     document.addEventListener("click", handleOutsideClick);
-    return () => {
-      document.removeEventListener("click", handleOutsideClick);
-    };
+    return () => document.removeEventListener("click", handleOutsideClick);
   }, []);
 
   const handleCardSelect = (id) => {
     setSelectedCard((prev) => (prev === id ? null : id));
+  };
+
+  const getCardWidthClass = (id) => {
+    if (selectedCard === id) return "md:w-[60%]";
+    if (selectedCard === null) return "md:w-[32%]";
+    return "md:w-[18%]";
   };
 
   return (
@@ -28,19 +31,26 @@ export default function RenderCards({ items, type }) {
       ref={cardsRef}
       className="relative mb-4 flex w-full flex-col gap-4 md:flex-row"
     >
-      {items.map((item) => (
-        <div
-          key={item.id}
-          className={`transition-all duration-300 md:h-[225px] ${selectedCard === item.id ? "md:w-[60%]" : selectedCard === null ? "md:w-[32%]" : "md:w-[18%]"} `}
-        >
-          <ExperienceCard
-            type={type}
-            items={item}
-            isSelected={selectedCard === item.id}
-            onCardSelect={() => handleCardSelect(item.id)}
-          />
-        </div>
-      ))}
+      {items.map((item) => {
+        const commonProps = {
+          key: item.id,
+          items: item,
+          isSelected: selectedCard === item.id,
+          onCardSelect: () => handleCardSelect(item.id),
+        };
+        return (
+          <div
+            key={item.id}
+            className={`transition-all duration-300 md:h-[225px] ${getCardWidthClass(item.id)}`}
+          >
+            {type === "experience" ? (
+              <ExperienceCard {...commonProps} />
+            ) : (
+              <ProjectCard {...commonProps} />
+            )}
+          </div>
+        );
+      })}
     </div>
   );
 }

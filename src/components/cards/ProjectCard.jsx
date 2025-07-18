@@ -1,11 +1,12 @@
 import { useRef } from "react";
+import { Link } from "react-router-dom";
 import CardWrapper from "./CardWrapper";
 import CardDetailWrapper from "./CardDetailWrapper";
 import useResizeWidth from "./hooks/useResizeWidth";
 
 import { AnimatePresence, motion } from "framer-motion";
 
-export default function ExperienceCard({ items, isSelected, onCardSelect }) {
+export default function ProjectCard({ items, isSelected, onCardSelect }) {
   return (
     <CardWrapper isSelectedProp={isSelected} onSelect={onCardSelect}>
       {({ isSelected, showDescription, isExpanded }) => (
@@ -32,7 +33,7 @@ export default function ExperienceCard({ items, isSelected, onCardSelect }) {
                 isSelected={isSelected}
                 showDescription={showDescription}
               >
-                <WorkDetails items={items} isSelected={isSelected} />
+                <ProjectDetails items={items} isSelected={isSelected} />
               </CardDetailWrapper>
             </motion.div>
           )}
@@ -42,8 +43,8 @@ export default function ExperienceCard({ items, isSelected, onCardSelect }) {
   );
 }
 
-function WorkDetails({ items, isSelected }) {
-  const { title, company, duration, images = [] } = items;
+function ProjectDetails({ items }) {
+  const { title, stack, duration, images = [], github } = items;
   const cardRef = useRef(null);
   const cardWidth = useResizeWidth(cardRef);
 
@@ -51,44 +52,41 @@ function WorkDetails({ items, isSelected }) {
     <>
       <div
         ref={cardRef}
-        className={`w-full transition-transform duration-300 ease-in-out ${
-          isSelected
-            ? "min-w-[160px]"
-            : "group-hover:-translate-y-2 group-hover:scale-90"
-        }`}
+        className="h-[120px] w-full items-end transition-transform duration-300 ease-in-out group-hover:-translate-y-2 group-hover:scale-90 md:h-[140px]"
       >
-        <div className="mb-2 flex">
-          {images.map((image, index) => (
-            <img
-              src={image}
-              alt={title}
+        <div className="font-semibold">{title}</div>
+        <div className="text-[14px]">{duration}</div>
+        <Link
+          to={github}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-[14px] underline hover:text-highlight-blue"
+          onClick={(e) => e.stopPropagation()}
+        >
+          Github
+        </Link>
+        <div className="mt-4 flex flex-row flex-wrap gap-2">
+          {stack.map((tech, index) => (
+            <div
               key={index}
-              className="h-auto w-16 object-contain"
-            />
+              className="rounded-lg bg-blue-100 p-[5px] text-[12px] dark:bg-highlight-blue"
+            >
+              {tech}
+            </div>
           ))}
         </div>
-        <div>{company}</div>
-        <div className="text-[14px] font-semibold">{title}</div>
-        <div className="text-[14px]">{duration}</div>
       </div>
 
-      {cardWidth >= 200 && (
-        <div className="mt-2 hidden justify-center md:flex">
-          <div className="origin-bottom text-center text-[14px] text-[#0071D5] opacity-0 transition-all duration-300 ease-in-out group-hover:-translate-y-2 group-hover:opacity-100">
-            Click for more information
-          </div>
+      {cardWidth >= 200 && images.length > 0 && (
+        <div className="mt-8 mb-2 flex">
+          <img
+            loading="lazy"
+            src={images[0]}
+            alt={title}
+            className="bottom-8 h-auto max-h-[200px] w-full origin-bottom rounded-[15px] object-cover object-top transition-transform duration-300 ease-in-out group-hover:-translate-y-4 group-hover:scale-110 md:w-[320px]"
+          />
         </div>
       )}
-
-      <div
-        className={`absolute bottom-4 w-[90%] text-center transition-opacity duration-300 ease-in-out md:hidden ${
-          isSelected ? "opacity-0" : "opacity-100"
-        }`}
-      >
-        <div className="origin-bottom text-center text-[14px] text-[#0071D5] transition-all duration-300 ease-in-out group-hover:-translate-y-2">
-          Click for more information
-        </div>
-      </div>
     </>
   );
 }

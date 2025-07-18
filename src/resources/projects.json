@@ -5,7 +5,7 @@
         "id": 1,
         "title": "Software Engineer Intern",
         "company": "Lockheed Martin",
-        "duration": "May 2024 - August 2024",
+        "duration": "May 2025 - August 2025, May 2024 - August 2024",
         "images": ["/cLogos/lockheed.png"],
         "description": [
           "Worked on the Software team supporting the MK41 Vertical Launch Systems (VLS) by refactoring a Java Swing UI framework using on a NetBeans IDE, improving user experience. I also collaborated with a team to design tracking algorithms for a search radar system using Python, MATLAB, and Excel."

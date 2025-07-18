@@ -11,7 +11,6 @@ export default function ExpandableCard() {
           className="fixed inset-0 z-50 bg-gray-700/40"
           onClick={() => {
             setIsOpen(false);
-            setTimezone(eventRange.timezone);
           }}
         />
       )}

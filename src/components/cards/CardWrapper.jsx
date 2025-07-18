@@ -97,12 +97,7 @@ export default function CardWrapper({ isSelectedProp, onSelect, children }) {
       <Rnd
         ref={cardRef}
         disableDragging
-        enableResizing={{
-          topRight: isExpanded ? false : true,
-          bottomLeft: isExpanded ? false : true,
-          topLeft: isExpanded ? false : true,
-          bottomRight: isExpanded ? false : true,
-        }}
+        enableResizing={!isExpanded}
         size={
           isExpanded ? dimensions : { width: "100%", height: "100%" } // fallback when not expanded
         }

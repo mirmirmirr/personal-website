@@ -1,55 +1,35 @@
-import React, { useRef } from "react";
+// src/components/ResizableBox.jsx
 import { Rnd } from "react-rnd";
-import { cn } from "../resources/utils";
 
-export default function ResizableBox({
-  x,
-  y,
-  width,
-  height,
-  children,
-  dragging = true,
-}) {
-  const vw = window.innerWidth;
-  const vh = window.innerHeight;
-
+export default function ResizableBox({ children, dragging = true }) {
   return (
     <Rnd
-      default={{
-        x: x,
-        y: y,
-        width: width,
-        height: height,
-      }}
       disableDragging={!dragging}
-      minWidth={50}
-      minHeight={50}
-      style={{
-        border: "2px solid #3395ff",
-        borderRadius: "4px",
-        position: "relative",
-      }}
-      className="h-fit"
+      size={{ width: "100%", height: "80%" }}
+      style={{ position: "relative" }}
+      className="h-fit border-2 border-highlight-blue md:pb-30"
     >
       <div>{children}</div>
 
-      {/* Add draggable corners */}
-      <div
-        className="absolute h-[15px] w-[15px] border-2 border-highlight-blue bg-background-light dark:bg-background-dark"
-        style={{ top: -8, left: -8 }}
-      ></div>
-      <div
-        className="absolute h-[15px] w-[15px] border-2 border-highlight-blue bg-background-light dark:bg-background-dark"
-        style={{ top: -8, right: -8 }}
-      ></div>
-      <div
-        className="absolute h-[15px] w-[15px] border-2 border-highlight-blue bg-background-light dark:bg-background-dark"
-        style={{ bottom: -8, left: -8 }}
-      ></div>
-      <div
-        className="absolute h-[15px] w-[15px] border-2 border-highlight-blue bg-background-light dark:bg-background-dark"
-        style={{ bottom: -8, right: -8 }}
-      ></div>
+      {/* Draggable corners */}
+      {["top-left", "top-right", "bottom-left", "bottom-right"].map(
+        (corner) => {
+          const position = {
+            "top-left": { top: -8, left: -8 },
+            "top-right": { top: -8, right: -8 },
+            "bottom-left": { bottom: -8, left: -8 },
+            "bottom-right": { bottom: -8, right: -8 },
+          }[corner];
+
+          return (
+            <div
+              key={corner}
+              className="absolute h-[15px] w-[15px] border-2 border-highlight-blue bg-background-light dark:bg-background-dark"
+              style={position}
+            ></div>
+          );
+        },
+      )}
     </Rnd>
   );
 }

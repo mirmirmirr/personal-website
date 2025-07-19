@@ -1,38 +1,44 @@
+// src/pages/Landing.jsx
 import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
 
 import Image from "../components/Image";
-import rightArrow from "/icons/rightarrow.svg";
 import ResizableBox from "../components/ResizeableBox";
 import Projects from "./Projects";
+import rightArrow from "/icons/rightarrow.svg";
 
 export default function Landing() {
-  const vw = window.innerWidth;
-  const vh = window.innerHeight;
+  const [vw, setVw] = useState(
+    typeof window !== "undefined" ? window.innerWidth : 0,
+  );
 
   const isSmallScreen = vw < 640;
 
+  useEffect(() => {
+    function handleResize() {
+      setVw(window.innerWidth);
+    }
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <>
-      {/* Resizable Box with Intro */}
+      {/* Hero Section */}
       <div className="relative mt-4 h-svh md:mt-16 md:h-fit">
-        <ResizableBox
-          x={isSmallScreen ? 0 : -25}
-          y={0}
-          width={Math.min(vw * 0.8, 1000)}
-          height={isSmallScreen ? vh * 0.8 : 350}
-          dragging={isSmallScreen ? false : true}
-        >
+        <ResizableBox dragging={!isSmallScreen}>
           <div className="flex h-[80dvh] flex-col items-center justify-center p-2 transition-all duration-700 ease-in-out md:h-fit md:items-start">
             <div className="text-xl mt-4 -mb-[20px] ml-2 font-normal md:-mb-[30px]">
               hello! my name is
             </div>
-            <h1 className="max-text-[40px] text-[10vw] font-normal underline decoration-highlight-blue decoration-2">
+            <h1 className="text-[10vw] font-normal underline decoration-highlight-blue decoration-2">
               Miranda
             </h1>
             <div className="text-xl p-6 text-center md:hidden">
               i'm studying <span className="font-bold">computer science</span>{" "}
-              and{" "}
+              and
               <span className="font-bold">
+                {" "}
                 information technology and web sciences
               </span>{" "}
               at Rensselaer Polytechnic Institute.
@@ -47,7 +53,7 @@ export default function Landing() {
         </ResizableBox>
       </div>
 
-      {/* Large Image on Bigger Screens */}
+      {/* Desktop Image */}
       <Image
         src="/miranda.png"
         alt="Miranda"
@@ -56,20 +62,21 @@ export default function Landing() {
         lazy={false}
       />
 
-      {/* About Section (Desktop) */}
+      {/* About Section for Desktop */}
       <div
         className="relative z-50 hidden overflow-hidden transition-all duration-700 ease-in-out md:block"
         style={{ height: "clamp(0px, 50vh, 500px)" }}
       >
         <div className="text-xl mt-16 h-[133px] w-[331px]">
-          i'm studying <span className="font-bold">computer science</span> and{" "}
+          i'm studying <span className="font-bold">computer science</span> and
           <span className="font-bold">
+            {" "}
             information technology and web sciences
           </span>{" "}
           at Rensselaer Polytechnic Institute.
           <Link
             to="/about"
-            className="flex flex-row gap-2 text-[#0071D5] hover:font-semibold dark:text-[#3395FF]"
+            className="group flex flex-row gap-2 text-[#0071D5] hover:font-semibold dark:text-[#3395FF]"
           >
             more about me
             <img
@@ -81,7 +88,7 @@ export default function Landing() {
         </div>
       </div>
 
-      {/* Projects Section */}
+      {/* Projects */}
       <Projects />
     </>
   );

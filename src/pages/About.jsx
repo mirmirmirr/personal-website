@@ -4,7 +4,6 @@ import DragCards from "../components/cards/DragCards";
 export default function About() {
   const vw = window.innerWidth;
   const vh = window.innerHeight;
-
   const isSmallScreen = vw < 640;
 
   return (
@@ -30,8 +29,6 @@ export default function About() {
 
       <div className="my-8 flex w-full max-w-4xl items-center justify-center md:my-0">
         <ResizableBox
-          x={0}
-          y={0}
           width={Math.min(vw * 0.85, 1000)}
           height={isSmallScreen ? vh * 0.6 : 350}
           dragging={false}

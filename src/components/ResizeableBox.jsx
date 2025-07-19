@@ -1,13 +1,18 @@
 // src/components/ResizableBox.jsx
 import { Rnd } from "react-rnd";
 
-export default function ResizableBox({ children, dragging = true }) {
+export default function ResizableBox({
+  children,
+  dragging = true,
+  width = "100%",
+  height = "80%",
+}) {
   return (
     <Rnd
       disableDragging={!dragging}
-      size={{ width: "100%", height: "80%" }}
+      size={{ width, height }}
       style={{ position: "relative" }}
-      className="h-fit border-2 border-highlight-blue md:pb-30"
+      className="border-2 border-highlight-blue md:pb-30"
     >
       <div>{children}</div>
 

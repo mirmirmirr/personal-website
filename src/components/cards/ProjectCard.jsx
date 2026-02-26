@@ -1,59 +1,22 @@
-import { useRef } from "react";
 import { Link } from "react-router-dom";
-import CardWrapper from "./CardWrapper";
-import CardDetailWrapper from "./CardDetailWrapper";
-import useResizeWidth from "./hooks/useResizeWidth";
+import { cn } from "../../lib/classnames";
+import BaseCard from "./BaseCard";
 
-import { AnimatePresence, motion } from "framer-motion";
-
-export default function ProjectCard({ items, isSelected, onCardSelect }) {
-  return (
-    <CardWrapper isSelectedProp={isSelected} onSelect={onCardSelect}>
-      {({ isSelected, showDescription, isExpanded }) => (
-        <AnimatePresence mode="wait">
-          {isExpanded ? (
-            <motion.div
-              key="expanded"
-              // initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              className="text-2xl overflow-auto bg-white p-8 text-blue-500"
-            >
-              huhihihihihihihihihihihhihihihihiih
-            </motion.div>
-          ) : (
-            <motion.div
-              key="collapsed"
-              initial={{ opacity: 0, scale: 1.05 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0 }}
-              className="h-full w-full"
-            >
-              <CardDetailWrapper
-                items={items}
-                isSelected={isSelected}
-                showDescription={showDescription}
-              >
-                <ProjectDetails items={items} isSelected={isSelected} />
-              </CardDetailWrapper>
-            </motion.div>
-          )}
-        </AnimatePresence>
-      )}
-    </CardWrapper>
-  );
-}
-
-function ProjectDetails({ items }) {
+export default function ProjectCard({
+  items,
+  isSelected,
+  isShrunk,
+  onCardSelect,
+}) {
   const { title, stack, duration, images = [], github } = items;
-  const cardRef = useRef(null);
-  const cardWidth = useResizeWidth(cardRef);
 
   return (
-    <>
-      <div
-        ref={cardRef}
-        className="h-[120px] w-full items-end transition-transform duration-300 ease-in-out group-hover:-translate-y-2 group-hover:scale-90 md:h-[140px]"
-      >
+    <BaseCard
+      isSelectedProp={isSelected}
+      onSelect={onCardSelect}
+      description={items.description}
+    >
+      <div className="h-[120px] w-full items-end transition-transform duration-300 ease-in-out group-hover:-translate-y-2 group-hover:scale-90 md:h-[140px]">
         <div className="font-semibold">{title}</div>
         {duration.map((d, i) => (
           <div key={i} className="text-[14px]">
@@ -64,16 +27,16 @@ function ProjectDetails({ items }) {
           to={github}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-[14px] underline hover:text-highlight-blue"
+          className="text-[14px] underline hover:text-blue"
           onClick={(e) => e.stopPropagation()}
         >
           Github
         </Link>
-        <div className="mt-4 flex flex-row flex-wrap gap-2">
+        <div className={cn("mt-2 flex flex-wrap gap-2", isShrunk && "hidden")}>
           {stack.map((tech, index) => (
             <div
               key={index}
-              className="rounded-lg bg-blue-100 p-[5px] text-[12px] dark:bg-highlight-blue"
+              className="rounded-lg bg-blue-100 p-[5px] text-[12px] dark:bg-blue/40"
             >
               {tech}
             </div>
@@ -81,8 +44,10 @@ function ProjectDetails({ items }) {
         </div>
       </div>
 
-      {cardWidth >= 200 && images.length > 0 && (
-        <div className="mt-8 mb-2 flex">
+      {images.length > 0 && (
+        <div
+          className={cn("mt-8 mb-2 flex", (isShrunk || isSelected) && "hidden")}
+        >
           <img
             loading="lazy"
             src={images[0]}
@@ -91,6 +56,6 @@ function ProjectDetails({ items }) {
           />
         </div>
       )}
-    </>
+    </BaseCard>
   );
 }

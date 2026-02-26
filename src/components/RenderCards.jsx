@@ -12,41 +12,49 @@ export default function RenderCards({ items, type }) {
         setSelectedCard(null);
       }
     };
-    document.addEventListener("click", handleOutsideClick);
-    return () => document.removeEventListener("click", handleOutsideClick);
+    document.addEventListener("mousedown", handleOutsideClick);
+    return () => document.removeEventListener("mousedown", handleOutsideClick);
   }, []);
 
   const handleCardSelect = (id) => {
     setSelectedCard((prev) => (prev === id ? null : id));
   };
 
-  const getCardWidthClass = (id) => {
-    if (selectedCard === id) return "md:w-[60%]";
-    if (selectedCard === null) return "md:w-[32%]";
-    return "md:w-[18%]";
-  };
-
   return (
     <div
       ref={cardsRef}
-      className="relative mb-4 flex w-full flex-col gap-4 md:flex-row"
+      className="relative mb-4 flex w-full flex-col gap-4 md:h-[225px] md:flex-row"
     >
       {items.map((item) => {
-        const commonProps = {
-          key: item.id,
-          items: item,
-          isSelected: selectedCard === item.id,
-          onCardSelect: () => handleCardSelect(item.id),
-        };
+        const isSelected = selectedCard === item.id;
+        const hasSelection = selectedCard !== null;
+        const isShrunk = hasSelection && !isSelected;
+
+        const flexLayoutClass = isSelected
+          ? "md:grow-[4] md:basis-0"
+          : hasSelection
+            ? "md:grow-[1] md:basis-0"
+            : "md:grow-[2] md:basis-0";
+
         return (
           <div
             key={item.id}
-            className={`transition-all duration-300 md:h-[225px] ${getCardWidthClass(item.id)}`}
+            className={`w-full transition-all duration-500 ease-in-out ${flexLayoutClass}`}
           >
             {type === "experience" ? (
-              <ExperienceCard {...commonProps} />
+              <ExperienceCard
+                items={item}
+                isSelected={isSelected}
+                isShrunk={isShrunk} // Pass it down!
+                onCardSelect={() => handleCardSelect(item.id)}
+              />
             ) : (
-              <ProjectCard {...commonProps} />
+              <ProjectCard
+                items={item}
+                isSelected={isSelected}
+                isShrunk={isShrunk} // Pass it down!
+                onCardSelect={() => handleCardSelect(item.id)}
+              />
             )}
           </div>
         );

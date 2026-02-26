@@ -1,4 +1,4 @@
-import { twMerge } from "tailwind-merge";
+import { cn } from "../../lib/classnames";
 
 export default function PortfolioImageCard({
   imageSrc,
@@ -11,7 +11,7 @@ export default function PortfolioImageCard({
 }) {
   return (
     <div
-      className={twMerge(
+      className={cn(
         "absolute",
         `${showImage ? "opacity-100 transition-opacity duration-500 ease-in-out" : "opacity-0"}`,
       )}

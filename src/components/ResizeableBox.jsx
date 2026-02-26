@@ -12,7 +12,7 @@ export default function ResizableBox({
       disableDragging={!dragging}
       size={{ width, height }}
       style={{ position: "relative" }}
-      className="border-2 border-highlight-blue md:pb-30"
+      className="border-2 border-blue md:pb-30"
     >
       <div>{children}</div>
 
@@ -29,7 +29,7 @@ export default function ResizableBox({
           return (
             <div
               key={corner}
-              className="absolute h-[15px] w-[15px] border-2 border-highlight-blue bg-background-light dark:bg-background-dark"
+              className="bg-background-light dark:bg-background-dark absolute h-[15px] w-[15px] border-2 border-blue"
               style={position}
             ></div>
           );

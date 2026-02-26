@@ -3,28 +3,17 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme {
-  --text-*: initial;
   --text-tiny: 0.625rem;
   --text-huge: 20vw;
 
-  --color-highlight-blue: #3395ff;
-  --color-background-light: #fcfcfc;
-  --color-foreground-light: #111113;
-  --color-background-dark: #111113;
-  --color-foreground-dark: #fcfcfc;
+  --color-blue: #3395ff;
+  --color-black: #141819;
+  --color-white: #f5f5f5;
 
   --flex-1: 1;
   --flex-4: 4;
 }
 
-/*
-  The default border color has changed to `currentcolor` in Tailwind CSS v4,
-  so we've added these compatibility styles to make sure everything still
-  looks the same as it did with Tailwind CSS v3.
-
-  If we ever want to remove these styles, we need to add an explicit border
-  color utility to any element that depends on these defaults.
-*/
 @layer base {
   *,
   ::after,
@@ -35,33 +24,54 @@
   }
 }
 
+@layer base {
+  :root {
+    /* Default (Light Mode) */
+    --background: var(--color-white);
+    --foreground: var(--color-black);
+  }
+
+  /* When the .dark class is present */
+  .dark {
+    --background: var(--color-black);
+    --foreground: var(--color-white);
+  }
+
+  /* Sync with system preferences automatically if no class is present */
+  @media (prefers-color-scheme: dark) {
+    :root:not(.light) {
+      --background: var(--color-black);
+      --foreground: var(--color-white);
+    }
+  }
+}
+
+@theme {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-nunito), sans-serif;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease; /* Smooth transition */
+}
+
 :root {
-  font-family: Poppins, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: Poppins, system-ui, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
+  /* This tells the browser the site supports both modes */
   color-scheme: light dark;
 
-  font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
-body {
-  @apply bg-background-light text-foreground-light;
-}
-
-body.dark {
-  @apply bg-background-dark text-foreground-dark;
-}
-
-/* @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-} */
 
 .my-masonry-grid {
   display: -webkit-box;

@@ -1,10 +1,12 @@
 import { useEffect, useState, useRef } from "react";
 import { motion } from "framer-motion";
-import { cn } from "../../resources/utils";
+import { cn } from "../../lib/classnames";
 
 export default function DragCards() {
   const [isSmallScreen, setIsSmallScreen] = useState(false);
   const containerRef = useRef(null);
+
+  const [highestZ, setHighestZ] = useState(0); 
 
   useEffect(() => {
     const checkScreen = () => setIsSmallScreen(window.innerWidth < 640);
@@ -51,33 +53,33 @@ export default function DragCards() {
   return (
     <div className="absolute inset-0 z-10" ref={containerRef}>
       {cards.map((card, index) => (
-        <Card key={index} containerRef={containerRef} {...card} />
+        <Card 
+          key={index} 
+          containerRef={containerRef} 
+          highestZ={highestZ}
+          setHighestZ={setHighestZ}
+          {...card} 
+        />
       ))}
     </div>
   );
 }
 
-const Card = ({ containerRef, src, alt, bottom, left, rotate, className }) => {
+const Card = ({ containerRef, highestZ, setHighestZ, src, alt, bottom, left, rotate, className }) => {
   const [zIndex, setZIndex] = useState(0);
 
-  const updateZIndex = () => {
-    const elements = document.querySelectorAll(".drag-elements");
-    let maxZ = 0;
-
-    elements.forEach((el) => {
-      const z = parseInt(window.getComputedStyle(el).zIndex);
-      if (!isNaN(z)) maxZ = Math.max(maxZ, z);
-    });
-
-    setZIndex(maxZ + 1);
+  const bringToFront = () => {
+    const newZ = highestZ + 1;
+    setHighestZ(newZ);
+    setZIndex(newZ);
   };
 
   return (
     <motion.img
-      onMouseDown={updateZIndex}
+      onMouseDown={bringToFront}
       style={{ bottom, left, rotate, zIndex }}
       className={cn(
-        "drag-elements absolute cursor-grab bg-neutral-200 p-1 pb-4 active:cursor-grabbing",
+        "absolute cursor-grab bg-neutral-200 p-1 pb-4 active:cursor-grabbing",
         className,
       )}
       src={src}

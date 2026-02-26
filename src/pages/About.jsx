@@ -13,17 +13,18 @@ export default function About() {
           src="headshot_circle.png"
           alt="Miranda Headshot 2024"
           className="h-full w-36 object-cover"
-          fetchpriority="high"
+          fetchPriority="high"
         />
         <h1 className="text-[40px] font-bold">mirmirmirr</h1>
         <p className="text-center">
-          Hi! I'm Miranda, a junior at Rensselaer Polytechnic Institute,
+          Hi! I&apos;m Miranda, a senior at Rensselaer Polytechnic Institute,
           pursuing a dual degree in Computer Science and Information Technology
           & Web Sciences. My passion for technology started when I became the
-          go-to 'tech person' in my family — I spent hours troubleshooting phone
-          and computer issues and teaching my grandpa easier ways to use his
-          phone. At the end of high school, my sister inspired me to choose
-          computer sicence as my major, and I've been loving it ever since.
+          go-to &apos;tech person&apos; in my family — I spent hours
+          troubleshooting phone and computer issues and teaching my grandpa
+          easier ways to use his phone. At the end of high school, my sister
+          inspired me to choose computer science as my major, and I&apos;ve been
+          loving it ever since.
         </p>
       </div>
 
@@ -44,12 +45,12 @@ export default function About() {
           at the intersection of development and design—creating experiences
           that are not only visually appealing but also optimized for
           performance and usability. Fascinated by the endless possibilities of
-          technology, I'm always looking for new ways to learn and grow!
+          technology, I am always looking for new ways to learn and grow!
         </p>
       </div>
 
       <button
-        className="mx-auto rounded-[15px] bg-blue-100 px-6 py-2 hover:bg-highlight-blue hover:text-white dark:bg-highlight-blue dark:hover:bg-[#9CC4F5] dark:hover:text-black"
+        className="mx-auto rounded-[15px] bg-blue-100 px-6 py-2 hover:bg-blue hover:text-white dark:bg-blue dark:hover:bg-[#9CC4F5] dark:hover:text-black"
         onClick={() => window.open("/MirandaZheng_Resume.pdf", "_blank")}
       >
         Get my resume!

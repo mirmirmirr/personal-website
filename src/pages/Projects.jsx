@@ -1,10 +1,8 @@
 // Projects.jsx
-import items from "../resources/projects.json";
+import { experienceData, projectData } from "../resources/projects.jsx";
 import RenderCards from "../components/RenderCards";
 
 export default function Projects() {
-  const { experiences, projects } = items[0];
-
   const chunkArray = (arr, size) =>
     Array.from({ length: Math.ceil(arr.length / size) }, (_, i) =>
       arr.slice(i * size, i * size + size),
@@ -21,10 +19,10 @@ export default function Projects() {
   return (
     <>
       <p className="mb-2 text-[20px] font-[700]">WORK EXPERIENCE & RESEARCH</p>
-      {renderCards(experiences, "experience")}
+      {renderCards(experienceData, "experience")}
 
       <p className="mt-8 mb-2 text-[20px] font-[700]">PROJECTS</p>
-      {renderCards(projects, "project")}
+      {renderCards(projectData, "project")}
     </>
   );
 }

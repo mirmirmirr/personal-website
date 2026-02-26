@@ -10,11 +10,11 @@ export default function GroupCard({ groupName, isSelected, onGroupSelect }) {
   return (
     <div
       ref={cardRef}
-      className={`relative flex ${isSelected ? "border-2 border-highlight-blue" : ""}`}
+      className={`relative flex ${isSelected ? "border-2 border-blue" : ""}`}
       onClick={handleGroupSelect}
     >
       <div
-        className={`w-full rounded-[20px] border-2 p-4 text-[14px] ${isSelected ? "" : "hover:border-highlight-blue"}`}
+        className={`w-full rounded-[20px] border-2 p-4 text-[14px] ${isSelected ? "" : "hover:border-blue"}`}
       >
         {groupName}
       </div>
@@ -22,19 +22,19 @@ export default function GroupCard({ groupName, isSelected, onGroupSelect }) {
       {isSelected && (
         <>
           <div
-            className="absolute h-[15px] w-[15px] border-2 border-highlight-blue bg-background-light dark:bg-background-dark"
+            className="bg-background-light dark:bg-background-dark absolute h-[15px] w-[15px] border-2 border-blue"
             style={{ top: -8, left: -8 }}
           ></div>
           <div
-            className="absolute h-[15px] w-[15px] border-2 border-highlight-blue bg-background-light dark:bg-background-dark"
+            className="bg-background-light dark:bg-background-dark absolute h-[15px] w-[15px] border-2 border-blue"
             style={{ top: -8, right: -8 }}
           ></div>
           <div
-            className="absolute h-[15px] w-[15px] border-2 border-highlight-blue bg-background-light dark:bg-background-dark"
+            className="bg-background-light dark:bg-background-dark absolute h-[15px] w-[15px] border-2 border-blue"
             style={{ bottom: -8, left: -8 }}
           ></div>
           <div
-            className="absolute h-[15px] w-[15px] border-2 border-highlight-blue bg-background-light dark:bg-background-dark"
+            className="bg-background-light dark:bg-background-dark absolute h-[15px] w-[15px] border-2 border-blue"
             style={{ bottom: -8, right: -8 }}
           ></div>
         </>

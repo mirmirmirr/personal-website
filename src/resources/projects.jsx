@@ -72,6 +72,65 @@ export const experienceData = [
 
 export const projectData = [
   {
+    id: 13,
+    title: (
+      <a
+        href="https://plancake.org"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="underline hover:text-blue"
+      >
+        Plancake
+      </a>
+    ),
+    stack: ["Next.js", "TailwindCSS", "Django", "PostgreSQL"],
+    duration: ["May 2025 - Present"],
+    images: ["/projects/plancake-dark.png"],
+    github: "https://github.com/plan-cake/plancake",
+    description: [
+      <>
+        Visit{" "}
+        <a
+          href="https://plancake.org"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="underline hover:text-blue"
+        >
+          plancake.org
+        </a>{" "}
+        to see the project live!
+      </>,
+      <>
+        Plancake is a web application that simplifies the process of scheduling
+        meetings by providing an intuitive interface for users to indicate their
+        availability. The project was developed using Next.js and TailwindCSS
+        for the frontend, while Django and PostgreSQL were used for the backend
+        to manage user data and scheduling logic. By streamlining the
+        coordination of meeting times, Plancake aims to enhance productivity and
+        reduce the hassle of finding mutually convenient time slots for group
+        meetings.
+      </>,
+      <>
+        This project was developed in my free time with friends since we wanted
+        to expand on our initial project, tomeeto, and create a more polished
+        and user-friendly scheduling tool. We are currently working on adding
+        new features and improving the design to make it even easier for users
+        to coordinate meetings!
+      </>,
+    ],
+  },
+  {
+    id: 14,
+    title: "Cool Academic RPI Bot (CARPI)",
+    stack: ["Discord.py", "React", "TailwindCSS"],
+    duration: ["January 2023 - October 2024", "January 2025 - Present"],
+    images: ["/projects/carpiScreen.png", "/projects/carpi.png"],
+    github: "https://github.com/Project-CARPI",
+    description: [
+      "CARPI started off as a discord bot that provided RPI students with easy access to university resources from an application that they use daily. With the progress on the bot completed, we have shifted to also create an online web resource, starting with a custom 4-year planner.",
+    ],
+  },
+  {
     id: 16,
     title: "FlyBy",
     stack: ["React", "Typescript", "Python", "FastAPI"],
@@ -96,14 +155,13 @@ export const projectData = [
       "The frontend is built with Next.js, the backend is powered by Django with a PostgreSQL database, and the POS system is developed using Flutter for seamless cross-platform functionality on both Windows and iPadOS.",
     ],
   },
-
   {
     id: 11,
     title: "tomeeto",
     stack: ["React", "TailwindCSS", "Flask", "MySQL"],
-    duration: ["September 2024 - Present"],
+    duration: ["September 2024 - December 2024"],
     images: ["/projects/tomeetohome.png", "/projects/tomeeto.png"],
-    github: "https://github.com/tomeeto",
+    github: "https://github.com/plan-cake/tomeeto-archive",
     description: [
       "tomeeto is a scheduling website that solves the logistics problem of figuring out when everyone is available to meet. Our goal was to simplify the process of communication with a simple and intuitive interface.",
       "The team and I worked on this project using Agile Methodologies, and I was responsible for frontend developement and design.",
@@ -118,17 +176,6 @@ export const projectData = [
     github: "https://github.com/LawrenceMiao/AI-paca",
     description: [
       "AI-paca, submitted for SASE Hacks 2024, is a mobile app that lets users photograph animal sightings, which are then analyzed by a deep learning classifier to identify species. The goal was to help adolescents participate in conservation efforts using their phones and help researches have more access to data.",
-    ],
-  },
-  {
-    id: 13,
-    title: "Cool Academic RPI Bot (CARPI)",
-    stack: ["Discord.py", "React", "TailwindCSS"],
-    duration: ["January 2023 - October 2024"],
-    images: ["/projects/carpiScreen.png", "/projects/carpi.png"],
-    github: "https://github.com/Project-CARPI",
-    description: [
-      "CARPI started off as a discord bot that provided RPI students with easy access to university resources from an application that they use daily. With the progress on the bot completed, we have shifted to also create an online web resource, starting with a custom 4-year planner.",
     ],
   },
 ];

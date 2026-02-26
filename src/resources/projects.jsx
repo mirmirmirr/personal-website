@@ -123,7 +123,7 @@ export const projectData = [
     id: 14,
     title: "Cool Academic RPI Bot (CARPI)",
     stack: ["Discord.py", "React", "TailwindCSS"],
-    duration: ["January 2023 - October 2024", "January 2025 - Present"],
+    duration: ["January 2025 - Present", "January 2023 - October 2024"],
     images: ["/projects/carpiScreen.png", "/projects/carpi.png"],
     github: "https://github.com/Project-CARPI",
     description: [

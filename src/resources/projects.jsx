@@ -98,7 +98,7 @@ export const projectData = [
         >
           plancake.org
         </a>{" "}
-        to see the project live!
+        to try it out!
       </>,
       <>
         Plancake is a web application that simplifies the process of scheduling
@@ -111,11 +111,10 @@ export const projectData = [
         meetings.
       </>,
       <>
-        This project was developed in my free time with friends since we wanted
-        to expand on our initial project, tomeeto, and create a more polished
-        and user-friendly scheduling tool. We are currently working on adding
-        new features and improving the design to make it even easier for users
-        to coordinate meetings!
+        My friends and I built this in our spare time as an upgraded version of
+        our first project, tomeeto. We're continuously adding cool features and
+        polishing the design to make group scheduling even easier and more
+        enjoyable!
       </>,
     ],
   },
@@ -127,7 +126,37 @@ export const projectData = [
     images: ["/projects/carpiScreen.png", "/projects/carpi.png"],
     github: "https://github.com/Project-CARPI",
     description: [
-      "CARPI started off as a discord bot that provided RPI students with easy access to university resources from an application that they use daily. With the progress on the bot completed, we have shifted to also create an online web resource, starting with a custom 4-year planner.",
+      "CARPI started as a Discord bot helping RPI students quickly access university resources without leaving their favorite chat app. Now we're expanding with a web platform, including a custom 4-year academic planner!",
+    ],
+  },
+  {
+    id: 17,
+    title: (
+      <div>
+        Microsoft PowerToys <br></br>
+        Keystroke Overlay
+      </div>
+    ),
+    stack: ["C#", "WinUI3", "XAML", "MVVM"],
+    duration: ["September 2025 - December 2025"],
+    images: ["/projects/keystroke-settings.png"],
+    github: "https://github.com/microsoft/PowerToys",
+    description: [
+      <>
+        This project was developed with regular meeting with Microsoft engineers
+        and product managers to ensure alignment with the PowerToys vision and
+        user needs.
+      </>,
+      <>
+        Collaborated in a team of 5 to develop a keystroke overlay feature for
+        Microsoft PowerToys, an open-source Windows utility. We designed and
+        implemented a real-time keyboard input display using C#, WinUI3, and the
+        MVVM architecture. This feature is ideal for streamers, educators, and
+        presenters who want to show their keystrokes on screen for tutorials,
+        demos, or gaming streams. It was rewarding to contribute to a
+        widely-used open-source project and create a tool that enhances user
+        experience across various applications!
+      </>,
     ],
   },
   {

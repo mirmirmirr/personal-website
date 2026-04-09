@@ -4,7 +4,7 @@ export const experienceData = [
     title: "Software Engineer Intern",
     company: "Lockheed Martin",
     duration: ["May 2025 - August 2025", "May 2024 - August 2024"],
-    images: ["/cLogos/lockheed.png"],
+    images: ["/company_logos/lockheed.png"],
     description: [
       <>
         Worked on the Software team supporting the{" "}
@@ -31,7 +31,7 @@ export const experienceData = [
     title: "Data Analyst",
     company: "Johnson & Johnson",
     duration: ["September 2024 - December 2024"],
-    images: ["/cLogos/jj.png"],
+    images: ["/company_logos/jj.png"],
     description: [
       <>
         This experience was part of a term project where my group was tasked to
@@ -54,7 +54,7 @@ export const experienceData = [
     title: "Student Researcher",
     company: "NASA",
     duration: ["January 2024 - May 2024"],
-    images: ["/cLogos/nasa.png", "/cLogos/research.png"],
+    images: ["/company_logos/nasa.png", "/company_logos/research.png"],
     description: [
       <>
         I worked on processing and enhancing video data from flow boiling

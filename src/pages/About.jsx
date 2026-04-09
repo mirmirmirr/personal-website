@@ -10,7 +10,7 @@ export default function About() {
     <div className="flex w-full flex-col justify-center transition-all duration-700 ease-in-out">
       <div className="flex flex-col items-center justify-center gap-4 p-2 md:p-16">
         <img
-          src="headshot_circle.png"
+          src="pictures/headshot_circle.png"
           alt="Miranda Headshot 2024"
           className="h-full w-36 object-cover"
           fetchPriority="high"

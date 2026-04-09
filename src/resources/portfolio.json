@@ -1,248 +1,248 @@
 {
   "all": [
     {
-      "src": "/Bread16.jpeg",
+      "src": "art/Bread16.jpeg",
       "title": "Bread16",
       "width": "250px"
     },
     {
-      "src": "/cookiesOfFortune.jpeg",
+      "src": "art/cookiesOfFortune.jpeg",
       "title": "Cookies of Fortune",
       "width": "250px"
     },
     {
-      "src": "/pursuitOfHappiness.jpeg",
+      "src": "art/pursuitOfHappiness.jpeg",
       "title": "Pursuit of Happiness",
       "width": "250px"
     },
     {
-      "src": "/sunsetTwilight.jpeg",
+      "src": "art/sunsetTwilight.jpeg",
       "title": "Sunset Twilight",
       "width": "225px"
     },
     {
-      "src": "/rescuedBa-Na-Nas.jpeg",
+      "src": "art/rescuedBa-Na-Nas.jpeg",
       "title": "Rescused Ba Na Nas",
       "width": "225px"
     },
     {
-      "src": "/onlyPickFive.jpeg",
+      "src": "art/onlyPickFive.jpeg",
       "title": "only pick 5",
       "width": "225px"
     },
     {
-      "src": "/Use_35_Carrots.jpeg",
+      "src": "art/Use_35_Carrots.jpeg",
       "title": "Use's 35 Carrots",
       "width": "225px"
     },
     {
-      "src": "/chickenWithChick.jpeg",
+      "src": "art/chickenWithChick.jpeg",
       "title": "Chicken Wings",
       "width": "225px"
     },
     {
-      "src": "/fishing.jpeg",
+      "src": "art/fishing.jpeg",
       "title": "fishing",
       "width": "225px"
     }
   ],
   "logos": [
     {
-      "src": "/logos/saseLogo.png",
+      "src": "art/logos/saseLogo.png",
       "title": "Society of Asian Scientists and Engineers (SASE)",
       "width": "200px"
     },
     {
-      "src": "/logos/carpiLogo.png",
+      "src": "art/logos/carpiLogo.png",
       "title": "Cool Academic RPI Bot (CARPI)",
       "width": "200px"
     },
     {
-      "src": "/logos/palHaul.png",
+      "src": "art/logos/palHaul.png",
       "title": "PAL Haul",
       "width": "200px"
     },
     {
-      "src": "/logos/casa.png",
+      "src": "art/logos/casa.png",
       "title": "Chinese American Student Association (CASA)",
       "width": "200px"
     },
     {
-      "src": "/logos/ksa.PNG",
+      "src": "art/logos/ksa.PNG",
       "title": "Korean Student Association (KSA)",
       "width": "200px"
     },
     {
-      "src": "/logos/NSU.png",
+      "src": "art/logos/NSU.png",
       "title": "Nikkei Student Union (NSU)",
       "width": "200px"
     },
     {
-      "src": "/logos/pal.png",
+      "src": "art/logos/pal.png",
       "title": "Philipino American League (PAL)",
       "width": "200px"
     }
   ],
   "hackrpi": [
     {
-      "src": "/hackrpi/banner2024.png",
+      "src": "art/hackrpi/banner2024.png",
       "title": "HackRPI 1",
       "width": "400px"
     },
     {
-      "src": "/hackrpi/banner2023.png",
+      "src": "art/hackrpi/banner2023.png",
       "title": "HackRPI 2",
       "width": "400px"
     },
     {
-      "src": "/hackrpi/brand2024.png",
+      "src": "art/hackrpi/brand2024.png",
       "title": "HackRPI 3",
       "width": "375px"
     },
     {
-      "src": "/hackrpi/infoPoster.png",
+      "src": "art/hackrpi/infoPoster.png",
       "title": "HackRPI 3",
       "width": "200px"
     },
     {
-      "src": "/hackrpi/map.png",
+      "src": "art/hackrpi/map.png",
       "title": "HackRPI 3",
       "width": "275px"
     },
     {
-      "src": "/hackrpi/numbers2023.png",
+      "src": "art/hackrpi/numbers2023.png",
       "title": "HackRPI 3",
       "width": "200px"
     },
     {
-      "src": "/hackrpi/poster1.png",
+      "src": "art/hackrpi/poster1.png",
       "title": "HackRPI 3",
       "width": "200px"
     }
   ],
   "art": [
     {
-      "src": "/Bread16.jpeg",
+      "src": "art/Bread16.jpeg",
       "title": "Bread16",
       "width": "250px"
     },
     {
-      "src": "/cookiesOfFortune.jpeg",
+      "src": "art/cookiesOfFortune.jpeg",
       "title": "Cookies of Fortune",
       "width": "250px"
     },
     {
-      "src": "/pursuitOfHappiness.jpeg",
+      "src": "art/pursuitOfHappiness.jpeg",
       "title": "Pursuit of Happiness",
       "width": "250px"
     },
     {
-      "src": "/sunsetTwilight.jpeg",
+      "src": "art/sunsetTwilight.jpeg",
       "title": "Sunset Twilight",
       "width": "225px"
     },
     {
-      "src": "/rescuedBa-Na-Nas.jpeg",
+      "src": "art/rescuedBa-Na-Nas.jpeg",
       "title": "Rescused Ba Na Nas",
       "width": "225px"
     },
     {
-      "src": "/onlyPickFive.jpeg",
+      "src": "art/onlyPickFive.jpeg",
       "title": "only pick 5",
       "width": "225px"
     },
     {
-      "src": "/Use_35_Carrots.jpeg",
+      "src": "art/Use_35_Carrots.jpeg",
       "title": "Use's 35 Carrots",
       "width": "225px"
     },
     {
-      "src": "/chickenWithChick.jpeg",
+      "src": "art/chickenWithChick.jpeg",
       "title": "Chicken Wings",
       "width": "225px"
     },
     {
-      "src": "/fishing.jpeg",
+      "src": "art/fishing.jpeg",
       "title": "fishing",
       "width": "225px"
     },
     {
-      "src": "/logos/saseLogo.png",
+      "src": "art/logos/saseLogo.png",
       "title": "Society of Asian Scientists and Engineers (SASE)",
       "width": "200px"
     },
     {
-      "src": "/logos/carpiLogo.png",
+      "src": "art/logos/carpiLogo.png",
       "title": "Cool Academic RPI Bot (CARPI)",
       "width": "200px"
     },
     {
-      "src": "/logos/palHaul.png",
+      "src": "art/logos/palHaul.png",
       "title": "PAL Haul",
       "width": "200px"
     },
     {
-      "src": "/logos/casa.png",
+      "src": "art/logos/casa.png",
       "title": "Chinese American Student Association (CASA)",
       "width": "200px"
     },
     {
-      "src": "/logos/KSA.png",
+      "src": "art/logos/KSA.png",
       "title": "Korean Student Association (KSA)",
       "width": "200px"
     },
     {
-      "src": "/logos/NSU.png",
+      "src": "art/logos/NSU.png",
       "title": "Nikkei Student Union (NSU)",
       "width": "200px"
     },
     {
-      "src": "/logos/pal.png",
+      "src": "art/logos/pal.png",
       "title": "Philipino American League (PAL)",
       "width": "200px"
     },
     {
-      "src": "/casa_merch.png",
+      "src": "art/casa_merch.png",
       "title": "CASA Merch",
       "width": "225px"
     },
     {
-      "src": "/lawganma.png",
+      "src": "art/lawganma.png",
       "title": "Lawganma",
       "width": "225px"
     },
     {
-      "src": "/hackrpi/banner2024.png",
+      "src": "art/hackrpi/banner2024.png",
       "title": "HackRPI Event Banner 2024",
       "width": "400px"
     },
     {
-      "src": "/hackrpi/banner2023.png",
+      "src": "art/hackrpi/banner2023.png",
       "title": "HackRPI Event Banner 2023",
       "width": "400px"
     },
     {
-      "src": "/hackrpi/brand2024.png",
+      "src": "art/hackrpi/brand2024.png",
       "title": "HackRPI Branding 2024",
       "width": "375px"
     },
     {
-      "src": "/hackrpi/infoPoster.png",
+      "src": "art/hackrpi/infoPoster.png",
       "title": "HackRPI Info Poster",
       "width": "200px"
     },
     {
-      "src": "/hackrpi/map.png",
+      "src": "art/hackrpi/map.png",
       "title": "HackRPI 2024 Event Map",
       "width": "300px"
     },
     {
-      "src": "/hackrpi/numbers2023.png",
+      "src": "art/hackrpi/numbers2023.png",
       "title": "HackRPI by Numbers 2023",
       "width": "200px"
     },
     {
-      "src": "/hackrpi/poster1.png",
+      "src": "art/hackrpi/poster1.png",
       "title": "HackRPI Poster 2023",
       "width": "200px"
     }

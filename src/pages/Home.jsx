@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 import Image from "../components/Image";
 import ResizableBox from "../components/ResizeableBox";
 import Projects from "./Projects";
-import rightArrow from "/icons/rightarrow.svg";
+import { ArrowRightIcon } from "@radix-ui/react-icons";
 
 export default function Landing() {
   const [vw, setVw] = useState(
@@ -45,7 +45,7 @@ export default function Landing() {
             </div>
             <img
               className="mt-2 w-[90%] md:hidden"
-              src="/miranda.png"
+              src="/pictures/miranda.png"
               alt="Miranda"
               fetchPriority="high"
             />
@@ -55,7 +55,7 @@ export default function Landing() {
 
       {/* Desktop Image */}
       <Image
-        src="/miranda.png"
+        src="/pictures/miranda.png"
         alt="Miranda"
         className="absolute top-[25%] left-[58%] z-10 hidden w-[38%] max-w-[520px] md:block"
         priority={true}
@@ -79,11 +79,7 @@ export default function Landing() {
             className="group flex flex-row gap-2 text-[#0071D5] hover:font-semibold dark:text-blue"
           >
             more about me
-            <img
-              src={rightArrow}
-              className="h-5 w-5 fill-blue transition-transform duration-300 group-hover:scale-110 dark:invert"
-              alt="right arrow"
-            />
+            <ArrowRightIcon className="h-5 w-5" />
           </Link>
         </div>
       </div>

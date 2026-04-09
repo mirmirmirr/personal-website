@@ -6,7 +6,7 @@ export default function DragCards() {
   const [isSmallScreen, setIsSmallScreen] = useState(false);
   const containerRef = useRef(null);
 
-  const [highestZ, setHighestZ] = useState(0); 
+  const [highestZ, setHighestZ] = useState(0);
 
   useEffect(() => {
     const checkScreen = () => setIsSmallScreen(window.innerWidth < 640);
@@ -17,7 +17,7 @@ export default function DragCards() {
 
   const cards = [
     {
-      src: "/group.png",
+      src: "/pictures/group.png",
       alt: "Group Photo",
       rotate: "6deg",
       bottom: isSmallScreen ? "85%" : "15%",
@@ -25,7 +25,7 @@ export default function DragCards() {
       className: "w-60 md:w-80",
     },
     {
-      src: "/family.jpg",
+      src: "/pictures/family.jpg",
       alt: "Family Photo",
       rotate: "12deg",
       bottom: isSmallScreen ? "0%" : "15%",
@@ -33,7 +33,7 @@ export default function DragCards() {
       className: "w-60 md:w-80",
     },
     {
-      src: "/photographer.JPEG",
+      src: "/pictures/photographer.JPEG",
       alt: "Photographer",
       rotate: "-6deg",
       bottom: isSmallScreen ? "50%" : "15%",
@@ -41,7 +41,7 @@ export default function DragCards() {
       className: "w-60 md:w-80",
     },
     {
-      src: "/littleme.png",
+      src: "/pictures/littleme.png",
       alt: "Young Miranda",
       rotate: "8deg",
       bottom: isSmallScreen ? "0%" : "15%",
@@ -53,19 +53,29 @@ export default function DragCards() {
   return (
     <div className="absolute inset-0 z-10" ref={containerRef}>
       {cards.map((card, index) => (
-        <Card 
-          key={index} 
-          containerRef={containerRef} 
+        <Card
+          key={index}
+          containerRef={containerRef}
           highestZ={highestZ}
           setHighestZ={setHighestZ}
-          {...card} 
+          {...card}
         />
       ))}
     </div>
   );
 }
 
-const Card = ({ containerRef, highestZ, setHighestZ, src, alt, bottom, left, rotate, className }) => {
+const Card = ({
+  containerRef,
+  highestZ,
+  setHighestZ,
+  src,
+  alt,
+  bottom,
+  left,
+  rotate,
+  className,
+}) => {
   const [zIndex, setZIndex] = useState(0);
 
   const bringToFront = () => {
